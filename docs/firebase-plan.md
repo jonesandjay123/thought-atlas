@@ -1,13 +1,15 @@
 # Firebase Plan
 
-Status: planned only. Do not add Firebase sync yet.
+Status: Firebase project created, but sync is still planned only. Do not add Firebase sync yet.
 
 ## Project strategy
 
-Use one Firebase project for the full Thought Atlas system:
+Use one Firebase project for the full Thought Atlas system. Jones successfully created the clean project id:
 
 ```text
-Firebase project: thought-atlas-jones
+Firebase project: thought-atlas
+Firestore: Production mode, nam7
+Hosting: enabled
 ```
 
 The repos remain separate, but they will target the same Firebase project later:
