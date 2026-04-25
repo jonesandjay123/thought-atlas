@@ -161,3 +161,27 @@ node scripts/apply-graph-patch.mjs graph_patches/some-source.patch.json graph/gr
 ```
 
 `--upsert` updates existing nodes/edges with incoming data and merges provenance (`source_refs`). It is useful for re-running the same source after digest logic improves, but should still be reported clearly to Jones.
+
+## Registry and run log
+
+`source:create`, `apply-graph-patch --record-registry`, and `source:reset` can record source/run history in:
+
+```text
+sources/registry.json
+```
+
+Inspect it with:
+
+```bash
+npm run registry:summary
+```
+
+Recommended apply command for a real ingest:
+
+```bash
+node scripts/apply-graph-patch.mjs graph_patches/some-source.patch.json graph/graph.json \
+  --record-registry \
+  --source-id some-source
+```
+
+For temporary experiments, use `--skip-registry` on source creation or reset if you do not want the event logged.

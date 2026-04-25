@@ -3,21 +3,22 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { readJson } from "./validators.mjs";
+import { findSources } from "./registry.mjs";
 
 export function sourceStatus(options = {}) {
-  const manifests = findManifestFiles(options.manifestDir ?? "examples")
-    .map((filePath) => ({ filePath, manifest: readJson(filePath) }));
-
   let contentHash = options.hash;
   if (options.file) contentHash = hashFile(options.file);
 
-  const matches = manifests.filter(({ manifest }) => {
-    if (options.sourceId && manifest.source_id !== options.sourceId) return false;
-    if (contentHash && manifest.content_hash !== contentHash) return false;
-    return true;
-  });
+  const registryMatches = findSources({ sourceId: options.sourceId, hash: contentHash }, options.registryPath ?? "sources/registry.json");
+  const manifestMatches = findManifestFiles(options.manifestDir ?? "examples")
+    .map((filePath) => ({ filePath, manifest: readJson(filePath) }))
+    .filter(({ manifest }) => {
+      if (options.sourceId && manifest.source_id !== options.sourceId) return false;
+      if (contentHash && manifest.content_hash !== contentHash) return false;
+      return true;
+    });
 
-  return { query: { source_id: options.sourceId, content_hash: contentHash }, matches };
+  return { query: { source_id: options.sourceId, content_hash: contentHash }, registryMatches, manifestMatches };
 }
 
 function findManifestFiles(dir) {
@@ -44,6 +45,7 @@ function parseArgs(argv) {
     else if (arg === "--hash") options.hash = next();
     else if (arg === "--file") options.file = next();
     else if (arg === "--manifest-dir") options.manifestDir = next();
+    else if (arg === "--registry") options.registryPath = next();
     else throw new Error(`unknown argument: ${arg}`);
   }
   return options;
@@ -54,18 +56,22 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     const result = sourceStatus(parseArgs(process.argv.slice(2)));
     console.log("Source status");
     console.log(JSON.stringify(result.query, null, 2));
-    if (!result.matches.length) {
-      console.log("No matching source manifests.");
-    } else {
-      console.log(`Matches: ${result.matches.length}`);
-      for (const { filePath, manifest } of result.matches) {
-        console.log(`- ${manifest.source_id} (${manifest.status})`);
-        console.log(`  manifest: ${filePath}`);
-        console.log(`  path: ${manifest.path}`);
-        console.log(`  hash: ${manifest.content_hash}`);
-        if (manifest.origin?.message_id) console.log(`  slack: ${manifest.origin.message_id}`);
-      }
+    console.log(`Registry matches: ${result.registryMatches.length}`);
+    for (const source of result.registryMatches) {
+      console.log(`- ${source.source_id} (${source.status})`);
+      console.log(`  registry path: ${source.path}`);
+      console.log(`  manifest: ${source.manifest_path}`);
+      console.log(`  hash: ${source.content_hash}`);
     }
+    console.log(`Manifest file matches: ${result.manifestMatches.length}`);
+    for (const { filePath, manifest } of result.manifestMatches) {
+      console.log(`- ${manifest.source_id} (${manifest.status})`);
+      console.log(`  manifest: ${filePath}`);
+      console.log(`  path: ${manifest.path}`);
+      console.log(`  hash: ${manifest.content_hash}`);
+      if (manifest.origin?.message_id) console.log(`  slack: ${manifest.origin.message_id}`);
+    }
+    if (!result.registryMatches.length && !result.manifestMatches.length) console.log("No matching sources.");
   } catch (error) {
     console.error(error.message);
     console.error("usage: node scripts/source-status.mjs [--source-id id] [--hash sha256:...] [--file path]");

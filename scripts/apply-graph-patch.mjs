@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import { pathToFileURL } from "node:url";
 import { readJson, validateGraphPatch } from "./validators.mjs";
+import { recordIngestRun } from "./registry.mjs";
 
 export function applyGraphPatch(patchPath, graphPath, options = {}) {
   const dryRun = options.dryRun ?? false;
@@ -83,6 +84,22 @@ export function applyGraphPatch(patchPath, graphPath, options = {}) {
 
   if (!dryRun) {
     fs.writeFileSync(graphPath, `${JSON.stringify(graph, null, 2)}\n`);
+    if (options.recordRegistry) {
+      recordIngestRun({
+        type: upsert ? "graph_patch_upserted" : "graph_patch_applied",
+        source_id: options.sourceId,
+        digest_id: patch.digest_id,
+        patch_id: patch.patch_id,
+        graph_path: graphPath,
+        status: "processed",
+        summary: {
+          added_nodes: summary.added_nodes.length,
+          updated_nodes: summary.updated_nodes.length,
+          added_edges: summary.added_edges.length,
+          updated_edges: summary.updated_edges.length
+        }
+      }, { registryPath: options.registryPath });
+    }
   }
 
   return summary;
@@ -136,7 +153,12 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   const graphPath = process.argv[3] ?? "graph/graph.json";
   const dryRun = process.argv.includes("--dry-run");
   const upsert = process.argv.includes("--upsert");
-  const summary = applyGraphPatch(patchPath, graphPath, { dryRun, upsert });
+  const recordRegistry = process.argv.includes("--record-registry");
+  const sourceIdFlagIndex = process.argv.indexOf("--source-id");
+  const registryFlagIndex = process.argv.indexOf("--registry");
+  const sourceId = sourceIdFlagIndex >= 0 ? process.argv[sourceIdFlagIndex + 1] : undefined;
+  const registryPath = registryFlagIndex >= 0 ? process.argv[registryFlagIndex + 1] : undefined;
+  const summary = applyGraphPatch(patchPath, graphPath, { dryRun, upsert, recordRegistry, sourceId, registryPath });
 
   console.log(`${dryRun ? "dry-run" : "applied"} graph patch: ${patchPath}`);
   console.log(formatSummary(summary, { dryRun }));

@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { readJson } from "./validators.mjs";
+import { removeSourceFromRegistry } from "./registry.mjs";
 
 export function resetSourceIngest(options) {
   const sourceId = required(options.sourceId, "--source-id");
@@ -50,6 +51,13 @@ export function resetSourceIngest(options) {
     for (const filePath of filesToRemove) {
       fs.rmSync(filePath, { force: true });
     }
+    if (!options.skipRegistry) {
+      removeSourceFromRegistry(sourceId, {
+        removed_nodes: summary.removed_nodes,
+        removed_edges: summary.removed_edges,
+        removed_files: summary.removed_files
+      }, { registryPath: options.registryPath });
+    }
   }
 
   return summary;
@@ -77,6 +85,8 @@ function parseArgs(argv) {
     else if (arg === "--graph") options.graphPath = next();
     else if (arg === "--extra-file") options.extraFiles.push(next());
     else if (arg === "--dry-run") options.dryRun = true;
+    else if (arg === "--skip-registry") options.skipRegistry = true;
+    else if (arg === "--registry") options.registryPath = next();
     else throw new Error(`unknown argument: ${arg}`);
   }
   return options;

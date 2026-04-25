@@ -15,6 +15,7 @@
     "source:status": "node scripts/source-status.mjs",
     "source:reset": "node scripts/reset-source-ingest.mjs",
     "ingest:check": "node scripts/ingest-checklist.mjs",
+    "registry:summary": "node scripts/registry-summary.mjs",
     "graph:summary": "node scripts/graph-summary.mjs",
     "graph:node": "node scripts/graph-node.mjs",
     "graph:search": "node scripts/graph-search.mjs",

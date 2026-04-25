@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { validateSourceManifest } from "./validators.mjs";
+import { recordSourceManifest } from "./registry.mjs";
 
 const SOURCE_TYPES = new Set(["markdown", "conversation", "report", "repo_state", "manual", "slack_file", "slack_message"]);
 
@@ -42,6 +43,9 @@ export function createSourceManifest(options) {
 
   validateSourceManifest(manifest);
   fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
+  if (!options.skipRegistry) {
+    recordSourceManifest(manifest, manifestPath, { registryPath: options.registryPath });
+  }
 
   return { manifest, manifestPath, destinationPath };
 }
@@ -102,6 +106,8 @@ function parseArgs(argv) {
     else if (arg === "--origin-thread-id") options.origin = { ...(options.origin ?? {}), thread_id: next() };
     else if (arg === "--origin-sender") options.origin = { ...(options.origin ?? {}), sender: next() };
     else if (arg === "--strip-openclaw-wrapper") options.stripOpenClawWrapper = true;
+    else if (arg === "--skip-registry") options.skipRegistry = true;
+    else if (arg === "--registry") options.registryPath = next();
     else if (arg === "--help") options.help = true;
     else throw new Error(`unknown argument: ${arg}`);
   }
@@ -109,7 +115,10 @@ function parseArgs(argv) {
 }
 
 function usage() {
-  return `usage: node scripts/create-source-manifest.mjs --input <file> [options]\n\nOptions:\n  --source-id <id>\n  --title <title>\n  --source-type <markdown|conversation|report|repo_state|manual|slack_file|slack_message>\n  --destination <path>\n  --manifest <path>\n  --captured-at <iso>\n  --language <lang>\n  --tag <tag> (repeatable)\n  --notes <text>\n  --origin-channel slack --origin-message-id ... --origin-thread-id ... --origin-sender Jones\n  --strip-openclaw-wrapper\n`;
+  return `usage: node scripts/create-source-manifest.mjs --input <file> [options]\n\nOptions:\n  --source-id <id>\n  --title <title>\n  --source-type <markdown|conversation|report|repo_state|manual|slack_file|slack_message>\n  --destination <path>\n  --manifest <path>\n  --captured-at <iso>\n  --language <lang>\n  --tag <tag> (repeatable)\n  --notes <text>\n  --origin-channel slack --origin-message-id ... --origin-thread-id ... --origin-sender Jones\n  --strip-openclaw-wrapper
+  --skip-registry
+  --registry <path>
+`;
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
