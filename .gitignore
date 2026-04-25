@@ -5,3 +5,8 @@ dist/
 .env.local
 *.log
 .vite/
+
+# Local credentials / Firebase service accounts
+service-account*.json
+*.service-account.json
+.firebase-service-account.json

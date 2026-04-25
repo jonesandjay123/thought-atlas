@@ -23,12 +23,14 @@
     "ingest:summary": "node scripts/ingest-bundle-summary.mjs",
     "no-ingest:check": "node scripts/no-ingest-check.mjs",
     "firestore:export": "node scripts/export-firestore-payload.mjs",
+    "firestore:sync": "node scripts/sync-firestore.mjs",
     "registry:summary": "node scripts/registry-summary.mjs",
     "graph:summary": "node scripts/graph-summary.mjs",
     "graph:node": "node scripts/graph-node.mjs",
     "graph:search": "node scripts/graph-search.mjs",
     "sample:apply": "node scripts/apply-graph-patch.mjs examples/sample-graph-patch.json graph/graph.json"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "firebase-admin": "^13.8.0"
+  }
 }

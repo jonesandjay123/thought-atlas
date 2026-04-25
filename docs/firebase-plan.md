@@ -100,3 +100,40 @@ This produces documents for:
 - `thoughtRegistryRuns/{runId}`
 
 This command does not contact Firebase and does not require credentials.
+
+## Firestore writer staging
+
+`sync-firestore.mjs` is intentionally staged and safe by default.
+
+Dry-run is the default and performs no writes:
+
+```bash
+node scripts/sync-firestore.mjs \
+  --project-id thought-atlas \
+  --dry-run
+```
+
+Service account default path:
+
+```text
+~/.config/thought-atlas/service-account.json
+```
+
+Safety rules:
+
+- Never commit the service account key.
+- Never print or paste credential contents.
+- Real writes require explicit `--write`.
+- Use `--limit N` for first small-batch writes.
+- Use `--collections thoughtSources,thoughtNodes` to restrict which collections are selected.
+
+First real write, after human confirmation, should be small and explicit, for example:
+
+```bash
+node scripts/sync-firestore.mjs \
+  --project-id thought-atlas \
+  --write \
+  --limit 5
+```
+
+Do not run a full write until the limited write is confirmed in Firebase Console.
