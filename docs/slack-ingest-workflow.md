@@ -185,3 +185,14 @@ node scripts/apply-graph-patch.mjs graph_patches/some-source.patch.json graph/gr
 ```
 
 For temporary experiments, use `--skip-registry` on source creation or reset if you do not want the event logged.
+
+## Bundle summary
+
+After an ingest, Jarvis can generate a stable summary from the repo state:
+
+```bash
+node scripts/ingest-bundle-summary.mjs --source-id some-source
+node scripts/ingest-bundle-summary.mjs --source-id some-source --json
+```
+
+This checks the expected manifest, digest, patch, report, registry entry, registry runs, and graph impact for one source. Use this when reporting final Slack ingest results to Jones.
