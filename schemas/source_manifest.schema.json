@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thought-atlas.local/schemas/source_manifest.schema.json",
+  "title": "Thought Atlas Source Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_id", "title", "source_type", "path", "captured_at", "status"],
+  "properties": {
+    "source_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "title": { "type": "string", "minLength": 1 },
+    "source_type": {
+      "type": "string",
+      "enum": ["markdown", "conversation", "report", "repo_state", "manual"]
+    },
+    "path": { "type": "string", "minLength": 1 },
+    "captured_at": { "type": "string", "format": "date-time" },
+    "language": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "status": {
+      "type": "string",
+      "enum": ["inbox", "processed", "archived"]
+    },
+    "notes": { "type": "string" }
+  }
+}

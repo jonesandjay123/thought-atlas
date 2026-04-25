@@ -1,0 +1,41 @@
+{
+  "digest_id": "sample-source.digest",
+  "source_id": "sample-source",
+  "created_at": "2026-04-25T12:05:00.000Z",
+  "summary": "Thought Atlas Core should be repositioned as a local-first Jarvis-native ingestion and graph data engine, with UI work moved out of the production path.",
+  "items": [
+    {
+      "id": "thought-atlas-core-local-engine",
+      "kind": "decision",
+      "title": "Thought Atlas Core is a local ingestion engine",
+      "body": "The repo's production responsibility is the local source-to-digest-to-graph-patch pipeline, not a hosted React UI.",
+      "source_refs": [
+        {
+          "source_id": "sample-source",
+          "path": "examples/sample-source.md",
+          "start_line": 8,
+          "end_line": 14,
+          "quote": "This repo should be treated as Thought Atlas Core, not the hosted UI."
+        }
+      ],
+      "confidence": 0.98,
+      "tags": ["core", "local-first", "jarvis-native"]
+    },
+    {
+      "id": "ui-is-prototype-boundary",
+      "kind": "decision",
+      "title": "UI belongs outside the core path",
+      "body": "The React / Vite UI should remain a prototype and must not define the core build or product direction.",
+      "source_refs": [
+        {
+          "source_id": "sample-source",
+          "path": "examples/sample-source.md",
+          "start_line": 16,
+          "end_line": 17
+        }
+      ],
+      "confidence": 0.95,
+      "tags": ["ui-boundary", "prototype"]
+    }
+  ]
+}

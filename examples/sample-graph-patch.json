@@ -1,0 +1,58 @@
+{
+  "patch_id": "sample-source.patch",
+  "digest_id": "sample-source.digest",
+  "created_at": "2026-04-25T12:10:00.000Z",
+  "operations": [
+    {
+      "op": "add_node",
+      "rationale": "The repo direction correction establishes the core product responsibility.",
+      "node": {
+        "id": "thought-atlas-core-local-engine",
+        "kind": "decision",
+        "title": "Thought Atlas Core is a local ingestion engine",
+        "body": "The repo's production responsibility is the local source-to-digest-to-graph-patch pipeline, not a hosted React UI.",
+        "source_refs": [
+          {
+            "source_id": "sample-source",
+            "path": "examples/sample-source.md",
+            "start_line": 8,
+            "end_line": 14
+          }
+        ],
+        "confidence": 0.98,
+        "tags": ["core", "local-first", "jarvis-native"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The UI boundary is a durable product decision that should be explicit in the graph.",
+      "node": {
+        "id": "ui-is-prototype-boundary",
+        "kind": "decision",
+        "title": "UI belongs outside the core path",
+        "body": "The React / Vite UI should remain a prototype and must not define the core build or product direction.",
+        "source_refs": [
+          {
+            "source_id": "sample-source",
+            "path": "examples/sample-source.md",
+            "start_line": 16,
+            "end_line": 17
+          }
+        ],
+        "confidence": 0.95,
+        "tags": ["ui-boundary", "prototype"]
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "The UI boundary follows from defining the repo as a local core engine.",
+      "edge": {
+        "id": "edge-core-engine-ui-boundary",
+        "from": "thought-atlas-core-local-engine",
+        "to": "ui-is-prototype-boundary",
+        "relation": "supports",
+        "weight": 0.9
+      }
+    }
+  ]
+}
