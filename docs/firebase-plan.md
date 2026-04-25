@@ -59,3 +59,26 @@ local graph.json / registry / digests / reports
 ```
 
 Firebase should not participate in core extraction, reasoning, or graph patch decisions.
+
+## Dry-run export before sync
+
+Before writing Firestore, build and inspect the deterministic export payload locally:
+
+```bash
+node scripts/export-firestore-payload.mjs \
+  --project-id thought-atlas \
+  --dry-run \
+  --output /tmp/thought-atlas-firestore-payload.json
+```
+
+This produces documents for:
+
+- `thoughtAtlasMeta/current`
+- `thoughtSources/{sourceId}`
+- `thoughtDigests/{digestId}`
+- `thoughtNodes/{nodeId}`
+- `thoughtEdges/{edgeId}`
+- `thoughtReports/{sourceId}`
+- `thoughtRegistryRuns/{runId}`
+
+This command does not contact Firebase and does not require credentials.

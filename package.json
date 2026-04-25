@@ -22,6 +22,7 @@
     "ingest:finalize": "node scripts/finalize-ingest.mjs",
     "ingest:summary": "node scripts/ingest-bundle-summary.mjs",
     "no-ingest:check": "node scripts/no-ingest-check.mjs",
+    "firestore:export": "node scripts/export-firestore-payload.mjs",
     "registry:summary": "node scripts/registry-summary.mjs",
     "graph:summary": "node scripts/graph-summary.mjs",
     "graph:node": "node scripts/graph-node.mjs",
