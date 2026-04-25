@@ -14,6 +14,8 @@
     "source:create": "node scripts/create-source-manifest.mjs",
     "source:status": "node scripts/source-status.mjs",
     "source:reset": "node scripts/reset-source-ingest.mjs",
+    "digest:template": "node scripts/create-digest-template.mjs",
+    "patch:template": "node scripts/create-graph-patch-template.mjs",
     "ingest:check": "node scripts/ingest-checklist.mjs",
     "ingest:summary": "node scripts/ingest-bundle-summary.mjs",
     "registry:summary": "node scripts/registry-summary.mjs",

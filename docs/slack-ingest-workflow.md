@@ -196,3 +196,17 @@ node scripts/ingest-bundle-summary.mjs --source-id some-source --json
 ```
 
 This checks the expected manifest, digest, patch, report, registry entry, registry runs, and graph impact for one source. Use this when reporting final Slack ingest results to Jones.
+
+## Digest and patch templates
+
+To reduce hand-written JSON mistakes, Jarvis can generate starter files after creating a source manifest:
+
+```bash
+node scripts/create-digest-template.mjs \
+  --manifest examples/some-source.source-manifest.json
+
+node scripts/create-graph-patch-template.mjs \
+  --digest digests/some-source.digest.json
+```
+
+These templates are intentionally conservative and contain TODO text. Jarvis must replace TODO content with real extracted ideas before applying a graph patch.
