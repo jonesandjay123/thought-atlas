@@ -1,7 +1,9 @@
 {
-  "schema_version": "0.1.0",
-  "updated_at": "2026-04-25T19:09:00.000Z",
-  "nodes": [
+  "digest_id": "original-conversation-2026-04-11.digest",
+  "source_id": "original-conversation-2026-04-11",
+  "created_at": "2026-04-25T19:08:00.000Z",
+  "summary": "這段對話從午休路上的冰淇淋店員觀察出發，逐步收斂成 Jones 對投入、幸福、主導權、AI 夥伴與長期創作方法論的核心思考。核心線索是：幸福常被比較喚醒，但穩固滿足來自認領自己的位置；Jones 的內在動力來自創作、思考、教學、主導權與個人風格；AI 不是最終載體，而是思想鍛造場；真正需要累積的是可被未來使用的封裝後思考模組。",
+  "items": [
     {
       "id": "labor-devotion-question",
       "kind": "question",
@@ -17,12 +19,7 @@
         }
       ],
       "confidence": 0.96,
-      "tags": [
-        "labor",
-        "meaning",
-        "devotion",
-        "work"
-      ]
+      "tags": ["labor", "meaning", "devotion", "work"]
     },
     {
       "id": "comparison-awakens-happiness",
@@ -39,12 +36,7 @@
         }
       ],
       "confidence": 0.95,
-      "tags": [
-        "happiness",
-        "comparison",
-        "alignment",
-        "life-position"
-      ]
+      "tags": ["happiness", "comparison", "alignment", "life-position"]
     },
     {
       "id": "embodied-agency-as-hidden-gift",
@@ -61,12 +53,7 @@
         }
       ],
       "confidence": 0.92,
-      "tags": [
-        "embodiment",
-        "agency",
-        "gratitude",
-        "labor"
-      ]
+      "tags": ["embodiment", "agency", "gratitude", "labor"]
     },
     {
       "id": "devotion-three-sources",
@@ -83,12 +70,7 @@
         }
       ],
       "confidence": 0.96,
-      "tags": [
-        "devotion",
-        "motivation",
-        "identity",
-        "meaning"
-      ]
+      "tags": ["devotion", "motivation", "identity", "meaning"]
     },
     {
       "id": "jones-intrinsic-creator-profile",
@@ -105,12 +87,7 @@
         }
       ],
       "confidence": 0.94,
-      "tags": [
-        "jones",
-        "creator",
-        "intrinsic-motivation",
-        "writing"
-      ]
+      "tags": ["jones", "creator", "intrinsic-motivation", "writing"]
     },
     {
       "id": "jones-needs-authorship-control-style",
@@ -127,12 +104,7 @@
         }
       ],
       "confidence": 0.94,
-      "tags": [
-        "jones",
-        "authorship",
-        "control",
-        "style"
-      ]
+      "tags": ["jones", "authorship", "control", "style"]
     },
     {
       "id": "internal-drive-low-external-constraint-risk",
@@ -149,12 +121,7 @@
         }
       ],
       "confidence": 0.93,
-      "tags": [
-        "risk",
-        "output",
-        "compounding",
-        "motivation"
-      ]
+      "tags": ["risk", "output", "compounding", "motivation"]
     },
     {
       "id": "vehicle-for-long-term-output",
@@ -171,12 +138,7 @@
         }
       ],
       "confidence": 0.95,
-      "tags": [
-        "vehicle",
-        "compounding",
-        "life-design",
-        "output-system"
-      ]
+      "tags": ["vehicle", "compounding", "life-design", "output-system"]
     },
     {
       "id": "ai-forge-not-final-vehicle",
@@ -200,12 +162,7 @@
         }
       ],
       "confidence": 0.96,
-      "tags": [
-        "ai-collaboration",
-        "forge",
-        "vehicle",
-        "thought-atlas"
-      ]
+      "tags": ["ai-collaboration", "forge", "vehicle", "thought-atlas"]
     },
     {
       "id": "thinking-building-compounding-system",
@@ -229,12 +186,7 @@
         }
       ],
       "confidence": 0.95,
-      "tags": [
-        "system",
-        "thinking",
-        "building",
-        "compounding"
-      ]
+      "tags": ["system", "thinking", "building", "compounding"]
     },
     {
       "id": "writing-practice-as-foundation",
@@ -258,12 +210,7 @@
         }
       ],
       "confidence": 0.94,
-      "tags": [
-        "writing",
-        "practice",
-        "foundation",
-        "jones"
-      ]
+      "tags": ["writing", "practice", "foundation", "jones"]
     },
     {
       "id": "value-density-over-daily-output",
@@ -280,12 +227,7 @@
         }
       ],
       "confidence": 0.95,
-      "tags": [
-        "creative-methodology",
-        "value-density",
-        "anti-burnout",
-        "output"
-      ]
+      "tags": ["creative-methodology", "value-density", "anti-burnout", "output"]
     },
     {
       "id": "trigger-expand-package-compound-method",
@@ -306,217 +248,10 @@
           "start_line": 1351,
           "end_line": 1381,
           "quote": "你不是在寫東西，你是在建立「可被未來使用的思考模組」。"
-        },
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 1205,
-          "end_line": 1278,
-          "quote": "Trigger → Expand → Package → Compound"
         }
       ],
       "confidence": 0.97,
-      "tags": [
-        "creative-methodology",
-        "trigger",
-        "ai-collaboration",
-        "compounding"
-      ]
-    }
-  ],
-  "edges": [
-    {
-      "id": "edge-labor-question-to-devotion-sources",
-      "from": "labor-devotion-question",
-      "to": "devotion-three-sources",
-      "relation": "extends",
-      "weight": 0.9,
-      "confidence": 0.94,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 229,
-          "end_line": 258
-        }
-      ],
-      "rationale": "The question of why someone would devote themselves to ordinary work is answered by intrinsic pleasure, identity, and larger meaning."
-    },
-    {
-      "id": "edge-embodied-agency-to-comparison-happiness",
-      "from": "embodied-agency-as-hidden-gift",
-      "to": "comparison-awakens-happiness",
-      "relation": "supports",
-      "weight": 0.82,
-      "confidence": 0.9,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 112,
-          "end_line": 170
-        }
-      ],
-      "rationale": "The Hawking contrast makes ordinary bodily ability visible, which exemplifies comparison as a way happiness is awakened."
-    },
-    {
-      "id": "edge-devotion-sources-to-jones-creator-profile",
-      "from": "devotion-three-sources",
-      "to": "jones-intrinsic-creator-profile",
-      "relation": "extends",
-      "weight": 0.88,
-      "confidence": 0.92,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 323,
-          "end_line": 365
-        }
-      ],
-      "rationale": "Jones lists intrinsic pleasures such as creation, observation, writing, and teaching, then the conversation abstracts him as an intrinsic creator."
-    },
-    {
-      "id": "edge-devotion-sources-to-authorship-control-style",
-      "from": "devotion-three-sources",
-      "to": "jones-needs-authorship-control-style",
-      "relation": "extends",
-      "weight": 0.86,
-      "confidence": 0.91,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 369,
-          "end_line": 386
-        }
-      ],
-      "rationale": "Jones's stated identity need is not generic freedom but imprinting his thought and style on outputs."
-    },
-    {
-      "id": "edge-internal-drive-risk-to-vehicle",
-      "from": "internal-drive-low-external-constraint-risk",
-      "to": "vehicle-for-long-term-output",
-      "relation": "supports",
-      "weight": 0.9,
-      "confidence": 0.93,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 405,
-          "end_line": 461
-        }
-      ],
-      "rationale": "Because intrinsic motivation alone can produce high-quality thought without accumulation, it needs to be tied to a vehicle."
-    },
-    {
-      "id": "edge-ai-forge-to-vehicle-boundary",
-      "from": "ai-forge-not-final-vehicle",
-      "to": "vehicle-for-long-term-output",
-      "relation": "contrasts",
-      "weight": 0.84,
-      "confidence": 0.92,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 615,
-          "end_line": 652
-        }
-      ],
-      "rationale": "The source distinguishes AI as an intermediate forge from the actual durable outputs that should accumulate."
-    },
-    {
-      "id": "edge-vehicle-to-thinking-building-compounding",
-      "from": "vehicle-for-long-term-output",
-      "to": "thinking-building-compounding-system",
-      "relation": "extends",
-      "weight": 0.9,
-      "confidence": 0.94,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 676,
-          "end_line": 714
-        }
-      ],
-      "rationale": "The long-term vehicle becomes a practical operating system: think, build a thing, then let it compound."
-    },
-    {
-      "id": "edge-writing-foundation-to-creator-profile",
-      "from": "writing-practice-as-foundation",
-      "to": "jones-intrinsic-creator-profile",
-      "relation": "supports",
-      "weight": 0.86,
-      "confidence": 0.91,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 924,
-          "end_line": 992
-        }
-      ],
-      "rationale": "The six-year daily writing habit trained the expressive and observational capacities now visible in Jones's AI conversations."
-    },
-    {
-      "id": "edge-writing-foundation-to-value-density",
-      "from": "writing-practice-as-foundation",
-      "to": "value-density-over-daily-output",
-      "relation": "extends",
-      "weight": 0.84,
-      "confidence": 0.91,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 1083,
-          "end_line": 1135
-        }
-      ],
-      "rationale": "The old daily-writing practice supplies the foundation, but the next system should be governed by value density rather than frequency."
-    },
-    {
-      "id": "edge-thinking-building-to-trigger-method",
-      "from": "thinking-building-compounding-system",
-      "to": "trigger-expand-package-compound-method",
-      "relation": "extends",
-      "weight": 0.93,
-      "confidence": 0.96,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 1205,
-          "end_line": 1278
-        },
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 1205,
-          "end_line": 1278
-        }
-      ],
-      "rationale": "The method gives the day-to-day steps for turning thought into durable, compounding artifacts."
-    },
-    {
-      "id": "edge-ai-forge-to-trigger-method",
-      "from": "ai-forge-not-final-vehicle",
-      "to": "trigger-expand-package-compound-method",
-      "relation": "supports",
-      "weight": 0.9,
-      "confidence": 0.94,
-      "source_refs": [
-        {
-          "source_id": "original-conversation-2026-04-11",
-          "path": "sources/inbox/original-conversation-2026-04-11.md",
-          "start_line": 1235,
-          "end_line": 1254
-        }
-      ],
-      "rationale": "The method's Expand stage explicitly uses AI to turn vague intuition into clear structure."
+      "tags": ["creative-methodology", "trigger", "ai-collaboration", "compounding"]
     }
   ]
 }

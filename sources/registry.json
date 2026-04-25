@@ -1,6 +1,92 @@
 {
   "schema_version": "0.1.0",
-  "updated_at": null,
-  "sources": [],
-  "runs": []
+  "updated_at": "2026-04-25T19:06:38.116Z",
+  "sources": [
+    {
+      "source_id": "original-conversation-2026-04-11",
+      "title": "午休路上的冰淇淋店、投入感與 AI 創作方法論",
+      "source_type": "slack_file",
+      "path": "sources/inbox/original-conversation-2026-04-11.md",
+      "manifest_path": "examples/original-conversation-2026-04-11.source-manifest.json",
+      "content_hash": "sha256:6e93b8292ef0698cf23c9a81bfed0a5abc17569a7824c61fc4e45479c59cd92c",
+      "status": "processed",
+      "tags": [
+        "meaning",
+        "creative-methodology",
+        "ai-collaboration",
+        "life-design"
+      ],
+      "origin": {
+        "channel": "slack",
+        "sender": "Jones",
+        "message_id": "1777143825.974469"
+      },
+      "first_seen_at": "2026-04-25T19:04:19.077Z",
+      "last_seen_at": "2026-04-25T19:06:38.116Z"
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "source_manifest_created-1777143859077-1",
+      "type": "source_manifest_created",
+      "source_id": "original-conversation-2026-04-11",
+      "content_hash": "sha256:6e93b8292ef0698cf23c9a81bfed0a5abc17569a7824c61fc4e45479c59cd92c",
+      "manifest_path": "examples/original-conversation-2026-04-11.source-manifest.json",
+      "source_path": "sources/inbox/original-conversation-2026-04-11.md",
+      "origin": {
+        "channel": "slack",
+        "sender": "Jones",
+        "message_id": "1777143825.974469"
+      },
+      "at": "2026-04-25T19:04:19.077Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1777143974324-2",
+      "type": "graph_patch_applied",
+      "source_id": "original-conversation-2026-04-11",
+      "digest_id": "original-conversation-2026-04-11.digest",
+      "patch_id": "original-conversation-2026-04-11.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 13,
+        "updated_nodes": 0,
+        "added_edges": 11,
+        "updated_edges": 0
+      },
+      "at": "2026-04-25T19:06:14.324Z"
+    },
+    {
+      "run_id": "graph_patch_upserted-1777143984625-3",
+      "type": "graph_patch_upserted",
+      "source_id": "original-conversation-2026-04-11",
+      "digest_id": "original-conversation-2026-04-11.digest",
+      "patch_id": "original-conversation-2026-04-11.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 0,
+        "updated_nodes": 13,
+        "added_edges": 0,
+        "updated_edges": 11
+      },
+      "at": "2026-04-25T19:06:24.624Z"
+    },
+    {
+      "run_id": "graph_patch_upserted-1777143998116-4",
+      "type": "graph_patch_upserted",
+      "source_id": "original-conversation-2026-04-11",
+      "digest_id": "original-conversation-2026-04-11.digest",
+      "patch_id": "original-conversation-2026-04-11.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 0,
+        "updated_nodes": 13,
+        "added_edges": 0,
+        "updated_edges": 11
+      },
+      "at": "2026-04-25T19:06:38.116Z"
+    }
+  ]
 }
