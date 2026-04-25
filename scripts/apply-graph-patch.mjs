@@ -4,6 +4,7 @@ import { readJson, validateGraphPatch } from "./validators.mjs";
 
 export function applyGraphPatch(patchPath, graphPath, options = {}) {
   const dryRun = options.dryRun ?? false;
+  const upsert = options.upsert ?? false;
   const patch = readJson(patchPath);
   validateGraphPatch(patch);
 
@@ -19,18 +20,26 @@ export function applyGraphPatch(patchPath, graphPath, options = {}) {
   const summary = {
     added_nodes: [],
     updated_nodes: [],
+    skipped_nodes: [],
     added_edges: [],
-    updated_edges: []
+    updated_edges: [],
+    skipped_edges: []
   };
 
   for (const operation of patch.operations) {
     if (operation.op === "add_node") {
-      if (nodesById.has(operation.node.id)) {
-        throw new Error(`node already exists: ${operation.node.id}`);
+      const existing = nodesById.get(operation.node.id);
+      if (existing) {
+        if (!upsert) {
+          throw new Error(`node already exists: ${operation.node.id} (rerun with --upsert to update existing nodes)`);
+        }
+        Object.assign(existing, mergeWithProvenance(existing, operation.node));
+        summary.updated_nodes.push(operation.node.id);
+      } else {
+        graph.nodes.push(operation.node);
+        nodesById.set(operation.node.id, operation.node);
+        summary.added_nodes.push(operation.node.id);
       }
-      graph.nodes.push(operation.node);
-      nodesById.set(operation.node.id, operation.node);
-      summary.added_nodes.push(operation.node.id);
     }
 
     if (operation.op === "update_node") {
@@ -43,13 +52,20 @@ export function applyGraphPatch(patchPath, graphPath, options = {}) {
     }
 
     if (operation.op === "add_edge") {
-      if (edgesById.has(operation.edge.id)) {
-        throw new Error(`edge already exists: ${operation.edge.id}`);
+      const existing = edgesById.get(operation.edge.id);
+      if (existing) {
+        if (!upsert) {
+          throw new Error(`edge already exists: ${operation.edge.id} (rerun with --upsert to update existing edges)`);
+        }
+        Object.assign(existing, mergeWithProvenance(existing, operation.edge));
+        assertEdgeNodesExist(existing, nodesById);
+        summary.updated_edges.push(operation.edge.id);
+      } else {
+        assertEdgeNodesExist(operation.edge, nodesById);
+        graph.edges.push(operation.edge);
+        edgesById.set(operation.edge.id, operation.edge);
+        summary.added_edges.push(operation.edge.id);
       }
-      assertEdgeNodesExist(operation.edge, nodesById);
-      graph.edges.push(operation.edge);
-      edgesById.set(operation.edge.id, operation.edge);
-      summary.added_edges.push(operation.edge.id);
     }
 
     if (operation.op === "update_edge") {
@@ -72,6 +88,21 @@ export function applyGraphPatch(patchPath, graphPath, options = {}) {
   return summary;
 }
 
+function mergeWithProvenance(existing, incoming) {
+  return {
+    ...incoming,
+    source_refs: mergeSourceRefs(existing.source_refs ?? [], incoming.source_refs ?? [])
+  };
+}
+
+function mergeSourceRefs(existingRefs, incomingRefs) {
+  const refsByKey = new Map();
+  for (const ref of [...existingRefs, ...incomingRefs]) {
+    refsByKey.set(JSON.stringify(ref), ref);
+  }
+  return [...refsByKey.values()];
+}
+
 function assertEdgeNodesExist(edge, nodesById) {
   if (!nodesById.has(edge.from)) {
     throw new Error(`edge references missing from node: ${edge.from}`);
@@ -87,8 +118,10 @@ export function formatSummary(summary, { dryRun = false } = {}) {
   const prefix = dryRun ? "Will" : "Did";
   lines.push(formatList(`${prefix} add nodes`, summary.added_nodes));
   lines.push(formatList(`${prefix} update nodes`, summary.updated_nodes));
+  lines.push(formatList(`${prefix} skip nodes`, summary.skipped_nodes ?? []));
   lines.push(formatList(`${prefix} add edges`, summary.added_edges));
   lines.push(formatList(`${prefix} update edges`, summary.updated_edges));
+  lines.push(formatList(`${prefix} skip edges`, summary.skipped_edges ?? []));
   if (dryRun) lines.push("No file written.");
   return lines.filter(Boolean).join("\n");
 }
@@ -102,14 +135,18 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   const patchPath = process.argv[2] ?? "examples/sample-graph-patch.json";
   const graphPath = process.argv[3] ?? "graph/graph.json";
   const dryRun = process.argv.includes("--dry-run");
-  const summary = applyGraphPatch(patchPath, graphPath, { dryRun });
+  const upsert = process.argv.includes("--upsert");
+  const summary = applyGraphPatch(patchPath, graphPath, { dryRun, upsert });
 
   console.log(`${dryRun ? "dry-run" : "applied"} graph patch: ${patchPath}`);
   console.log(formatSummary(summary, { dryRun }));
   console.log(JSON.stringify({
     added_nodes: summary.added_nodes.length,
     updated_nodes: summary.updated_nodes.length,
+    skipped_nodes: (summary.skipped_nodes ?? []).length,
     added_edges: summary.added_edges.length,
-    updated_edges: summary.updated_edges.length
+    updated_edges: summary.updated_edges.length,
+    skipped_edges: (summary.skipped_edges ?? []).length,
+    mode: upsert ? "upsert" : "strict"
   }, null, 2));
 }

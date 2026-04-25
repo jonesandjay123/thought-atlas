@@ -131,3 +131,33 @@ npm run build
 - 該 source 對應的 manifest / digest / patch / report / source file
 
 這個工具是測試輔助，不應用來刪除正式重要資料，除非 Jones 明確要求。
+
+## Duplicate and upsert checks
+
+Before ingesting a Slack file, Jarvis can check whether the same source already exists:
+
+```bash
+node scripts/source-status.mjs --file /path/to/inbound.md
+node scripts/source-status.mjs --source-id some-source
+node scripts/source-status.mjs --hash sha256:<hash>
+```
+
+If a source with the same hash already exists, Jarvis should not blindly create duplicate graph nodes. The safe choices are:
+
+1. report that the source already exists and ask Jones whether to reset or upsert;
+2. run `source:reset` if this is a regression test;
+3. run patch apply with `--upsert` only when the intended behavior is to refresh existing nodes/edges.
+
+Strict apply remains the default:
+
+```bash
+node scripts/apply-graph-patch.mjs graph_patches/some-source.patch.json graph/graph.json
+```
+
+Upsert mode must be explicit:
+
+```bash
+node scripts/apply-graph-patch.mjs graph_patches/some-source.patch.json graph/graph.json --upsert
+```
+
+`--upsert` updates existing nodes/edges with incoming data and merges provenance (`source_refs`). It is useful for re-running the same source after digest logic improves, but should still be reported clearly to Jones.
