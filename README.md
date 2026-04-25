@@ -2,11 +2,15 @@
 
 Thought Atlas Core 是 Jarvis-native、local-first 的 ingestion / data engine。它的責任不是提供 hosted UI，也不是做圖形化展示，而是把本機來源穩定地轉成可驗證、可版本控制、可由 Jarvis 操作的思想資料。
 
+> 新 session 接手請先讀：`docs/handoff.md`。它記錄目前 backend / Firestore sync / seed data / 下一步 UI 對接狀態。
+
 核心里程碑：
 
 ```text
-source.md + source_manifest.json + digest.json + graph_patch.json -> local graph JSON
+source.md + source_manifest.json + digest.json + graph_patch.json -> local graph JSON -> Firestore mirror
 ```
+
+目前 v0 backend 已完成三篇 seed source ingestion，並已 full sync 到 Firebase project `thought-atlas`。Firestore 是 downstream mirror；本 repo 的 local files 仍是目前 source of truth。
 
 目前根目錄只保留資料結構、範例、文件與本地腳本。舊的 React / Vite UI prototype 已移到 `prototypes/web-shell/`，它只作為互動概念參考，不是 production app path，也不是此 repo 的主要責任。
 
@@ -20,7 +24,7 @@ source.md + source_manifest.json + digest.json + graph_patch.json -> local graph
 - `graph_patches/`：由 digest 產生的 graph patch JSON
 - `graph/`：本地 graph JSON 狀態
 - `reports/`：由 graph / digest 派生的本地報告
-- `docs/`：產品、架構、資料模型、Jarvis workflow、UI 邊界、ObserverJ 整合與 Jarvis output contract
+- `docs/`：handoff、產品、架構、資料模型、Jarvis workflow、UI 邊界、Firebase/Firestore、ObserverJ 整合與 Jarvis output contract
 - `scripts/`：本地 validation、hash 與 patch apply 腳本
 - `prototypes/web-shell/`：封存的 React / Vite UI shell prototype
 
@@ -69,10 +73,40 @@ Jones 未來多半會透過 Slack 貼文件或上傳 `.md`。Jarvis 不應把所
 
 完整規則見 `docs/jarvis-output-contract.md`。
 
+## Firestore sync
+
+Firebase project:
+
+```text
+project_id: thought-atlas
+firestore: Production, nam7
+hosting: enabled
+```
+
+Dry-run:
+
+```bash
+node scripts/sync-firestore.mjs --project-id thought-atlas --dry-run
+```
+
+Full sync（必須明確確認後才執行）：
+
+```bash
+node scripts/sync-firestore.mjs --project-id thought-atlas --write
+```
+
+Service account key 使用 repo-local secret：
+
+```text
+.secrets/service-account.json
+```
+
+`.secrets/` 已 gitignored；不要印出、貼出或 commit credential。
+
 ## 明確不做
 
-- 不接 Firebase Hosting
-- 不加入 graph visualization libraries
-- 不加入 LLM API integration
+- 不在此 repo 做 Firebase Hosting UI
+- 不加入 graph visualization libraries 到 core
+- 不加入 LLM API integration 到 core
 - 不繼續改善 UI
 - 不把 hosted web app 當成 production responsibility
