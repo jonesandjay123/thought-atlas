@@ -4,10 +4,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { buildFirestorePayload } from "./export-firestore-payload.mjs";
 
-const DEFAULT_SERVICE_ACCOUNT_PATHS = [
-  ".secrets/service-account.json",
-  "~/.config/thought-atlas/service-account.json"
-];
+const DEFAULT_SERVICE_ACCOUNT_PATH = ".secrets/service-account.json";
 
 export async function syncFirestore(options = {}) {
   const dryRun = options.write ? false : true;
@@ -112,13 +109,8 @@ function resolveCredentialPath(explicitPath) {
     return { path: resolved, exists: fs.existsSync(resolved), source: "explicit" };
   }
 
-  for (const candidate of DEFAULT_SERVICE_ACCOUNT_PATHS) {
-    const resolved = expandHome(candidate);
-    if (fs.existsSync(resolved)) return { path: resolved, exists: true, source: candidate };
-  }
-
-  const fallback = expandHome(DEFAULT_SERVICE_ACCOUNT_PATHS[0]);
-  return { path: fallback, exists: false, source: DEFAULT_SERVICE_ACCOUNT_PATHS[0] };
+  const resolved = expandHome(DEFAULT_SERVICE_ACCOUNT_PATH);
+  return { path: resolved, exists: fs.existsSync(resolved), source: DEFAULT_SERVICE_ACCOUNT_PATH };
 }
 
 function expandHome(filePath) {

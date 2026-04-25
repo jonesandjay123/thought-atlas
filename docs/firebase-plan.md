@@ -113,21 +113,17 @@ node scripts/sync-firestore.mjs \
   --dry-run
 ```
 
-Service account lookup order:
-
-```text
-1. .secrets/service-account.json
-2. ~/.config/thought-atlas/service-account.json
-3. explicit --service-account <path> override
-```
-
-For this personal local-first project, the preferred path is:
+Service account default path:
 
 ```text
 .secrets/service-account.json
 ```
 
+For this personal local-first project, keep the service account key inside the repo-local `.secrets/` directory for easier maintenance.
+
 The `.secrets/` directory is local-only and must never be committed.
+
+Do not use `~/.config/thought-atlas/service-account.json` as a fallback; Jones prefers avoiding extra hidden config locations for this project.
 
 Safety rules:
 
