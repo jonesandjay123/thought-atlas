@@ -20,6 +20,22 @@ thought-atlas-ui  = hosted private UI shell
 Firebase project  = Firestore / Hosting / Auth / Storage / IAM container
 ```
 
+
+## Actual Firebase setup
+
+Jones confirmed the current Firebase setup:
+
+```text
+Firebase project ID: thought-atlas
+Firestore mode: Production
+Firestore location: nam7
+Hosting: enabled
+Owner: jonesandjay123@gmail.com
+Operator accounts: raijax.ai@gmail.com, jarvis.mac.ai@gmail.com
+```
+
+No real Firebase writes should happen until the write step is explicitly implemented and approved.
+
 ## Account strategy
 
 Recommended ownership and operation model:
@@ -27,16 +43,18 @@ Recommended ownership and operation model:
 ```text
 Project owner: jonesandjay123@gmail.com
 Mac mini Firebase CLI operator: raijax.ai@gmail.com
+Additional operator account: jarvis.mac.ai@gmail.com
 Future Jarvis sync identity: dedicated service account
-jarvis.mac.ai@gmail.com: optional Viewer/operator, never sole owner
+jarvis.mac.ai@gmail.com: operator account, never sole owner
 ```
 
 Rationale:
 
 - Thought Atlas is Jones's personal thought system, so Jones's private account should own the Firebase project and billing relationship.
-- `raijax.ai@gmail.com` can remain the Mac mini Firebase CLI/operator account if useful.
+- `raijax.ai@gmail.com` is added as an operator account and can remain the Mac mini Firebase CLI/operator account if useful.
+- `jarvis.mac.ai@gmail.com` is also added as an operator account, but should not be the sole owner.
 - Jarvis should eventually write Firestore through a dedicated service account, not through a human login token.
-- `jarvis.mac.ai@gmail.com` should not be the only owner because project ownership, billing, and recovery should remain under Jones's control.
+- Project ownership, billing, and recovery should remain under Jones's control.
 
 ## Current boundary
 

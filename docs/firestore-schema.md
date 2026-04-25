@@ -8,6 +8,8 @@ Firebase project:
 project_id: thought-atlas
 firestore: Production mode, nam7
 hosting: enabled
+owner: jonesandjay123@gmail.com
+operators: raijax.ai@gmail.com, jarvis.mac.ai@gmail.com
 ```
 
 ## Design goals
