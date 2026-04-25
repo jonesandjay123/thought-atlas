@@ -3,7 +3,7 @@ import { readJson, validateDigest, validateGraphPatch, validateSourceManifest } 
 import { applyGraphPatch, formatSummary } from "./apply-graph-patch.mjs";
 import { runQualityGate } from "./quality-gate.mjs";
 
-export function runIngestChecklist({ manifestPath, digestPath, patchPath, graphPath = "graph/graph.json", skipQualityGate = false }) {
+export function runIngestChecklist({ manifestPath, digestPath, patchPath, graphPath = "graph/graph.json", skipQualityGate = false, upsert = false }) {
   const manifest = readJson(manifestPath);
   const digest = readJson(digestPath);
   const patch = readJson(patchPath);
@@ -26,7 +26,7 @@ export function runIngestChecklist({ manifestPath, digestPath, patchPath, graphP
     throw new Error(`quality gate failed: ${details}`);
   }
 
-  const summary = applyGraphPatch(patchPath, graphPath, { dryRun: true });
+  const summary = applyGraphPatch(patchPath, graphPath, { dryRun: true, upsert });
 
   return { manifest, digest, patch, summary, quality };
 }
@@ -41,6 +41,7 @@ function parseArgs(argv) {
     else if (arg === "--patch") options.patchPath = next();
     else if (arg === "--graph") options.graphPath = next();
     else if (arg === "--skip-quality-gate") options.skipQualityGate = true;
+    else if (arg === "--upsert") options.upsert = true;
     else throw new Error(`unknown argument: ${arg}`);
   }
   return options;
@@ -61,7 +62,8 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     patch_id: result.patch.patch_id,
     digest_items: result.digest.items.length,
     operations: result.patch.operations.length,
-    quality_issues: result.quality.issues.length
+    quality_issues: result.quality.issues.length,
+    mode: options.upsert ? "upsert" : "strict"
   }, null, 2));
   if (result.quality.issues.length) {
     console.log("Quality gate warnings:");

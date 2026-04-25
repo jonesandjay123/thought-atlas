@@ -236,3 +236,27 @@ For rare debugging only:
 ```bash
 node scripts/ingest-checklist.mjs ... --skip-quality-gate
 ```
+
+## Finalize ingest
+
+After manifest, digest, and graph patch are ready, use one wrapper instead of hand-running every step:
+
+```bash
+node scripts/finalize-ingest.mjs --source-id some-source
+```
+
+If the source was already applied and the intent is to refresh existing graph objects, make that explicit:
+
+```bash
+node scripts/finalize-ingest.mjs --source-id some-source --upsert
+```
+
+The wrapper validates manifest/digest/patch, runs the quality gate, dry-runs the graph patch, applies it with registry recording, regenerates the ingest report from actual state, and prints a bundle summary.
+
+## Generated reports
+
+Do not hand-edit ingest report counts. Regenerate reports from repo state:
+
+```bash
+node scripts/generate-ingest-report.mjs --source-id some-source
+```
