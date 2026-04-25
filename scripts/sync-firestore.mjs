@@ -4,13 +4,17 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { buildFirestorePayload } from "./export-firestore-payload.mjs";
 
-const DEFAULT_SERVICE_ACCOUNT_PATH = "~/.config/thought-atlas/service-account.json";
+const DEFAULT_SERVICE_ACCOUNT_PATHS = [
+  ".secrets/service-account.json",
+  "~/.config/thought-atlas/service-account.json"
+];
 
 export async function syncFirestore(options = {}) {
   const dryRun = options.write ? false : true;
   const projectId = options.projectId ?? "thought-atlas";
-  const credentialPath = expandHome(options.credentialPath ?? DEFAULT_SERVICE_ACCOUNT_PATH);
-  const credentialExists = fs.existsSync(credentialPath);
+  const credential = resolveCredentialPath(options.credentialPath);
+  const credentialPath = credential.path;
+  const credentialExists = credential.exists;
   const payload = buildFirestorePayload({
     projectId,
     registryPath: options.registryPath,
@@ -35,6 +39,7 @@ export async function syncFirestore(options = {}) {
     dry_run: dryRun,
     write_enabled: !dryRun,
     credential_path: credentialPath,
+    credential_source: credential.source,
     credential_exists: credentialExists,
     admin_initialized: adminInitialized,
     selected_collections: options.collections ?? null,
@@ -101,6 +106,21 @@ function chunk(items, size) {
   return chunks;
 }
 
+function resolveCredentialPath(explicitPath) {
+  if (explicitPath) {
+    const resolved = expandHome(explicitPath);
+    return { path: resolved, exists: fs.existsSync(resolved), source: "explicit" };
+  }
+
+  for (const candidate of DEFAULT_SERVICE_ACCOUNT_PATHS) {
+    const resolved = expandHome(candidate);
+    if (fs.existsSync(resolved)) return { path: resolved, exists: true, source: candidate };
+  }
+
+  const fallback = expandHome(DEFAULT_SERVICE_ACCOUNT_PATHS[0]);
+  return { path: fallback, exists: false, source: DEFAULT_SERVICE_ACCOUNT_PATHS[0] };
+}
+
 function expandHome(filePath) {
   if (filePath === "~") return os.homedir();
   if (filePath.startsWith("~/")) return path.join(os.homedir(), filePath.slice(2));
@@ -148,7 +168,7 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     printSummary(result);
   } catch (error) {
     console.error(error.message);
-    console.error("usage: node scripts/sync-firestore.mjs [--dry-run] [--write] [--project-id thought-atlas] [--service-account ~/.config/thought-atlas/service-account.json] [--limit N] [--collections a,b]");
+    console.error("usage: node scripts/sync-firestore.mjs [--dry-run] [--write] [--project-id thought-atlas] [--service-account path] [--limit N] [--collections a,b]");
     process.exit(1);
   }
 }
