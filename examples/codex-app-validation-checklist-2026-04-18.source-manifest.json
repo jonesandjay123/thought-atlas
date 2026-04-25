@@ -1,0 +1,22 @@
+{
+  "source_id": "codex-app-validation-checklist-2026-04-18",
+  "title": "Codex App 實測驗收清單",
+  "source_type": "slack_file",
+  "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+  "captured_at": "2026-04-25T19:42:42.704Z",
+  "content_hash": "sha256:8eb0c21927acc78ecb452c3d09c99d7c041a38bb814424a7cc65cb271395cf46",
+  "language": "zh-Hant",
+  "tags": [
+    "validation",
+    "codex",
+    "openclaw",
+    "agent-architecture",
+    "checklist"
+  ],
+  "status": "inbox",
+  "origin": {
+    "channel": "slack",
+    "sender": "Jones",
+    "message_id": "1777146138.135509"
+  }
+}

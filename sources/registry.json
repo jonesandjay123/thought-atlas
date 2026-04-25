@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_at": "2026-04-25T19:31:17.310Z",
+  "updated_at": "2026-04-25T19:44:09.365Z",
   "sources": [
     {
       "source_id": "original-conversation-2026-04-11",
@@ -46,6 +46,29 @@
       },
       "first_seen_at": "2026-04-25T19:29:04.118Z",
       "last_seen_at": "2026-04-25T19:31:17.310Z"
+    },
+    {
+      "source_id": "codex-app-validation-checklist-2026-04-18",
+      "title": "Codex App 實測驗收清單",
+      "source_type": "slack_file",
+      "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+      "manifest_path": "examples/codex-app-validation-checklist-2026-04-18.source-manifest.json",
+      "content_hash": "sha256:8eb0c21927acc78ecb452c3d09c99d7c041a38bb814424a7cc65cb271395cf46",
+      "status": "processed",
+      "tags": [
+        "validation",
+        "codex",
+        "openclaw",
+        "agent-architecture",
+        "checklist"
+      ],
+      "origin": {
+        "channel": "slack",
+        "sender": "Jones",
+        "message_id": "1777146138.135509"
+      },
+      "first_seen_at": "2026-04-25T19:42:42.705Z",
+      "last_seen_at": "2026-04-25T19:44:09.365Z"
     }
   ],
   "runs": [
@@ -172,6 +195,52 @@
         "updated_edges": 15
       },
       "at": "2026-04-25T19:31:17.309Z"
+    },
+    {
+      "run_id": "source_manifest_created-1777146162705-9",
+      "type": "source_manifest_created",
+      "source_id": "codex-app-validation-checklist-2026-04-18",
+      "content_hash": "sha256:8eb0c21927acc78ecb452c3d09c99d7c041a38bb814424a7cc65cb271395cf46",
+      "manifest_path": "examples/codex-app-validation-checklist-2026-04-18.source-manifest.json",
+      "source_path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+      "origin": {
+        "channel": "slack",
+        "sender": "Jones",
+        "message_id": "1777146138.135509"
+      },
+      "at": "2026-04-25T19:42:42.705Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1777146239730-10",
+      "type": "graph_patch_applied",
+      "source_id": "codex-app-validation-checklist-2026-04-18",
+      "digest_id": "codex-app-validation-checklist-2026-04-18.digest",
+      "patch_id": "codex-app-validation-checklist-2026-04-18.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 10,
+        "updated_nodes": 0,
+        "added_edges": 11,
+        "updated_edges": 0
+      },
+      "at": "2026-04-25T19:43:59.729Z"
+    },
+    {
+      "run_id": "graph_patch_upserted-1777146249365-11",
+      "type": "graph_patch_upserted",
+      "source_id": "codex-app-validation-checklist-2026-04-18",
+      "digest_id": "codex-app-validation-checklist-2026-04-18.digest",
+      "patch_id": "codex-app-validation-checklist-2026-04-18.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 0,
+        "updated_nodes": 10,
+        "added_edges": 0,
+        "updated_edges": 11
+      },
+      "at": "2026-04-25T19:44:09.364Z"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_at": "2026-04-25T19:35:00.000Z",
+  "updated_at": "2026-04-25T19:48:00.000Z",
   "nodes": [
     {
       "id": "labor-devotion-question",
@@ -652,6 +652,240 @@
         "monetization",
         "phases"
       ]
+    },
+    {
+      "id": "validation-real-workflow-principle",
+      "kind": "decision",
+      "title": "Codex 驗收要以 Jones 真實日常工作流為準",
+      "body": "驗收原則不是問 Codex app 看起來強不強，而是問它能不能取代 Jones 每天真正在做的事。評估要看哪些地方 Codex 明顯更強、哪些地方 OpenClaw 仍不可替代，以及是否適合形成雙層架構。",
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 1,
+          "end_line": 23,
+          "quote": "不要問「看起來強不強」，要問「能不能取代我每天真正在做的事」。"
+        }
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "validation",
+        "codex",
+        "workflow",
+        "openclaw"
+      ]
+    },
+    {
+      "id": "codex-three-core-questions",
+      "kind": "pattern",
+      "title": "Codex 總體驗收聚焦 execution engine、Slack-first、continuity 三題",
+      "body": "文件將 Codex app 的總體驗收濃縮成三題：能不能成為 Mac mini 上更強的本機 execution engine；能不能保留或重建 Slack-first remote workflow；continuity / memory 體感是否足以讓 Jones 願意遷移 Jarvis 核心日常。",
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 27,
+          "end_line": 37,
+          "quote": "Codex 適合當底層 worker，不適合單獨當整套 Jarvis 替代品。"
+        }
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "codex",
+        "execution-engine",
+        "slack-first",
+        "continuity"
+      ]
+    },
+    {
+      "id": "codex-install-and-project-onboarding-test",
+      "kind": "action",
+      "title": "Codex 第一層測試是安裝成本與 repo 接入能力",
+      "body": "驗收清單要求先測 Mac mini 安裝、權限、常駐可接受度，再測把低風險 repo 接進 Codex app 的順暢度、Git 狀態理解、diff 可視性與信任感。",
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 41,
+          "end_line": 89,
+          "quote": "不要一開始就拿 production 高風險 repo 開刀"
+        }
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "codex",
+        "installation",
+        "repo-onboarding",
+        "safety"
+      ]
+    },
+    {
+      "id": "codex-coding-git-evaluation-loop",
+      "kind": "pattern",
+      "title": "Codex coding 驗收要測小功能、debug 收斂與 Git 工作流",
+      "body": "核心 coding 能力驗收包含三類：小功能開發是否能理解需求、集中修改、跑驗證並產生乾淨 patch；多步 bug 是否能讀錯誤、找 root cause、在 2 到 5 回合內收斂；Git / commit / push / PR 流程是否清楚可信。",
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 93,
+          "end_line": 125,
+          "quote": "這件事相比 OpenClaw 目前的工作方式，是真的更快、更穩、更舒服嗎？"
+        },
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 129,
+          "end_line": 155,
+          "quote": "給它一個需要：讀錯誤、找 root cause、改 code、再重跑的問題。"
+        },
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 159,
+          "end_line": 180,
+          "quote": "它做完後，能不能很好地整理成可 review 成果"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "coding",
+        "git",
+        "debug",
+        "validation"
+      ]
+    },
+    {
+      "id": "codex-browser-gui-closed-loop-test",
+      "kind": "pattern",
+      "title": "Codex GUI/browser 驗收重點是看見問題、修 code、再驗證的閉環",
+      "body": "Browser 與本機 GUI 測試不是看 demo，而是看 Codex 是否能穩定理解畫面、避免誤操作、處理多視窗/彈窗，並形成從視覺發現問題到修 code 再驗證的閉環。高風險帳號安全、金流與敏感登入不應作為第一輪測試。",
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 184,
+          "end_line": 239,
+          "quote": "從「看到問題」到「修 code 再驗證」是否形成閉環"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "browser",
+        "gui",
+        "computer-use",
+        "closed-loop"
+      ]
+    },
+    {
+      "id": "codex-continuity-memory-validation",
+      "kind": "pattern",
+      "title": "Codex 長任務與 memory 驗收要看是否真的改變 continuity 體感",
+      "body": "長任務驗收要測 thread automations 是否醒來後仍知道自己在做什麼、能否形成穩定 follow-up loop；memory 驗收要隔一段時間開新 thread 測偏好、repo 慣例與工作模式是否主動帶入。重點是記憶是否真的改變工作體感，而不是偶爾加分。",
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 243,
+          "end_line": 298,
+          "quote": "這種記憶是「偶爾加分」還是「真的改變工作體感」？"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "continuity",
+        "memory",
+        "long-tasks",
+        "automation"
+      ]
+    },
+    {
+      "id": "slack-first-is-critical-gate",
+      "kind": "decision",
+      "title": "Slack-first 遠端入口是 Codex 是否能取代 Jarvis 的關鍵門檻",
+      "body": "文件明確把 Slack-first 工作流列為最重要驗收項目：不是測 Codex 有沒有 Slack plugin，而是 Jones 能不能像現在一樣用手機 Slack 發起任務、追狀態、收到結果，而不是退回必須打開 Codex app。若 Slack 只能是資料源或 summary/draft 工具，就還沒有接手主工作流。",
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 302,
+          "end_line": 362,
+          "quote": "Jones 能不能像現在一樣，把 Slack 當第一入口，而不是退回『我得先打開 Codex app』。"
+        }
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "slack-first",
+        "remote-workflow",
+        "jarvis",
+        "codex"
+      ]
+    },
+    {
+      "id": "codex-positioning-framework-abc",
+      "kind": "pattern",
+      "title": "Codex 最終定位分成 OpenClaw 替代品、execution engine 補強者、暫非 daily driver 三類",
+      "body": "驗收後應把 Codex 定位成三類之一：A 類是 OpenClaw 替代品，需要 Slack-first、continuity 與 coding/browser/GUI 都足以遷移；B 類是 OpenClaw execution engine 補強者，底層能力強但入口與 continuity 不足；C 類是值得玩但暫時不是 daily driver。",
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 366,
+          "end_line": 387,
+          "quote": "OpenClaw 在外層，Codex 在內層"
+        }
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "positioning",
+        "openclaw",
+        "codex",
+        "architecture"
+      ]
+    },
+    {
+      "id": "codex-predicted-type-b-worker",
+      "kind": "claim",
+      "title": "Codex 預測最可能成為 Jarvis 背後的強 worker 而非入口人格",
+      "body": "文件預測 Codex 最可能落在類型 B：coding、GUI、browser、automation 能力很強，但 Jones 真正依賴的是 Slack DM 到 Mac mini 上 Jarvis 的整套存在感，因此 Codex 更可能成為 Jarvis 背後最強的新工人，而不是互動入口人格。",
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 391,
+          "end_line": 407,
+          "quote": "Codex 很可能成為 Jarvis 背後最強的新工人，但未必立刻成為你真正互動的那個入口人格。"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "codex",
+        "worker",
+        "jarvis",
+        "architecture"
+      ]
+    },
+    {
+      "id": "codex-first-round-validation-order",
+      "kind": "action",
+      "title": "Codex 第一輪實測應按低風險 repo、功能修改、browser/GUI、長任務、memory、Slack-first 順序跑",
+      "body": "文件建議第一輪不要測所有花哨功能，而是依序跑安裝與權限、低風險 repo 接入、小功能修改、browser / GUI 驗證、長任務 automation、隔 thread 記憶，最後判斷 Slack-first workflow 是否能接上。目標是看最常做的 20% 任務能否吃掉 80% 價值。",
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 411,
+          "end_line": 446,
+          "quote": "先看它能不能在你最常做的 20% 任務裡，吃掉 80% 價值。"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "validation-plan",
+        "codex",
+        "low-risk",
+        "workflow"
+      ]
     }
   ],
   "edges": [
@@ -1102,6 +1336,208 @@
         }
       ],
       "rationale": "Starting with private play and only later sharing workflows/templates preserves productization as overflow rather than market-first pressure."
+    },
+    {
+      "id": "edge-real-workflow-to-codex-core-questions",
+      "from": "validation-real-workflow-principle",
+      "to": "codex-three-core-questions",
+      "relation": "supports",
+      "weight": 0.92,
+      "confidence": 0.95,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 6,
+          "end_line": 37
+        }
+      ],
+      "rationale": "The core questions are explicitly derived from whether Codex can replace Jones's real daily workflow."
+    },
+    {
+      "id": "edge-codex-core-questions-to-install-onboarding",
+      "from": "codex-three-core-questions",
+      "to": "codex-install-and-project-onboarding-test",
+      "relation": "extends",
+      "weight": 0.76,
+      "confidence": 0.86,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 41,
+          "end_line": 89
+        }
+      ],
+      "rationale": "Basic usability and repo onboarding operationalize the execution-engine part of the core questions."
+    },
+    {
+      "id": "edge-codex-core-questions-to-coding-git-loop",
+      "from": "codex-three-core-questions",
+      "to": "codex-coding-git-evaluation-loop",
+      "relation": "extends",
+      "weight": 0.86,
+      "confidence": 0.9,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 93,
+          "end_line": 125,
+          "quote": "這件事相比 OpenClaw 目前的工作方式，是真的更快、更穩、更舒服嗎？"
+        },
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 129,
+          "end_line": 155,
+          "quote": "給它一個需要：讀錯誤、找 root cause、改 code、再重跑的問題。"
+        },
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 159,
+          "end_line": 180,
+          "quote": "它做完後，能不能很好地整理成可 review 成果"
+        }
+      ],
+      "rationale": "If Codex cannot do small features, debugging, and Git flow well, it cannot be the stronger local execution engine."
+    },
+    {
+      "id": "edge-codex-core-questions-to-browser-gui-loop",
+      "from": "codex-three-core-questions",
+      "to": "codex-browser-gui-closed-loop-test",
+      "relation": "extends",
+      "weight": 0.82,
+      "confidence": 0.88,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 184,
+          "end_line": 239
+        }
+      ],
+      "rationale": "GUI/browser ability determines whether Codex extends beyond code editing into local app/browser execution."
+    },
+    {
+      "id": "edge-codex-core-questions-to-continuity-memory",
+      "from": "codex-three-core-questions",
+      "to": "codex-continuity-memory-validation",
+      "relation": "extends",
+      "weight": 0.9,
+      "confidence": 0.94,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 243,
+          "end_line": 298
+        }
+      ],
+      "rationale": "The checklist treats continuity/memory as necessary for Jones to move Jarvis's daily core to Codex."
+    },
+    {
+      "id": "edge-codex-core-questions-to-slack-first-gate",
+      "from": "codex-three-core-questions",
+      "to": "slack-first-is-critical-gate",
+      "relation": "extends",
+      "weight": 0.94,
+      "confidence": 0.96,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 302,
+          "end_line": 362
+        }
+      ],
+      "rationale": "The source explicitly says Slack-first is the most important part and decides whether Codex can take over the main workflow."
+    },
+    {
+      "id": "edge-codex-core-questions-to-positioning-framework",
+      "from": "codex-three-core-questions",
+      "to": "codex-positioning-framework-abc",
+      "relation": "extends",
+      "weight": 0.88,
+      "confidence": 0.92,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 366,
+          "end_line": 387
+        }
+      ],
+      "rationale": "The three positioning types are the final synthesis of the checklist's core dimensions."
+    },
+    {
+      "id": "edge-positioning-framework-to-predicted-type-b-worker",
+      "from": "codex-positioning-framework-abc",
+      "to": "codex-predicted-type-b-worker",
+      "relation": "supports",
+      "weight": 0.9,
+      "confidence": 0.94,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 391,
+          "end_line": 407
+        }
+      ],
+      "rationale": "The checklist's own forecast maps Codex to type B: execution engine complement rather than total replacement."
+    },
+    {
+      "id": "edge-slack-first-gate-to-predicted-type-b-worker",
+      "from": "slack-first-is-critical-gate",
+      "to": "codex-predicted-type-b-worker",
+      "relation": "supports",
+      "weight": 0.92,
+      "confidence": 0.95,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 391,
+          "end_line": 407
+        }
+      ],
+      "rationale": "Codex may be strong locally, but if it cannot replace Slack DM to Jarvis, it remains an inner worker."
+    },
+    {
+      "id": "edge-codex-worker-to-ai-forge",
+      "from": "codex-predicted-type-b-worker",
+      "to": "ai-forge-not-final-vehicle",
+      "relation": "supports",
+      "weight": 0.82,
+      "confidence": 0.88,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 391,
+          "end_line": 407
+        }
+      ],
+      "rationale": "Codex is framed as a powerful worker/forge inside Jarvis's architecture rather than the final interactive identity."
+    },
+    {
+      "id": "edge-positioning-framework-to-first-round-validation-order",
+      "from": "codex-positioning-framework-abc",
+      "to": "codex-first-round-validation-order",
+      "relation": "extends",
+      "weight": 0.82,
+      "confidence": 0.88,
+      "source_refs": [
+        {
+          "source_id": "codex-app-validation-checklist-2026-04-18",
+          "path": "sources/inbox/codex-app-validation-checklist-2026-04-18.md",
+          "start_line": 411,
+          "end_line": 446
+        }
+      ],
+      "rationale": "The source turns the positioning logic into a prioritized sequence of practical tests."
     }
   ]
 }
