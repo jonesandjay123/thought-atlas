@@ -210,3 +210,29 @@ node scripts/create-graph-patch-template.mjs \
 ```
 
 These templates are intentionally conservative and contain TODO text. Jarvis must replace TODO content with real extracted ideas before applying a graph patch.
+
+## Quality gate
+
+Before dry-run/apply, Jarvis should run the quality gate:
+
+```bash
+node scripts/quality-gate.mjs \
+  --digest digests/some-source.digest.json \
+  --patch graph_patches/some-source.patch.json
+```
+
+The gate checks for:
+
+- TODO / TBD / placeholder text
+- missing provenance
+- low confidence values
+- empty tags
+- source refs with very broad line spans
+
+`ingest-checklist` runs this gate by default and blocks on hard errors. Warnings are shown but do not block; Jarvis should still report them to Jones when relevant.
+
+For rare debugging only:
+
+```bash
+node scripts/ingest-checklist.mjs ... --skip-quality-gate
+```

@@ -1,8 +1,9 @@
 import { pathToFileURL } from "node:url";
 import { readJson, validateDigest, validateGraphPatch, validateSourceManifest } from "./validators.mjs";
 import { applyGraphPatch, formatSummary } from "./apply-graph-patch.mjs";
+import { runQualityGate } from "./quality-gate.mjs";
 
-export function runIngestChecklist({ manifestPath, digestPath, patchPath, graphPath = "graph/graph.json" }) {
+export function runIngestChecklist({ manifestPath, digestPath, patchPath, graphPath = "graph/graph.json", skipQualityGate = false }) {
   const manifest = readJson(manifestPath);
   const digest = readJson(digestPath);
   const patch = readJson(patchPath);
@@ -18,9 +19,16 @@ export function runIngestChecklist({ manifestPath, digestPath, patchPath, graphP
     throw new Error(`patch.digest_id (${patch.digest_id}) does not match digest.digest_id (${digest.digest_id})`);
   }
 
+  const quality = skipQualityGate ? { ok: true, issues: [] } : runQualityGate({ digestPath, patchPath });
+  const blockingIssues = quality.issues.filter((issue) => issue.severity === "error");
+  if (blockingIssues.length) {
+    const details = blockingIssues.map((issue) => `${issue.label}: ${issue.message}`).join("; ");
+    throw new Error(`quality gate failed: ${details}`);
+  }
+
   const summary = applyGraphPatch(patchPath, graphPath, { dryRun: true });
 
-  return { manifest, digest, patch, summary };
+  return { manifest, digest, patch, summary, quality };
 }
 
 function parseArgs(argv) {
@@ -32,6 +40,7 @@ function parseArgs(argv) {
     else if (arg === "--digest") options.digestPath = next();
     else if (arg === "--patch") options.patchPath = next();
     else if (arg === "--graph") options.graphPath = next();
+    else if (arg === "--skip-quality-gate") options.skipQualityGate = true;
     else throw new Error(`unknown argument: ${arg}`);
   }
   return options;
@@ -51,7 +60,12 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     digest_id: result.digest.digest_id,
     patch_id: result.patch.patch_id,
     digest_items: result.digest.items.length,
-    operations: result.patch.operations.length
+    operations: result.patch.operations.length,
+    quality_issues: result.quality.issues.length
   }, null, 2));
+  if (result.quality.issues.length) {
+    console.log("Quality gate warnings:");
+    for (const issue of result.quality.issues) console.log(`- [${issue.severity}] ${issue.label}: ${issue.message}`);
+  }
   console.log(formatSummary(result.summary, { dryRun: true }));
 }

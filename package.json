@@ -10,6 +10,7 @@
     "validate:source": "node scripts/validate-source-manifest.mjs",
     "validate:digest": "node scripts/validate-digest.mjs",
     "validate:patch": "node scripts/validate-graph-patch.mjs",
+    "quality:gate": "node scripts/quality-gate.mjs",
     "hash:source": "node scripts/hash-source.mjs",
     "source:create": "node scripts/create-source-manifest.mjs",
     "source:status": "node scripts/source-status.mjs",
