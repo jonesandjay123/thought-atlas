@@ -131,6 +131,7 @@ Safety rules:
 - Never print or paste credential contents.
 - Real writes require explicit `--write`.
 - Use `--limit N` for first small-batch writes.
+- Use `--limit-per-collection N` to sample evenly across selected collections.
 - Use `--collections thoughtSources,thoughtNodes` to restrict which collections are selected.
 
 First real write, after human confirmation, should be small and explicit, for example:
@@ -142,4 +143,14 @@ node scripts/sync-firestore.mjs \
   --limit 5
 ```
 
-Do not run a full write until the limited write is confirmed in Firebase Console.
+For validating multiple collections without full sync, prefer:
+
+```bash
+node scripts/sync-firestore.mjs \
+  --project-id thought-atlas \
+  --write \
+  --collections thoughtNodes,thoughtEdges,thoughtReports,thoughtRegistryRuns \
+  --limit-per-collection 3
+```
+
+Do not run a full write until limited writes are confirmed in Firebase Console.

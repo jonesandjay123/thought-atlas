@@ -41,6 +41,7 @@ export async function syncFirestore(options = {}) {
     admin_initialized: adminInitialized,
     selected_collections: options.collections ?? null,
     limit: options.limit ?? null,
+    limit_per_collection: options.limitPerCollection ?? null,
     total_payload_documents: payload.documents.length,
     selected_documents: selectedDocuments.length,
     selected_counts: countByCollection(selectedDocuments)
@@ -61,6 +62,15 @@ function selectDocuments(documents, options) {
   if (options.collections?.length) {
     const allowed = new Set(options.collections);
     selected = selected.filter((doc) => allowed.has(doc.collection));
+  }
+  if (Number.isInteger(options.limitPerCollection)) {
+    const counts = new Map();
+    selected = selected.filter((doc) => {
+      const count = counts.get(doc.collection) ?? 0;
+      if (count >= options.limitPerCollection) return false;
+      counts.set(doc.collection, count + 1);
+      return true;
+    });
   }
   if (Number.isInteger(options.limit)) selected = selected.slice(0, options.limit);
   return selected;
@@ -129,6 +139,7 @@ function parseArgs(argv) {
     else if (arg === "--project-id") options.projectId = next();
     else if (arg === "--service-account") options.credentialPath = next();
     else if (arg === "--limit") options.limit = Number.parseInt(next(), 10);
+    else if (arg === "--limit-per-collection") options.limitPerCollection = Number.parseInt(next(), 10);
     else if (arg === "--collections") options.collections = next().split(",").map((item) => item.trim()).filter(Boolean);
     else if (arg === "--registry") options.registryPath = next();
     else if (arg === "--graph") options.graphPath = next();
@@ -138,6 +149,9 @@ function parseArgs(argv) {
   }
   if (options.limit !== undefined && (!Number.isInteger(options.limit) || options.limit < 1)) {
     throw new Error("--limit must be a positive integer");
+  }
+  if (options.limitPerCollection !== undefined && (!Number.isInteger(options.limitPerCollection) || options.limitPerCollection < 1)) {
+    throw new Error("--limit-per-collection must be a positive integer");
   }
   return options;
 }
@@ -160,7 +174,7 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     printSummary(result);
   } catch (error) {
     console.error(error.message);
-    console.error("usage: node scripts/sync-firestore.mjs [--dry-run] [--write] [--project-id thought-atlas] [--service-account path] [--limit N] [--collections a,b]");
+    console.error("usage: node scripts/sync-firestore.mjs [--dry-run] [--write] [--project-id thought-atlas] [--service-account path] [--limit N] [--limit-per-collection N] [--collections a,b]");
     process.exit(1);
   }
 }
