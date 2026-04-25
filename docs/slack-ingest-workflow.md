@@ -113,3 +113,21 @@ npm run graph:summary
 node scripts/graph-node.mjs trigger-expand-package-compound
 node scripts/graph-search.mjs 創作
 ```
+
+## Reset a test ingest
+
+如果 Jones 要用同一份 `.md` 反覆測試，可以先清掉某個 source 的 ingest 結果：
+
+```bash
+node scripts/reset-source-ingest.mjs --source-id some-source --dry-run
+node scripts/reset-source-ingest.mjs --source-id some-source
+npm run build
+```
+
+這會移除：
+
+- graph 中所有 `source_refs` 指向該 source 的 nodes
+- 連到那些 nodes 的 edges
+- 該 source 對應的 manifest / digest / patch / report / source file
+
+這個工具是測試輔助，不應用來刪除正式重要資料，除非 Jones 明確要求。

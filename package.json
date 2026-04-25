@@ -12,6 +12,7 @@
     "validate:patch": "node scripts/validate-graph-patch.mjs",
     "hash:source": "node scripts/hash-source.mjs",
     "source:create": "node scripts/create-source-manifest.mjs",
+    "source:reset": "node scripts/reset-source-ingest.mjs",
     "ingest:check": "node scripts/ingest-checklist.mjs",
     "graph:summary": "node scripts/graph-summary.mjs",
     "graph:node": "node scripts/graph-node.mjs",
