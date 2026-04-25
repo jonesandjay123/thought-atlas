@@ -11,6 +11,11 @@
     "validate:digest": "node scripts/validate-digest.mjs",
     "validate:patch": "node scripts/validate-graph-patch.mjs",
     "hash:source": "node scripts/hash-source.mjs",
+    "source:create": "node scripts/create-source-manifest.mjs",
+    "ingest:check": "node scripts/ingest-checklist.mjs",
+    "graph:summary": "node scripts/graph-summary.mjs",
+    "graph:node": "node scripts/graph-node.mjs",
+    "graph:search": "node scripts/graph-search.mjs",
     "sample:apply": "node scripts/apply-graph-patch.mjs examples/sample-graph-patch.json graph/graph.json"
   },
   "dependencies": {},
