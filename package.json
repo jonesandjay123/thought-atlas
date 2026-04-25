@@ -7,8 +7,10 @@
   "scripts": {
     "build": "npm run validate",
     "validate": "node scripts/validate-all.mjs",
+    "validate:source": "node scripts/validate-source-manifest.mjs",
     "validate:digest": "node scripts/validate-digest.mjs",
     "validate:patch": "node scripts/validate-graph-patch.mjs",
+    "hash:source": "node scripts/hash-source.mjs",
     "sample:apply": "node scripts/apply-graph-patch.mjs examples/sample-graph-patch.json graph/graph.json"
   },
   "dependencies": {},

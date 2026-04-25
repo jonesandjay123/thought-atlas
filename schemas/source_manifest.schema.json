@@ -4,16 +4,17 @@
   "title": "Thought Atlas Source Manifest",
   "type": "object",
   "additionalProperties": false,
-  "required": ["source_id", "title", "source_type", "path", "captured_at", "status"],
+  "required": ["source_id", "title", "source_type", "path", "captured_at", "content_hash", "status"],
   "properties": {
     "source_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
     "title": { "type": "string", "minLength": 1 },
     "source_type": {
       "type": "string",
-      "enum": ["markdown", "conversation", "report", "repo_state", "manual"]
+      "enum": ["markdown", "conversation", "report", "repo_state", "manual", "slack_file", "slack_message"]
     },
     "path": { "type": "string", "minLength": 1 },
     "captured_at": { "type": "string", "format": "date-time" },
+    "content_hash": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
     "language": { "type": "string" },
     "tags": {
       "type": "array",
@@ -23,6 +24,16 @@
     "status": {
       "type": "string",
       "enum": ["inbox", "processed", "archived"]
+    },
+    "origin": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "channel": { "type": "string" },
+        "message_id": { "type": "string" },
+        "thread_id": { "type": "string" },
+        "sender": { "type": "string" }
+      }
     },
     "notes": { "type": "string" }
   }

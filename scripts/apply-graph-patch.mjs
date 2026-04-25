@@ -16,7 +16,12 @@ export function applyGraphPatch(patchPath, graphPath, options = {}) {
 
   const nodesById = new Map(graph.nodes.map((node) => [node.id, node]));
   const edgesById = new Map(graph.edges.map((edge) => [edge.id, edge]));
-  const summary = { added_nodes: 0, updated_nodes: 0, added_edges: 0 };
+  const summary = {
+    added_nodes: [],
+    updated_nodes: [],
+    added_edges: [],
+    updated_edges: []
+  };
 
   for (const operation of patch.operations) {
     if (operation.op === "add_node") {
@@ -25,7 +30,7 @@ export function applyGraphPatch(patchPath, graphPath, options = {}) {
       }
       graph.nodes.push(operation.node);
       nodesById.set(operation.node.id, operation.node);
-      summary.added_nodes += 1;
+      summary.added_nodes.push(operation.node.id);
     }
 
     if (operation.op === "update_node") {
@@ -34,22 +39,27 @@ export function applyGraphPatch(patchPath, graphPath, options = {}) {
         throw new Error(`cannot update missing node: ${operation.node_id}`);
       }
       Object.assign(node, operation.fields);
-      summary.updated_nodes += 1;
+      summary.updated_nodes.push(operation.node_id);
     }
 
     if (operation.op === "add_edge") {
       if (edgesById.has(operation.edge.id)) {
         throw new Error(`edge already exists: ${operation.edge.id}`);
       }
-      if (!nodesById.has(operation.edge.from)) {
-        throw new Error(`edge references missing from node: ${operation.edge.from}`);
-      }
-      if (!nodesById.has(operation.edge.to)) {
-        throw new Error(`edge references missing to node: ${operation.edge.to}`);
-      }
+      assertEdgeNodesExist(operation.edge, nodesById);
       graph.edges.push(operation.edge);
       edgesById.set(operation.edge.id, operation.edge);
-      summary.added_edges += 1;
+      summary.added_edges.push(operation.edge.id);
+    }
+
+    if (operation.op === "update_edge") {
+      const edge = edgesById.get(operation.edge_id);
+      if (!edge) {
+        throw new Error(`cannot update missing edge: ${operation.edge_id}`);
+      }
+      Object.assign(edge, operation.fields);
+      assertEdgeNodesExist(edge, nodesById);
+      summary.updated_edges.push(operation.edge_id);
     }
   }
 
@@ -62,13 +72,44 @@ export function applyGraphPatch(patchPath, graphPath, options = {}) {
   return summary;
 }
 
+function assertEdgeNodesExist(edge, nodesById) {
+  if (!nodesById.has(edge.from)) {
+    throw new Error(`edge references missing from node: ${edge.from}`);
+  }
+  if (!nodesById.has(edge.to)) {
+    throw new Error(`edge references missing to node: ${edge.to}`);
+  }
+}
+
+export function formatSummary(summary, { dryRun = false } = {}) {
+  const lines = [];
+  lines.push(dryRun ? "Dry-run graph patch summary (no file written):" : "Applied graph patch summary:");
+  const prefix = dryRun ? "Will" : "Did";
+  lines.push(formatList(`${prefix} add nodes`, summary.added_nodes));
+  lines.push(formatList(`${prefix} update nodes`, summary.updated_nodes));
+  lines.push(formatList(`${prefix} add edges`, summary.added_edges));
+  lines.push(formatList(`${prefix} update edges`, summary.updated_edges));
+  if (dryRun) lines.push("No file written.");
+  return lines.filter(Boolean).join("\n");
+}
+
+function formatList(label, items) {
+  if (!items.length) return `${label}: none`;
+  return `${label}:\n${items.map((item) => `- ${item}`).join("\n")}`;
+}
+
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   const patchPath = process.argv[2] ?? "examples/sample-graph-patch.json";
   const graphPath = process.argv[3] ?? "graph/graph.json";
   const dryRun = process.argv.includes("--dry-run");
   const summary = applyGraphPatch(patchPath, graphPath, { dryRun });
 
-  const mode = dryRun ? "dry-run" : "applied";
-  console.log(`${mode} graph patch: ${patchPath}`);
-  console.log(JSON.stringify(summary, null, 2));
+  console.log(`${dryRun ? "dry-run" : "applied"} graph patch: ${patchPath}`);
+  console.log(formatSummary(summary, { dryRun }));
+  console.log(JSON.stringify({
+    added_nodes: summary.added_nodes.length,
+    updated_nodes: summary.updated_nodes.length,
+    added_edges: summary.added_edges.length,
+    updated_edges: summary.updated_edges.length
+  }, null, 2));
 }

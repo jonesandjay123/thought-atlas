@@ -51,7 +51,26 @@
         "from": "thought-atlas-core-local-engine",
         "to": "ui-is-prototype-boundary",
         "relation": "supports",
-        "weight": 0.9
+        "weight": 0.9,
+        "confidence": 0.94,
+        "source_refs": [
+          {
+            "source_id": "sample-source",
+            "path": "examples/sample-source.md",
+            "start_line": 10,
+            "end_line": 17
+          }
+        ],
+        "rationale": "The source says Thought Atlas Core is not the hosted UI and that the existing React/Vite prototype should remain outside the main app path."
+      }
+    },
+    {
+      "op": "update_edge",
+      "rationale": "A second pass can strengthen the edge after the relation is confirmed.",
+      "edge_id": "edge-core-engine-ui-boundary",
+      "fields": {
+        "weight": 0.92,
+        "confidence": 0.96
       }
     }
   ]

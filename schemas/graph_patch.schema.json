@@ -17,7 +17,7 @@
         "additionalProperties": false,
         "required": ["op", "rationale"],
         "properties": {
-          "op": { "type": "string", "enum": ["add_node", "update_node", "add_edge"] },
+          "op": { "type": "string", "enum": ["add_node", "update_node", "add_edge", "update_edge"] },
           "rationale": { "type": "string", "minLength": 1 },
           "node": {
             "type": "object",
@@ -34,20 +34,24 @@
             }
           },
           "node_id": { "type": "string" },
+          "edge_id": { "type": "string" },
           "fields": { "type": "object" },
           "edge": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["id", "from", "to", "relation"],
+            "required": ["id", "from", "to", "relation", "confidence", "source_refs", "rationale"],
             "properties": {
               "id": { "type": "string" },
               "from": { "type": "string" },
               "to": { "type": "string" },
               "relation": {
                 "type": "string",
-                "enum": ["supports", "contrasts", "extends", "depends_on", "blocks", "duplicates"]
+                "enum": ["supports", "contrasts", "extends", "depends_on", "blocks", "duplicates", "resonates_with"]
               },
-              "weight": { "type": "number", "minimum": 0, "maximum": 1 }
+              "weight": { "type": "number", "minimum": 0, "maximum": 1 },
+              "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+              "source_refs": { "type": "array", "minItems": 1 },
+              "rationale": { "type": "string", "minLength": 1 }
             }
           }
         }

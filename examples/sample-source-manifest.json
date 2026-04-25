@@ -1,0 +1,16 @@
+{
+  "source_id": "sample-source",
+  "title": "Thought Atlas Core direction correction",
+  "source_type": "markdown",
+  "path": "examples/sample-source.md",
+  "captured_at": "2026-04-25T12:00:00.000Z",
+  "content_hash": "sha256:01996cdbc7411e42cfa2a14422db1f11a567a6a89f52a6c53b1f663f72e63502",
+  "language": "en",
+  "tags": [
+    "thought-atlas",
+    "core",
+    "ui-boundary"
+  ],
+  "status": "inbox",
+  "notes": "Initial sample source for local pipeline validation."
+}

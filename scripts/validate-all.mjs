@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { readJson, validateDigest, validateGraphPatch } from "./validators.mjs";
+import { readJson, validateDigest, validateGraphPatch, validateSourceManifest } from "./validators.mjs";
 import { applyGraphPatch } from "./apply-graph-patch.mjs";
 
 const schemaPaths = [
@@ -14,6 +14,7 @@ for (const schemaPath of schemaPaths) {
   readJson(schemaPath);
 }
 
+validateSourceManifest(readJson("examples/sample-source-manifest.json"));
 validateDigest(readJson("examples/sample-digest.json"));
 validateGraphPatch(readJson("examples/sample-graph-patch.json"));
 
