@@ -91,4 +91,4 @@ npm run dev
 npm run build
 ```
 
-這個 repo 目前尚未 commit。完成 prototype 後應先 review UI 與資料模型，再決定是否加入真實 import pipeline。
+目前已完成第一版 prototype。下一步應先 review UI 與資料模型，再決定是否加入真實 import pipeline。
