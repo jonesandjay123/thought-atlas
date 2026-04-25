@@ -1,0 +1,203 @@
+{
+  "patch_id": "blind-mode-ux-2026-03-31.patch",
+  "digest_id": "blind-mode-ux-2026-03-31.digest",
+  "created_at": "2026-04-25T23:05:00.000Z",
+  "operations": [
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from blind-mode-ux-2026-03-31: Blind mode 不是 disability feature 而是 premium UX mode",
+      "node": {
+        "id": "blind-mode-as-premium-ux",
+        "kind": "pattern",
+        "title": "Blind mode 不是 disability feature 而是 premium UX mode",
+        "body": "Jones 在地鐵上的頓悟把視障輔助重新 frame：不是只有盲人需要，而是所有人都可能在懶得看、不能看或不想看時需要低認知負擔的高效模式。",
+        "source_refs": [
+          {
+            "source_id": "blind-mode-ux-2026-03-31",
+            "path": "sources/inbox/blind-mode-ux-2026-03-31.md",
+            "start_line": 12,
+            "end_line": 26,
+            "quote": "Blind mode is not a disability feature — it's a premium UX mode."
+          }
+        ],
+        "confidence": 0.97,
+        "tags": [
+          "blind-mode",
+          "post-ui",
+          "premium-ux",
+          "accessibility"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from blind-mode-ux-2026-03-31: 下一代介面會從點擊與觀看轉向 agent、語音與無介面",
+      "node": {
+        "id": "post-ui-agent-interface-shift",
+        "kind": "claim",
+        "title": "下一代介面會從點擊與觀看轉向 agent、語音與無介面",
+        "body": "文件把互動模式排成 Web 點擊、Mobile App、Chat UI，到下一步 Agent + 語音 + 無介面，主張視障者不是特殊族群，而是未來使用模式的先行者。",
+        "source_refs": [
+          {
+            "source_id": "blind-mode-ux-2026-03-31",
+            "path": "sources/inbox/blind-mode-ux-2026-03-31.md",
+            "start_line": 30,
+            "end_line": 41,
+            "quote": "下一步 | Agent + 語音 + 無介面"
+          }
+        ],
+        "confidence": 0.95,
+        "tags": [
+          "post-ui",
+          "voice",
+          "agent-interface",
+          "future-ux"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from blind-mode-ux-2026-03-31: Signal API 的價值是抽取有用訊號而非描述畫面",
+      "node": {
+        "id": "signal-api-high-signal-transformation",
+        "kind": "pattern",
+        "title": "Signal API 的價值是抽取有用訊號而非描述畫面",
+        "body": "文件校正通用描述 API 會被大模型吃掉，真正有價值的是 high-signal transformation：不是說畫面有什麼，而是指出「這個人正在看你」「這是危險場景」等對決策有用的訊號。",
+        "source_refs": [
+          {
+            "source_id": "blind-mode-ux-2026-03-31",
+            "path": "sources/inbox/blind-mode-ux-2026-03-31.md",
+            "start_line": 68,
+            "end_line": 85,
+            "quote": "不是描述世界，是抽取「對人有用的訊號」"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": [
+          "signal-api",
+          "decision-support",
+          "perception",
+          "ai-agent"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from blind-mode-ux-2026-03-31: 視障產品不是流量生意而是信任生意",
+      "node": {
+        "id": "assistive-products-are-trust-business",
+        "kind": "claim",
+        "title": "視障產品不是流量生意而是信任生意",
+        "body": "早餐店理論被修正為醫院旁的早餐店：需求極高但集中，成功關鍵不是功能數量，而是信任、穩定與真有幫助；體驗錯一次就會破壞使用者安全感。",
+        "source_refs": [
+          {
+            "source_id": "blind-mode-ux-2026-03-31",
+            "path": "sources/inbox/blind-mode-ux-2026-03-31.md",
+            "start_line": 109,
+            "end_line": 130,
+            "quote": "這不是流量生意，是「信任生意」。"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": [
+          "trust",
+          "assistive-tech",
+          "product-quality",
+          "accessibility"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from blind-mode-ux-2026-03-31: 適合的商業模式是高頻小場景的 niche lifestyle SaaS",
+      "node": {
+        "id": "niche-lifestyle-saas-over-startup",
+        "kind": "decision",
+        "title": "適合的商業模式是高頻小場景的 niche lifestyle SaaS",
+        "body": "文件反對做很多 demo 或感動人的東西，主張做一個每天用十次、可訂閱的小場景；這更接近 lifestyle SaaS for a niche，而不是追求大而全的 startup。",
+        "source_refs": [
+          {
+            "source_id": "blind-mode-ux-2026-03-31",
+            "path": "sources/inbox/blind-mode-ux-2026-03-31.md",
+            "start_line": 133,
+            "end_line": 142,
+            "quote": "Not a startup, but a lifestyle SaaS for a niche."
+          }
+        ],
+        "confidence": 0.95,
+        "tags": [
+          "lifestyle-saas",
+          "niche",
+          "subscription",
+          "mvp"
+        ]
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Post-UI 的時代演進支撐 blind mode 從輔具變成一般人的 premium UX。",
+      "edge": {
+        "id": "blind-mode-ux-2026-03-31.edge-1",
+        "from": "post-ui-agent-interface-shift",
+        "to": "blind-mode-as-premium-ux",
+        "relation": "supports",
+        "weight": 0.82,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "blind-mode-ux-2026-03-31",
+            "path": "sources/inbox/blind-mode-ux-2026-03-31.md",
+            "start_line": 30,
+            "end_line": 41,
+            "quote": "下一步 | Agent + 語音 + 無介面"
+          }
+        ],
+        "rationale": "Post-UI 的時代演進支撐 blind mode 從輔具變成一般人的 premium UX。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Signal API 把無介面互動落到 agent 需要的高價值訊號層。",
+      "edge": {
+        "id": "blind-mode-ux-2026-03-31.edge-2",
+        "from": "signal-api-high-signal-transformation",
+        "to": "post-ui-agent-interface-shift",
+        "relation": "extends",
+        "weight": 0.82,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "blind-mode-ux-2026-03-31",
+            "path": "sources/inbox/blind-mode-ux-2026-03-31.md",
+            "start_line": 68,
+            "end_line": 85,
+            "quote": "不是描述世界，是抽取「對人有用的訊號」"
+          }
+        ],
+        "rationale": "Signal API 把無介面互動落到 agent 需要的高價值訊號層。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "信任與穩定要求產品從高頻小場景切入，而不是追求大而炫的 demo。",
+      "edge": {
+        "id": "blind-mode-ux-2026-03-31.edge-3",
+        "from": "assistive-products-are-trust-business",
+        "to": "niche-lifestyle-saas-over-startup",
+        "relation": "supports",
+        "weight": 0.82,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "blind-mode-ux-2026-03-31",
+            "path": "sources/inbox/blind-mode-ux-2026-03-31.md",
+            "start_line": 109,
+            "end_line": 130,
+            "quote": "這不是流量生意，是「信任生意」。"
+          }
+        ],
+        "rationale": "信任與穩定要求產品從高頻小場景切入，而不是追求大而炫的 demo。"
+      }
+    }
+  ]
+}

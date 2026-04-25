@@ -1,0 +1,17 @@
+{
+  "source_id": "claude-mythos-alignment-paradox-2026-04-08",
+  "title": "Claude Mythos System Card：alignment paradox 與 frontier risk",
+  "source_type": "report",
+  "path": "sources/inbox/claude-mythos-alignment-paradox-2026-04-08.md",
+  "captured_at": "2026-04-25T22:57:34.437Z",
+  "content_hash": "sha256:3929c63a1ddf603c5058cc0251e23a26992a79b972cfaf5c86cfa1d69a33674e",
+  "language": "zh-Hant",
+  "tags": [
+    "ai-safety",
+    "alignment",
+    "frontier-models",
+    "model-welfare"
+  ],
+  "status": "inbox",
+  "notes": "Curated from thinking_with_ai/projects as a high-value Thought Atlas source."
+}

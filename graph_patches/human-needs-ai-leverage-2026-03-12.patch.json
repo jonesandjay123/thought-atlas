@@ -1,0 +1,251 @@
+{
+  "patch_id": "human-needs-ai-leverage-2026-03-12.patch",
+  "digest_id": "human-needs-ai-leverage-2026-03-12.digest",
+  "created_at": "2026-04-25T23:05:00.000Z",
+  "operations": [
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from human-needs-ai-leverage-2026-03-12: 降維打擊是用 AI 壓縮傳統 know-how 進入低技術市場",
+      "node": {
+        "id": "dimension-reduction-means-ai-compresses-traditional-knowhow",
+        "kind": "pattern",
+        "title": "降維打擊是用 AI 壓縮傳統 know-how 進入低技術市場",
+        "body": "文件重新定義降維打擊：不是跟技術人做 SaaS 互卷，而是用 AI 快速學會傳統市場多年經驗，再賣給不懂 AI 的普通人。",
+        "source_refs": [
+          {
+            "source_id": "human-needs-ai-leverage-2026-03-12",
+            "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+            "start_line": 20,
+            "end_line": 41,
+            "quote": "AI 30 分鐘把他 10 年的 know-how 壓縮給你"
+          }
+        ],
+        "confidence": 0.97,
+        "tags": [
+          "ai-leverage",
+          "dimension-reduction",
+          "business-strategy",
+          "knowhow"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from human-needs-ai-leverage-2026-03-12: 可行的人性需求生意需立刻賺錢、抓住人性、AI 加速 know-how、前台有人味",
+      "node": {
+        "id": "human-need-business-four-conditions",
+        "kind": "pattern",
+        "title": "可行的人性需求生意需立刻賺錢、抓住人性、AI 加速 know-how、前台有人味",
+        "body": "文件提出四個檢驗條件：做了明天能不能收錢、百年後人類是否仍需要、AI 把學習時間縮短多少、客戶前台是否感受到人的溫度。",
+        "source_refs": [
+          {
+            "source_id": "human-needs-ai-leverage-2026-03-12",
+            "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+            "start_line": 43,
+            "end_line": 50,
+            "quote": "立刻能賺錢／抓住人性需求／AI 加速 know-how／前台人溫度，後台 AI 效率"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": [
+          "human-needs",
+          "business-filter",
+          "ai-leverage",
+          "frontstage-human"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from human-needs-ai-leverage-2026-03-12: 人性需求可分身體、心理、社交、虛榮四層且越往上溢價越高",
+      "node": {
+        "id": "four-layer-human-needs-stack",
+        "kind": "pattern",
+        "title": "人性需求可分身體、心理、社交、虛榮四層且越往上溢價越高",
+        "body": "文件建立身體、心理、社交、虛榮四層需求金字塔，指出越往上溢價越高、越容易遠端做、AI 槓桿越大。",
+        "source_refs": [
+          {
+            "source_id": "human-needs-ai-leverage-2026-03-12",
+            "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+            "start_line": 52,
+            "end_line": 73,
+            "quote": "身體層／心理層／社交層／虛榮層"
+          }
+        ],
+        "confidence": 0.97,
+        "tags": [
+          "human-needs",
+          "status",
+          "psychology",
+          "social"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from human-needs-ai-leverage-2026-03-12: 心理層的高溢價來自被理解、被安慰與知道未來",
+      "node": {
+        "id": "psychological-layer-sells-being-understood",
+        "kind": "claim",
+        "title": "心理層的高溢價來自被理解、被安慰與知道未來",
+        "body": "心理層被定位為高溢價，因為人類對被理解、被安慰、想知道未來的需求長期存在；AI 的角色是知識庫、個性化內容與客戶關係管理，但前台仍必須是人。",
+        "source_refs": [
+          {
+            "source_id": "human-needs-ai-leverage-2026-03-12",
+            "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+            "start_line": 200,
+            "end_line": 218,
+            "quote": "人類對「被理解」「被安慰」「知道未來」的需求永遠存在"
+          }
+        ],
+        "confidence": 0.95,
+        "tags": [
+          "psychology",
+          "human-needs",
+          "service-design",
+          "trust"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from human-needs-ai-leverage-2026-03-12: 虛榮層最適合 AI 槓桿因為人會為被看見與地位付高價",
+      "node": {
+        "id": "vanity-layer-highest-margin-ai-fit",
+        "kind": "claim",
+        "title": "虛榮層最適合 AI 槓桿因為人會為被看見與地位付高價",
+        "body": "虛榮層被定義為利潤最高，因為人類追求被看見、被羨慕與社會地位，且 AI 很擅長生成內容、設計視覺、分析數據與自動化營運。",
+        "source_refs": [
+          {
+            "source_id": "human-needs-ai-leverage-2026-03-12",
+            "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+            "start_line": 489,
+            "end_line": 506,
+            "quote": "人類對「被看見」「被羨慕」「社會地位」的追求永無止境"
+          }
+        ],
+        "confidence": 0.94,
+        "tags": [
+          "vanity",
+          "status",
+          "ai-content",
+          "business-strategy"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from human-needs-ai-leverage-2026-03-12: 最佳服務模型是前台人溫度、後台 AI 效率",
+      "node": {
+        "id": "frontstage-human-backstage-ai-service-model",
+        "kind": "decision",
+        "title": "最佳服務模型是前台人溫度、後台 AI 效率",
+        "body": "文件用塔羅、品牌包裝、情感教練等流程展示：客戶看到的是人與個性化理解，背後則由 AI 做資料整理、草稿、分析與營運效率。",
+        "source_refs": [
+          {
+            "source_id": "human-needs-ai-leverage-2026-03-12",
+            "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+            "start_line": 714,
+            "end_line": 739,
+            "quote": "客戶看到什麼（前台體驗）／你實際做什麼（後台 AI 流程）"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": [
+          "service-design",
+          "human-in-the-loop",
+          "ai-ops",
+          "business-model"
+        ]
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "降維打擊公式落到四個可檢驗的 business filter。",
+      "edge": {
+        "id": "human-needs-ai-leverage-2026-03-12.edge-1",
+        "from": "dimension-reduction-means-ai-compresses-traditional-knowhow",
+        "to": "human-need-business-four-conditions",
+        "relation": "supports",
+        "weight": 0.82,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "human-needs-ai-leverage-2026-03-12",
+            "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+            "start_line": 20,
+            "end_line": 41,
+            "quote": "AI 30 分鐘把他 10 年的 know-how 壓縮給你"
+          }
+        ],
+        "rationale": "降維打擊公式落到四個可檢驗的 business filter。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "心理層是四層人性需求中的高溢價層之一。",
+      "edge": {
+        "id": "human-needs-ai-leverage-2026-03-12.edge-2",
+        "from": "four-layer-human-needs-stack",
+        "to": "psychological-layer-sells-being-understood",
+        "relation": "supports",
+        "weight": 0.82,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "human-needs-ai-leverage-2026-03-12",
+            "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+            "start_line": 52,
+            "end_line": 73,
+            "quote": "身體層／心理層／社交層／虛榮層"
+          }
+        ],
+        "rationale": "心理層是四層人性需求中的高溢價層之一。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "虛榮層是四層需求中利潤與 AI 槓桿最高的上層需求。",
+      "edge": {
+        "id": "human-needs-ai-leverage-2026-03-12.edge-3",
+        "from": "four-layer-human-needs-stack",
+        "to": "vanity-layer-highest-margin-ai-fit",
+        "relation": "supports",
+        "weight": 0.82,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "human-needs-ai-leverage-2026-03-12",
+            "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+            "start_line": 52,
+            "end_line": 73,
+            "quote": "身體層／心理層／社交層／虛榮層"
+          }
+        ],
+        "rationale": "虛榮層是四層需求中利潤與 AI 槓桿最高的上層需求。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "前台人溫度、後台 AI 效率是四條件中的實際運作模型。",
+      "edge": {
+        "id": "human-needs-ai-leverage-2026-03-12.edge-4",
+        "from": "human-need-business-four-conditions",
+        "to": "frontstage-human-backstage-ai-service-model",
+        "relation": "extends",
+        "weight": 0.82,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "human-needs-ai-leverage-2026-03-12",
+            "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+            "start_line": 43,
+            "end_line": 50,
+            "quote": "立刻能賺錢／抓住人性需求／AI 加速 know-how／前台人溫度，後台 AI 效率"
+          }
+        ],
+        "rationale": "前台人溫度、後台 AI 效率是四條件中的實際運作模型。"
+      }
+    }
+  ]
+}

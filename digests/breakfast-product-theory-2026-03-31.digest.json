@@ -1,0 +1,118 @@
+{
+  "digest_id": "breakfast-product-theory-2026-03-31.digest",
+  "source_id": "breakfast-product-theory-2026-03-31",
+  "created_at": "2026-04-25T23:05:00.000Z",
+  "summary": "這份短文把視障輔助探索收斂成早餐店等級產品哲學：先排除不適合 Jones 心理結構的 Polymarket 資訊套利路線，保留 decision augmentation 的抽象洞察；再把 Haro 願景放到遠期，回到每天會用、不用學、一個功能就夠、做完能收錢的 MVP。文件最後把下一步收斂為驗證而不是繼續討論。",
+  "items": [
+    {
+      "id": "blind-assist-and-polymarket-share-decision-augmentation",
+      "kind": "pattern",
+      "title": "視障輔助與預測市場本質上都是 Decision Augmentation",
+      "body": "雖然 Jones 排除了 Polymarket，但文件保留一個跨領域洞察：視障的感知判斷與預測市場的預測判斷，都在資訊不完整的世界中幫人做更好的決策。",
+      "source_refs": [
+        {
+          "source_id": "breakfast-product-theory-2026-03-31",
+          "path": "sources/inbox/breakfast-product-theory-2026-03-31.md",
+          "start_line": 8,
+          "end_line": 19,
+          "quote": "在資訊不完整的世界中，幫人做更好的決策（Decision Augmentation）"
+        }
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "decision-augmentation",
+        "blind-assist",
+        "prediction",
+        "sensemaking"
+      ]
+    },
+    {
+      "id": "haro-is-phase-ten-not-current-mvp",
+      "kind": "decision",
+      "title": "Haro 式 ambient companion 是遠期願景不是當前 MVP",
+      "body": "Haro 小球點出永遠在身邊的 ambient AI companion 願景，但文件明確判斷它遠超個人開發者能力，是 Phase 10，不是現在要做的事。",
+      "source_refs": [
+        {
+          "source_id": "breakfast-product-theory-2026-03-31",
+          "path": "sources/inbox/breakfast-product-theory-2026-03-31.md",
+          "start_line": 22,
+          "end_line": 31,
+          "quote": "Haro 是 Phase 10 的願景，不是現在該做的事。先煎好第一份蛋餅。"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "ambient-ai",
+        "scope-control",
+        "mvp",
+        "agent-body"
+      ]
+    },
+    {
+      "id": "breakfast-product-four-conditions",
+      "kind": "pattern",
+      "title": "早餐店產品必須每天會用、不用學、一個功能就夠、做完能收錢",
+      "body": "早餐店理論將可做產品壓到最小可營運單位：高頻、零學習曲線、單一 job、可立即收錢。這是 Jones 避免過度造平台的重要產品約束。",
+      "source_refs": [
+        {
+          "source_id": "breakfast-product-theory-2026-03-31",
+          "path": "sources/inbox/breakfast-product-theory-2026-03-31.md",
+          "start_line": 33,
+          "end_line": 45,
+          "quote": "每天會用、不用學、一個功能就夠、做完就能收錢"
+        }
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "breakfast-theory",
+        "mvp",
+        "product-strategy",
+        "high-frequency"
+      ]
+    },
+    {
+      "id": "queue-turn-reminder-first-wedge",
+      "kind": "action",
+      "title": "輪到你提醒器是最該先驗證的蛋餅級 wedge",
+      "body": "三個蛋餅級 idea 中，輪到你提醒器被評為技術最簡單、場景最高頻、最該先做，因為它可以用現有樂高積木組出一個明確的單一 job。",
+      "source_refs": [
+        {
+          "source_id": "breakfast-product-theory-2026-03-31",
+          "path": "sources/inbox/breakfast-product-theory-2026-03-31.md",
+          "start_line": 47,
+          "end_line": 55,
+          "quote": "輪到你提醒器｜最該先做 — 技術最簡單、場景最高頻"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "queue-reminder",
+        "wedge",
+        "blind-assist",
+        "prototype"
+      ]
+    },
+    {
+      "id": "validation-before-more-framing",
+      "kind": "decision",
+      "title": "下一步是驗證痛點而不是繼續重新 frame",
+      "body": "文件直接批評一直重新 frame 會鬼打牆，真正該做的是去 r/Blind 問、看回覆、確認痛點，再用最爛的方式做 prototype。",
+      "source_refs": [
+        {
+          "source_id": "breakfast-product-theory-2026-03-31",
+          "path": "sources/inbox/breakfast-product-theory-2026-03-31.md",
+          "start_line": 57,
+          "end_line": 67,
+          "quote": "不要再討論了，去驗證"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "validation",
+        "action-bias",
+        "prototype",
+        "product-discovery"
+      ]
+    }
+  ]
+}

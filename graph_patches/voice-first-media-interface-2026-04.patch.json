@@ -1,0 +1,203 @@
+{
+  "patch_id": "voice-first-media-interface-2026-04.patch",
+  "digest_id": "voice-first-media-interface-2026-04.digest",
+  "created_at": "2026-04-25T23:05:00.000Z",
+  "operations": [
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from voice-first-media-interface-2026-04: 影音內容不該只能被播放而應能被操作",
+      "node": {
+        "id": "media-should-be-operable-not-just-played",
+        "kind": "claim",
+        "title": "影音內容不該只能被播放而應能被操作",
+        "body": "文件指出影音內容的根本限制是只能播放，不能被操作；真正的問題不是做更好的播放器，而是把時間軸內容變成可查、可問、可操作的知識介面。",
+        "source_refs": [
+          {
+            "source_id": "voice-first-media-interface-2026-04",
+            "path": "sources/inbox/voice-first-media-interface-2026-04.md",
+            "start_line": 10,
+            "end_line": 20,
+            "quote": "把只能被播放的東西，變成可以被查、被問、被操作的知識介面"
+          }
+        ],
+        "confidence": 0.97,
+        "tags": [
+          "media-interface",
+          "knowledge-interface",
+          "retrieval",
+          "interaction"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from voice-first-media-interface-2026-04: 長影音與 podcast 的觀點回找目前幾乎無解",
+      "node": {
+        "id": "lost-media-memory-is-unsolved-use-case",
+        "kind": "claim",
+        "title": "長影音與 podcast 的觀點回找目前幾乎無解",
+        "body": "文件列出常見痛點：想找某集 podcast 的某段話、快速掌握長訪談、找回曾聽過但忘記位置的觀點、視障或通勤情境下無法靠 timeline UI。",
+        "source_refs": [
+          {
+            "source_id": "voice-first-media-interface-2026-04",
+            "path": "sources/inbox/voice-first-media-interface-2026-04.md",
+            "start_line": 25,
+            "end_line": 36,
+            "quote": "曾經聽過某個很對的觀點，但忘記在哪一集、哪個頻道"
+          }
+        ],
+        "confidence": 0.94,
+        "tags": [
+          "media-retrieval",
+          "podcast",
+          "memory",
+          "use-case"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from voice-first-media-interface-2026-04: 影音知識介面可拆成找得到、變短、可以問、可導航與模式轉換五層",
+      "node": {
+        "id": "five-layer-media-interface-model",
+        "kind": "pattern",
+        "title": "影音知識介面可拆成找得到、變短、可以問、可導航與模式轉換五層",
+        "body": "文件用五個維度建立產品座標：Retrieval、Compression、Interaction、Navigation、Mode shift；這不是單一功能，而是把影音從時間軸轉為知識介面的分層模型。",
+        "source_refs": [
+          {
+            "source_id": "voice-first-media-interface-2026-04",
+            "path": "sources/inbox/voice-first-media-interface-2026-04.md",
+            "start_line": 39,
+            "end_line": 62,
+            "quote": "Retrieval／Compression／Interaction／Navigation／Mode shift"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": [
+          "product-framework",
+          "media-interface",
+          "voice-first",
+          "navigation"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from voice-first-media-interface-2026-04: 用語言在影片中移動可能取代 timeline UI",
+      "node": {
+        "id": "language-navigation-replaces-timeline-ui",
+        "kind": "pattern",
+        "title": "用語言在影片中移動可能取代 timeline UI",
+        "body": "Navigation 層的核心是用語言取代 timeline：「跳到他開始講 inflation 的地方」「剛剛那段再播一次」。這是目前沒人真正做好的高潛力互動。",
+        "source_refs": [
+          {
+            "source_id": "voice-first-media-interface-2026-04",
+            "path": "sources/inbox/voice-first-media-interface-2026-04.md",
+            "start_line": 52,
+            "end_line": 56,
+            "quote": "用語言取代 timeline UI"
+          }
+        ],
+        "confidence": 0.95,
+        "tags": [
+          "navigation",
+          "voice-ui",
+          "post-ui",
+          "media"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Promotes durable idea from voice-first-media-interface-2026-04: 若完全沒有畫面仍成立，voice-first 就是強差異化",
+      "node": {
+        "id": "voice-first-mode-shift-is-differentiator",
+        "kind": "question",
+        "title": "若完全沒有畫面仍成立，voice-first 就是強差異化",
+        "body": "Mode shift 層提出關鍵檢驗：如果完全沒有畫面，這個系統還成立嗎？若成立，代表它不是普通 UI feature，而是使用模式改變。",
+        "source_refs": [
+          {
+            "source_id": "voice-first-media-interface-2026-04",
+            "path": "sources/inbox/voice-first-media-interface-2026-04.md",
+            "start_line": 58,
+            "end_line": 62,
+            "quote": "如果完全沒有畫面，這個系統還成立嗎？"
+          }
+        ],
+        "confidence": 0.95,
+        "tags": [
+          "voice-first",
+          "mode-shift",
+          "accessibility",
+          "differentiation"
+        ]
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "五層模型是讓影音從播放物變成可操作知識介面的具體拆解。",
+      "edge": {
+        "id": "voice-first-media-interface-2026-04.edge-1",
+        "from": "media-should-be-operable-not-just-played",
+        "to": "five-layer-media-interface-model",
+        "relation": "supports",
+        "weight": 0.82,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "voice-first-media-interface-2026-04",
+            "path": "sources/inbox/voice-first-media-interface-2026-04.md",
+            "start_line": 10,
+            "end_line": 20,
+            "quote": "把只能被播放的東西，變成可以被查、被問、被操作的知識介面"
+          }
+        ],
+        "rationale": "五層模型是讓影音從播放物變成可操作知識介面的具體拆解。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "找不回長影音中的觀點，正是影音只能播放不能操作的痛點。",
+      "edge": {
+        "id": "voice-first-media-interface-2026-04.edge-2",
+        "from": "lost-media-memory-is-unsolved-use-case",
+        "to": "media-should-be-operable-not-just-played",
+        "relation": "supports",
+        "weight": 0.82,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "voice-first-media-interface-2026-04",
+            "path": "sources/inbox/voice-first-media-interface-2026-04.md",
+            "start_line": 25,
+            "end_line": 36,
+            "quote": "曾經聽過某個很對的觀點，但忘記在哪一集、哪個頻道"
+          }
+        ],
+        "rationale": "找不回長影音中的觀點，正是影音只能播放不能操作的痛點。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "語言導航能否取代 timeline UI，是 voice-first mode shift 是否成立的重要檢驗。",
+      "edge": {
+        "id": "voice-first-media-interface-2026-04.edge-3",
+        "from": "language-navigation-replaces-timeline-ui",
+        "to": "voice-first-mode-shift-is-differentiator",
+        "relation": "supports",
+        "weight": 0.82,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "voice-first-media-interface-2026-04",
+            "path": "sources/inbox/voice-first-media-interface-2026-04.md",
+            "start_line": 52,
+            "end_line": 56,
+            "quote": "用語言取代 timeline UI"
+          }
+        ],
+        "rationale": "語言導航能否取代 timeline UI，是 voice-first mode shift 是否成立的重要檢驗。"
+      }
+    }
+  ]
+}

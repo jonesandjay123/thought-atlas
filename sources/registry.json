@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_at": "2026-04-25T19:44:09.365Z",
+  "updated_at": "2026-04-25T22:59:11.200Z",
   "sources": [
     {
       "source_id": "original-conversation-2026-04-11",
@@ -69,6 +69,91 @@
       },
       "first_seen_at": "2026-04-25T19:42:42.705Z",
       "last_seen_at": "2026-04-25T19:44:09.365Z"
+    },
+    {
+      "source_id": "blind-mode-ux-2026-03-31",
+      "title": "Blind Mode UX 與無介面時代",
+      "source_type": "markdown",
+      "path": "sources/inbox/blind-mode-ux-2026-03-31.md",
+      "manifest_path": "examples/blind-mode-ux-2026-03-31.source-manifest.json",
+      "content_hash": "sha256:e73e93daf293ba38873439dffafcd80a7c966ad6050bc641b3a54cbd02a48428",
+      "status": "processed",
+      "tags": [
+        "blind-mode",
+        "post-ui",
+        "signal-api",
+        "product-philosophy"
+      ],
+      "first_seen_at": "2026-04-25T22:57:34.238Z",
+      "last_seen_at": "2026-04-25T22:59:10.987Z"
+    },
+    {
+      "source_id": "breakfast-product-theory-2026-03-31",
+      "title": "早餐店理論與 Decision Augmentation",
+      "source_type": "markdown",
+      "path": "sources/inbox/breakfast-product-theory-2026-03-31.md",
+      "manifest_path": "examples/breakfast-product-theory-2026-03-31.source-manifest.json",
+      "content_hash": "sha256:0728094e194f4464cf303f2810f836b9301634c7724afef784c9cab91997a91e",
+      "status": "processed",
+      "tags": [
+        "blind-assist",
+        "decision-augmentation",
+        "breakfast-theory",
+        "mvp"
+      ],
+      "first_seen_at": "2026-04-25T22:57:34.288Z",
+      "last_seen_at": "2026-04-25T22:59:11.042Z"
+    },
+    {
+      "source_id": "human-needs-ai-leverage-2026-03-12",
+      "title": "降維打擊與人性需求",
+      "source_type": "markdown",
+      "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+      "manifest_path": "examples/human-needs-ai-leverage-2026-03-12.source-manifest.json",
+      "content_hash": "sha256:970f821ada91f14c421162f8e998261ae761e140f528675a4ff823a8ebfdcdd1",
+      "status": "processed",
+      "tags": [
+        "human-needs",
+        "ai-leverage",
+        "business-strategy",
+        "product-philosophy"
+      ],
+      "first_seen_at": "2026-04-25T22:57:34.338Z",
+      "last_seen_at": "2026-04-25T22:59:11.094Z"
+    },
+    {
+      "source_id": "voice-first-media-interface-2026-04",
+      "title": "Voice-First Media Agent：影音內容的對話式知識介面",
+      "source_type": "markdown",
+      "path": "sources/inbox/voice-first-media-interface-2026-04.md",
+      "manifest_path": "examples/voice-first-media-interface-2026-04.source-manifest.json",
+      "content_hash": "sha256:0c38e5194977cb40711ffb66cf0ad07c52ab7dca577a189070dc6bec3ee0b3de",
+      "status": "processed",
+      "tags": [
+        "voice-first",
+        "media-interface",
+        "post-ui",
+        "retrieval"
+      ],
+      "first_seen_at": "2026-04-25T22:57:34.388Z",
+      "last_seen_at": "2026-04-25T22:59:11.148Z"
+    },
+    {
+      "source_id": "claude-mythos-alignment-paradox-2026-04-08",
+      "title": "Claude Mythos System Card：alignment paradox 與 frontier risk",
+      "source_type": "report",
+      "path": "sources/inbox/claude-mythos-alignment-paradox-2026-04-08.md",
+      "manifest_path": "examples/claude-mythos-alignment-paradox-2026-04-08.source-manifest.json",
+      "content_hash": "sha256:3929c63a1ddf603c5058cc0251e23a26992a79b972cfaf5c86cfa1d69a33674e",
+      "status": "processed",
+      "tags": [
+        "ai-safety",
+        "alignment",
+        "frontier-models",
+        "model-welfare"
+      ],
+      "first_seen_at": "2026-04-25T22:57:34.438Z",
+      "last_seen_at": "2026-04-25T22:59:11.200Z"
     }
   ],
   "runs": [
@@ -241,6 +326,131 @@
         "updated_edges": 11
       },
       "at": "2026-04-25T19:44:09.364Z"
+    },
+    {
+      "run_id": "source_manifest_created-1777157854238-12",
+      "type": "source_manifest_created",
+      "source_id": "blind-mode-ux-2026-03-31",
+      "content_hash": "sha256:e73e93daf293ba38873439dffafcd80a7c966ad6050bc641b3a54cbd02a48428",
+      "manifest_path": "examples/blind-mode-ux-2026-03-31.source-manifest.json",
+      "source_path": "sources/inbox/blind-mode-ux-2026-03-31.md",
+      "at": "2026-04-25T22:57:34.238Z"
+    },
+    {
+      "run_id": "source_manifest_created-1777157854288-13",
+      "type": "source_manifest_created",
+      "source_id": "breakfast-product-theory-2026-03-31",
+      "content_hash": "sha256:0728094e194f4464cf303f2810f836b9301634c7724afef784c9cab91997a91e",
+      "manifest_path": "examples/breakfast-product-theory-2026-03-31.source-manifest.json",
+      "source_path": "sources/inbox/breakfast-product-theory-2026-03-31.md",
+      "at": "2026-04-25T22:57:34.288Z"
+    },
+    {
+      "run_id": "source_manifest_created-1777157854338-14",
+      "type": "source_manifest_created",
+      "source_id": "human-needs-ai-leverage-2026-03-12",
+      "content_hash": "sha256:970f821ada91f14c421162f8e998261ae761e140f528675a4ff823a8ebfdcdd1",
+      "manifest_path": "examples/human-needs-ai-leverage-2026-03-12.source-manifest.json",
+      "source_path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+      "at": "2026-04-25T22:57:34.338Z"
+    },
+    {
+      "run_id": "source_manifest_created-1777157854388-15",
+      "type": "source_manifest_created",
+      "source_id": "voice-first-media-interface-2026-04",
+      "content_hash": "sha256:0c38e5194977cb40711ffb66cf0ad07c52ab7dca577a189070dc6bec3ee0b3de",
+      "manifest_path": "examples/voice-first-media-interface-2026-04.source-manifest.json",
+      "source_path": "sources/inbox/voice-first-media-interface-2026-04.md",
+      "at": "2026-04-25T22:57:34.388Z"
+    },
+    {
+      "run_id": "source_manifest_created-1777157854438-16",
+      "type": "source_manifest_created",
+      "source_id": "claude-mythos-alignment-paradox-2026-04-08",
+      "content_hash": "sha256:3929c63a1ddf603c5058cc0251e23a26992a79b972cfaf5c86cfa1d69a33674e",
+      "manifest_path": "examples/claude-mythos-alignment-paradox-2026-04-08.source-manifest.json",
+      "source_path": "sources/inbox/claude-mythos-alignment-paradox-2026-04-08.md",
+      "at": "2026-04-25T22:57:34.438Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1777157950987-17",
+      "type": "graph_patch_applied",
+      "source_id": "blind-mode-ux-2026-03-31",
+      "digest_id": "blind-mode-ux-2026-03-31.digest",
+      "patch_id": "blind-mode-ux-2026-03-31.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 5,
+        "updated_nodes": 0,
+        "added_edges": 3,
+        "updated_edges": 0
+      },
+      "at": "2026-04-25T22:59:10.987Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1777157951042-18",
+      "type": "graph_patch_applied",
+      "source_id": "breakfast-product-theory-2026-03-31",
+      "digest_id": "breakfast-product-theory-2026-03-31.digest",
+      "patch_id": "breakfast-product-theory-2026-03-31.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 5,
+        "updated_nodes": 0,
+        "added_edges": 3,
+        "updated_edges": 0
+      },
+      "at": "2026-04-25T22:59:11.041Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1777157951094-19",
+      "type": "graph_patch_applied",
+      "source_id": "human-needs-ai-leverage-2026-03-12",
+      "digest_id": "human-needs-ai-leverage-2026-03-12.digest",
+      "patch_id": "human-needs-ai-leverage-2026-03-12.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 6,
+        "updated_nodes": 0,
+        "added_edges": 4,
+        "updated_edges": 0
+      },
+      "at": "2026-04-25T22:59:11.093Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1777157951148-20",
+      "type": "graph_patch_applied",
+      "source_id": "voice-first-media-interface-2026-04",
+      "digest_id": "voice-first-media-interface-2026-04.digest",
+      "patch_id": "voice-first-media-interface-2026-04.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 5,
+        "updated_nodes": 0,
+        "added_edges": 3,
+        "updated_edges": 0
+      },
+      "at": "2026-04-25T22:59:11.147Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1777157951200-21",
+      "type": "graph_patch_applied",
+      "source_id": "claude-mythos-alignment-paradox-2026-04-08",
+      "digest_id": "claude-mythos-alignment-paradox-2026-04-08.digest",
+      "patch_id": "claude-mythos-alignment-paradox-2026-04-08.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 6,
+        "updated_nodes": 0,
+        "added_edges": 4,
+        "updated_edges": 0
+      },
+      "at": "2026-04-25T22:59:11.199Z"
     }
   ]
 }
