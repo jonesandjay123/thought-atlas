@@ -1,0 +1,637 @@
+{
+  "patch_id": "ikigai-2026-04-25.patch",
+  "digest_id": "ikigai-2026-04-25.digest",
+  "created_at": "2026-04-25T19:35:00.000Z",
+  "operations": [
+    {
+      "op": "add_node",
+      "rationale": "The source starts by locating Jones between self-knowledge and unclear direction.",
+      "node": {
+        "id": "ikigai-knowing-self-before-doing",
+        "kind": "claim",
+        "title": "Jones 已更知道自己是誰但尚未明朗要做什麼",
+        "body": "Ikigai 對話的起點是 Jones 已經越來越認識自己的核心本質與在乎之事，但目標志向、尤其是要做什麼事情，仍未明朗。這不是空白，而是一個可以系統化探索的位置。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 1,
+            "end_line": 13,
+            "quote": "已經知道自己是誰，但還不知道要做什麼"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": ["ikigai", "self-knowledge", "direction", "life-design"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The Love/Strength analysis names Jones's core builder profile.",
+      "node": {
+        "id": "jones-love-strength-system-builder",
+        "kind": "claim",
+        "title": "Jones 的 Love 與 Strength 交集是創造、架構與 system builder",
+        "body": "Jones 喜歡建東西、AI、自動化、system thinking、長期 project 與探索人生/系統/社會運作；他擅長軟體工程、把 idea 變 product、快速學技術、拆解複雜問題。因此他的強項不是純工程師，而是 execution + system builder。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 31,
+            "end_line": 55,
+            "quote": "你的強項其實是：execution + system builder（不是純工程師）"
+          }
+        ],
+        "confidence": 0.95,
+        "tags": ["jones", "strength", "system-builder", "execution"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The source identifies the missing Ikigai quadrant as problem selection at the Need/Money intersection.",
+      "node": {
+        "id": "need-money-problem-selection-gap",
+        "kind": "question",
+        "title": "Jones 的卡點是能力要用來解什麼問題",
+        "body": "Jones 已經有 Passion 與 Profession 的基礎，但真正缺的是 Need + Money 交集：世界需要什麼、他願意長期投入什麼，以及這些能力要用來修好哪個問題。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 57,
+            "end_line": 72,
+            "quote": "這些能力要用來解什麼問題？"
+          }
+        ],
+        "confidence": 0.95,
+        "tags": ["ikigai", "need", "money", "problem-selection"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The three candidate directions are concrete candidate paths for the missing Need/Money layer.",
+      "node": {
+        "id": "candidate-ikigai-directions",
+        "kind": "pattern",
+        "title": "三個候選 Ikigai 方向是 AI × 社交、資訊、行為",
+        "body": "對話提出三個與 Jones 已有訊號高度一致的候選方向：用 AI 建立更好的連結系統、打造讓人更理解世界的 AI 系統、設計讓人更有動機活著的系統。這些方向分別對應 Jovicheer、ObserverJ / thinking-canvas、gamification / psychology / product。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 74,
+            "end_line": 149,
+            "quote": "AI × 社交（Jovicheer）／AI × 資訊（ObserverJ）／AI × 行為（gamification）"
+          }
+        ],
+        "confidence": 0.94,
+        "tags": ["ikigai", "ai-social", "ai-information", "ai-behavior"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The conversation distinguishes lack of direction from a commitment problem caused by too many plausible directions.",
+      "node": {
+        "id": "direction-too-many-commitment-gap",
+        "kind": "claim",
+        "title": "Jones 不是沒有方向而是方向太多所以難以 commit",
+        "body": "對話校正 Jones 的狀態：問題不是沒有方向，而是方向太多，導致不敢 commit。Ikigai 不必是找到永遠正確答案，而是選一個值得投入的方向，並在投入中讓它變成答案。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 151,
+            "end_line": 207,
+            "quote": "你不是沒有方向。你是：方向太多 → 不敢 commit"
+          }
+        ],
+        "confidence": 0.93,
+        "tags": ["commitment", "direction", "ikigai", "decision"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The three-loop architecture is a stable model of how Jones currently operates.",
+      "node": {
+        "id": "three-loop-operating-architecture",
+        "kind": "pattern",
+        "title": "Jones 的當前運作架構是內在探索、生活創作、自我進化三個 loop",
+        "body": "Jones 不是在 A/B/C 之間選一個，而是同時在跑三個 loop：內在探索提供燃料、生活創作提供遊戲場、自我進化提供角色升級。三者合起來像一個同時升級認知、能力與現實操作的遊戲。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 209,
+            "end_line": 256,
+            "quote": "一個可以同時升級認知、能力、與現實操作的遊戲"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": ["operating-system", "inner-exploration", "life-creation", "self-evolution"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Externalizing Jones's life system is framed as the decisive Ikigai transition.",
+      "node": {
+        "id": "externalization-choice-for-main-life",
+        "kind": "question",
+        "title": "Ikigai 的分水嶺是是否讓生活方式外化成主線人生",
+        "body": "傳統 Ikigai 問要做什麼來賺錢或貢獻世界，但對 Jones 更準的問題是：是否要把已經在玩的認知、創作、進化系統變成主線人生，並讓這種生活方式外化一部分。外化程度可分為完全私有、半開放觀察、可產品化系統。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 300,
+            "end_line": 345,
+            "quote": "你願不願意讓「你的這種生活方式」被外化出來一部分？"
+          }
+        ],
+        "confidence": 0.95,
+        "tags": ["externalization", "main-life", "ikigai", "productization"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The source clarifies the difference between entrepreneurship itself and a result-oriented startup frame.",
+      "node": {
+        "id": "process-oriented-entrepreneurship-fit",
+        "kind": "claim",
+        "title": "Jones 不是不適合創業而是不適合用賺錢導向當核心驅動",
+        "body": "對話校正 Jones 對創業卡住的理解：不是創業不適合他，而是典型賺錢、scale、變現、成功的結果導向創業動機不是他的核心驅動。Jones 實際被探索、創造、玩系統與升級自己驅動，因此過去用結果導向創業去驅動過程導向的人會卡死。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 363,
+            "end_line": 400,
+            "quote": "你之前試圖用「結果導向創業」去驅動一個「過程導向的人」"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": ["entrepreneurship", "intrinsic-motivation", "process", "product-strategy"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Jones's perceived need for a backup is reinterpreted as the search for a sustainable life structure.",
+      "node": {
+        "id": "life-system-sustainability-structure",
+        "kind": "claim",
+        "title": "Jones 在找能承載其活法的長期結構而非單純備案",
+        "body": "Jones 目前在路線一：白天工作、晚上玩自己的世界；因感覺這樣無法持續很久而尋找備案。更本質地說，他是在找一個能承載這種活法並讓它可持續存在的長期系統。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 402,
+            "end_line": 413,
+            "quote": "我需要一個能承載我這種活法的長期系統"
+          }
+        ],
+        "confidence": 0.94,
+        "tags": ["sustainability", "life-system", "backup", "structure"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "This is the key product strategy decision in the source.",
+      "node": {
+        "id": "productization-as-natural-overflow",
+        "kind": "decision",
+        "title": "產品化應是生活系統自然外溢而非為產品而產品",
+        "body": "Jones 直覺仍會選可產品化，但適合他的路不是為市場、PMF、變現而做產品；正確版本是他本來就在玩 Jarvis / mind system / AI，這套生活系統剛好有部分可被別人用，於是整理出來。產品是副產物，不是目標。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 415,
+            "end_line": 450,
+            "quote": "產品是副產物，不是目標"
+          }
+        ],
+        "confidence": 0.97,
+        "tags": ["productization", "natural-overflow", "life-system", "strategy"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The source defines the necessary boundary between sustainability and market capture.",
+      "node": {
+        "id": "sustainability-compromise-boundary",
+        "kind": "question",
+        "title": "可持續化需要適度妥協但不能被市場反向吞沒",
+        "body": "若 Jones 完全不妥協，系統很純、很自由但難以 sustain；若適度考慮別人、整理輸出、接觸市場，才有機會變成可持續系統。但邊界是不能為了市場改變自己在玩的東西，而是問哪些部分可以讓別人一起玩。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 465,
+            "end_line": 490,
+            "quote": "我在玩的東西，有哪些部分可以讓別人一起玩？"
+          }
+        ],
+        "confidence": 0.94,
+        "tags": ["sustainability", "market", "boundary", "compromise"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The source explains why AI is central to Jones's direction without reducing it to market hype.",
+      "node": {
+        "id": "ai-as-natural-leverage",
+        "kind": "claim",
+        "title": "AI 對 Jones 不是風口而是最自然的槓桿",
+        "body": "Jones 感覺 AI 槓桿大，不只是因為它是趨勢，而是因為 AI 剛好放大他已經每天在做的事：思考、連結、創作與系統互動。AI 的本質與他的興趣和生活比例高度重合。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 537,
+            "end_line": 560,
+            "quote": "AI 對你來說不是風口，而是「最自然的槓桿」"
+          }
+        ],
+        "confidence": 0.97,
+        "tags": ["ai", "leverage", "jones", "life-system"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Playable Life System is the concrete prototype concept that emerges from the discussion.",
+      "node": {
+        "id": "playable-life-system-prototype",
+        "kind": "pattern",
+        "title": "Playable Life System 是可外化但不破壞動力的 prototype",
+        "body": "Playable Life System 的核心概念是把 Jones 的生活、想法、行動全部變成一個可以被 AI 一起操作與重構的遊戲介面。它不是 Notion + AI、task manager 或 productivity tool，而是讓人生可以被玩、重組與擴展的系統。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 562,
+            "end_line": 589,
+            "quote": "把你的生活、想法、行動，全部變成一個可以被 AI 一起操作與重構的「遊戲介面」"
+          }
+        ],
+        "confidence": 0.97,
+        "tags": ["playable-life-system", "prototype", "ai-collaboration", "life-design"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The source lists five concrete layers for Playable Life System.",
+      "node": {
+        "id": "playable-life-system-layers",
+        "kind": "pattern",
+        "title": "Playable Life System 由 Mind、Timeline、Agent、Evolution、Curiosity 五層組成",
+        "body": "Prototype v1 的五個核心模組來自 Jones 已在做的事：思維層讓想法可操作；行動層讓生活可編排與即時改寫；AI 代理層讓 Jarvis 成為 co-player；自我進化層追蹤技能與 experiment；探索層把知識、八卦、哲學與連結變成探索樹。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 590,
+            "end_line": 663,
+            "quote": "我在玩一個高自由度的開放世界遊戲"
+          }
+        ],
+        "confidence": 0.95,
+        "tags": ["playable-life-system", "layers", "agent", "timeline"]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The externalization path protects intrinsic motivation while allowing eventual monetization.",
+      "node": {
+        "id": "externalization-phases-from-private-to-monetization",
+        "kind": "pattern",
+        "title": "外化路徑應從完全自用到自然外溢、弱產品化、再到真正變現",
+        "body": "符合 Jones 本質的外化路徑不是一開始就做 SaaS，而是先完全自用、瘋狂玩；接著記錄酷的瞬間，不為觀眾優化；再開源一部分、分享 workflow、提供 template/system；最後才詢問是否有人願意為工具、教學、system access 等形式付費。",
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 665,
+            "end_line": 710,
+            "quote": "你從頭到尾都在做自己本來會做的事"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": ["externalization", "productization", "monetization", "phases"]
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Knowing self but not direction leads into the missing Need/Money problem-selection gap.",
+      "edge": {
+        "id": "edge-self-knowledge-to-problem-selection-gap",
+        "from": "ikigai-knowing-self-before-doing",
+        "to": "need-money-problem-selection-gap",
+        "relation": "extends",
+        "weight": 0.88,
+        "confidence": 0.92,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 9,
+            "end_line": 25
+          }
+        ],
+        "rationale": "The source states Jones knows himself more clearly, then identifies Need + Money as the unclear part."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Jones's system-builder profile supports the earlier graph claim that he is an intrinsic creator.",
+      "edge": {
+        "id": "edge-system-builder-to-intrinsic-creator-profile",
+        "from": "jones-love-strength-system-builder",
+        "to": "jones-intrinsic-creator-profile",
+        "relation": "supports",
+        "weight": 0.88,
+        "confidence": 0.92,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 31,
+            "end_line": 55
+          }
+        ],
+        "rationale": "The Love/Strength profile adds evidence for Jones as an internally driven creator and builder."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Candidate directions are possible answers to the Need/Money problem-selection gap.",
+      "edge": {
+        "id": "edge-problem-selection-to-candidate-directions",
+        "from": "need-money-problem-selection-gap",
+        "to": "candidate-ikigai-directions",
+        "relation": "extends",
+        "weight": 0.9,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 74,
+            "end_line": 149
+          }
+        ],
+        "rationale": "The three AI directions are generated in response to the question of what problem Jones's abilities should address."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Having multiple good directions explains the commitment gap.",
+      "edge": {
+        "id": "edge-candidate-directions-to-commitment-gap",
+        "from": "candidate-ikigai-directions",
+        "to": "direction-too-many-commitment-gap",
+        "relation": "supports",
+        "weight": 0.84,
+        "confidence": 0.9,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 151,
+            "end_line": 177
+          }
+        ],
+        "rationale": "The source immediately follows the three directions with the claim that the issue is too many directions and difficulty committing."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "The three-loop operating architecture is a more detailed form of the prior Thinking → Building → Compounding model.",
+      "edge": {
+        "id": "edge-three-loop-to-thinking-building-compounding",
+        "from": "three-loop-operating-architecture",
+        "to": "thinking-building-compounding-system",
+        "relation": "extends",
+        "weight": 0.88,
+        "confidence": 0.91,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 209,
+            "end_line": 256
+          }
+        ],
+        "rationale": "Inner exploration, life creation, and self-evolution map onto the broader operating-system idea already in the graph."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Externalizing the three-loop system is the path from side thing to main life.",
+      "edge": {
+        "id": "edge-three-loop-to-externalization-choice",
+        "from": "three-loop-operating-architecture",
+        "to": "externalization-choice-for-main-life",
+        "relation": "extends",
+        "weight": 0.9,
+        "confidence": 0.94,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 258,
+            "end_line": 322
+          }
+        ],
+        "rationale": "The source asks whether the three loops should become a sustainable life/output/system."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Process-oriented entrepreneurship clarifies how Jones can pursue productization without using money as the core driver.",
+      "edge": {
+        "id": "edge-process-entrepreneurship-to-natural-overflow",
+        "from": "process-oriented-entrepreneurship-fit",
+        "to": "productization-as-natural-overflow",
+        "relation": "supports",
+        "weight": 0.9,
+        "confidence": 0.94,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 415,
+            "end_line": 450
+          }
+        ],
+        "rationale": "Because external result-driven entrepreneurship misfits Jones, productization should come from the system he already enjoys."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "The sustainability structure motivates natural-overflow productization.",
+      "edge": {
+        "id": "edge-life-system-sustainability-to-natural-overflow",
+        "from": "life-system-sustainability-structure",
+        "to": "productization-as-natural-overflow",
+        "relation": "supports",
+        "weight": 0.86,
+        "confidence": 0.91,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 402,
+            "end_line": 450
+          }
+        ],
+        "rationale": "The long-term system must be sustainable, and productization is framed as a natural overflow of that system."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "The compromise boundary protects productization from becoming market capture.",
+      "edge": {
+        "id": "edge-natural-overflow-to-compromise-boundary",
+        "from": "productization-as-natural-overflow",
+        "to": "sustainability-compromise-boundary",
+        "relation": "depends_on",
+        "weight": 0.82,
+        "confidence": 0.9,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 465,
+            "end_line": 490
+          }
+        ],
+        "rationale": "Natural productization still requires some compromise, but the source defines the boundary against changing the core game for the market."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "AI as natural leverage reinforces the prior graph decision that AI is a forge rather than the final vehicle.",
+      "edge": {
+        "id": "edge-ai-natural-leverage-to-ai-forge",
+        "from": "ai-as-natural-leverage",
+        "to": "ai-forge-not-final-vehicle",
+        "relation": "supports",
+        "weight": 0.88,
+        "confidence": 0.92,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 537,
+            "end_line": 560
+          }
+        ],
+        "rationale": "AI matters because it amplifies Jones's existing thinking, creating, connecting, and system interaction."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Playable Life System is a concrete implementation of AI as leverage over Jones's life system.",
+      "edge": {
+        "id": "edge-ai-leverage-to-playable-life-system",
+        "from": "ai-as-natural-leverage",
+        "to": "playable-life-system-prototype",
+        "relation": "extends",
+        "weight": 0.9,
+        "confidence": 0.94,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 551,
+            "end_line": 589
+          }
+        ],
+        "rationale": "The prototype uses AI to make Jones's thoughts, actions, and life system operable and reconfigurable."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Playable Life System is a product/prototype expression of the previously extracted Trigger → Expand → Package → Compound method.",
+      "edge": {
+        "id": "edge-trigger-method-to-playable-life-system",
+        "from": "trigger-expand-package-compound-method",
+        "to": "playable-life-system-prototype",
+        "relation": "extends",
+        "weight": 0.86,
+        "confidence": 0.9,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 562,
+            "end_line": 589
+          }
+        ],
+        "rationale": "The earlier method says to turn life triggers into reusable modules; this prototype turns that method into a playable interface."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "The layer model decomposes the Playable Life System prototype.",
+      "edge": {
+        "id": "edge-playable-life-system-to-layers",
+        "from": "playable-life-system-prototype",
+        "to": "playable-life-system-layers",
+        "relation": "extends",
+        "weight": 0.9,
+        "confidence": 0.94,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 590,
+            "end_line": 663
+          }
+        ],
+        "rationale": "The five layers are the concrete module breakdown of the prototype."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Externalization phases describe how the prototype can move outward without breaking Jones's motivation.",
+      "edge": {
+        "id": "edge-playable-life-system-to-externalization-phases",
+        "from": "playable-life-system-prototype",
+        "to": "externalization-phases-from-private-to-monetization",
+        "relation": "extends",
+        "weight": 0.88,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 665,
+            "end_line": 710
+          }
+        ],
+        "rationale": "The source explicitly gives a staged path from self-use to weak productization and later monetization."
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Externalization phases also implement the natural-overflow product strategy.",
+      "edge": {
+        "id": "edge-natural-overflow-to-externalization-phases",
+        "from": "productization-as-natural-overflow",
+        "to": "externalization-phases-from-private-to-monetization",
+        "relation": "supports",
+        "weight": 0.86,
+        "confidence": 0.91,
+        "source_refs": [
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 665,
+            "end_line": 710
+          }
+        ],
+        "rationale": "Starting with private play and only later sharing workflows/templates preserves productization as overflow rather than market-first pressure."
+      }
+    }
+  ]
+}

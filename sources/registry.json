@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_at": "2026-04-25T19:06:38.116Z",
+  "updated_at": "2026-04-25T19:31:17.310Z",
   "sources": [
     {
       "source_id": "original-conversation-2026-04-11",
@@ -23,6 +23,29 @@
       },
       "first_seen_at": "2026-04-25T19:04:19.077Z",
       "last_seen_at": "2026-04-25T19:06:38.116Z"
+    },
+    {
+      "source_id": "ikigai-2026-04-25",
+      "title": "Ikigai、生活系統與 Playable Life System",
+      "source_type": "slack_file",
+      "path": "sources/inbox/ikigai-2026-04-25.md",
+      "manifest_path": "examples/ikigai-2026-04-25.source-manifest.json",
+      "content_hash": "sha256:1141e7ebcc4bf4d7e445c6d2dc5847074bddea5eb11f3cd300ac431d725295d7",
+      "status": "processed",
+      "tags": [
+        "ikigai",
+        "life-design",
+        "ai-collaboration",
+        "playable-life-system",
+        "product-strategy"
+      ],
+      "origin": {
+        "channel": "slack",
+        "sender": "Jones",
+        "message_id": "1777145324.050329"
+      },
+      "first_seen_at": "2026-04-25T19:29:04.118Z",
+      "last_seen_at": "2026-04-25T19:31:17.310Z"
     }
   ],
   "runs": [
@@ -87,6 +110,68 @@
         "updated_edges": 11
       },
       "at": "2026-04-25T19:06:38.116Z"
+    },
+    {
+      "run_id": "source_manifest_created-1777145344118-5",
+      "type": "source_manifest_created",
+      "source_id": "ikigai-2026-04-25",
+      "content_hash": "sha256:1141e7ebcc4bf4d7e445c6d2dc5847074bddea5eb11f3cd300ac431d725295d7",
+      "manifest_path": "examples/ikigai-2026-04-25.source-manifest.json",
+      "source_path": "sources/inbox/ikigai-2026-04-25.md",
+      "origin": {
+        "channel": "slack",
+        "sender": "Jones",
+        "message_id": "1777145324.050329"
+      },
+      "at": "2026-04-25T19:29:04.118Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1777145449373-6",
+      "type": "graph_patch_applied",
+      "source_id": "ikigai-2026-04-25",
+      "digest_id": "ikigai-2026-04-25.digest",
+      "patch_id": "ikigai-2026-04-25.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 15,
+        "updated_nodes": 0,
+        "added_edges": 15,
+        "updated_edges": 0
+      },
+      "at": "2026-04-25T19:30:49.373Z"
+    },
+    {
+      "run_id": "graph_patch_upserted-1777145465316-7",
+      "type": "graph_patch_upserted",
+      "source_id": "ikigai-2026-04-25",
+      "digest_id": "ikigai-2026-04-25.digest",
+      "patch_id": "ikigai-2026-04-25.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 0,
+        "updated_nodes": 15,
+        "added_edges": 0,
+        "updated_edges": 15
+      },
+      "at": "2026-04-25T19:31:05.316Z"
+    },
+    {
+      "run_id": "graph_patch_upserted-1777145477310-8",
+      "type": "graph_patch_upserted",
+      "source_id": "ikigai-2026-04-25",
+      "digest_id": "ikigai-2026-04-25.digest",
+      "patch_id": "ikigai-2026-04-25.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 0,
+        "updated_nodes": 15,
+        "added_edges": 0,
+        "updated_edges": 15
+      },
+      "at": "2026-04-25T19:31:17.309Z"
     }
   ]
 }

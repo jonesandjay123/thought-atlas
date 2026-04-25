@@ -1,0 +1,22 @@
+{
+  "source_id": "ikigai-2026-04-25",
+  "title": "Ikigai、生活系統與 Playable Life System",
+  "source_type": "slack_file",
+  "path": "sources/inbox/ikigai-2026-04-25.md",
+  "captured_at": "2026-04-25T19:29:04.116Z",
+  "content_hash": "sha256:1141e7ebcc4bf4d7e445c6d2dc5847074bddea5eb11f3cd300ac431d725295d7",
+  "language": "zh-Hant",
+  "tags": [
+    "ikigai",
+    "life-design",
+    "ai-collaboration",
+    "playable-life-system",
+    "product-strategy"
+  ],
+  "status": "inbox",
+  "origin": {
+    "channel": "slack",
+    "sender": "Jones",
+    "message_id": "1777145324.050329"
+  }
+}
