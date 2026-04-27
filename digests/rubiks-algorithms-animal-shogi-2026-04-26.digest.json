@@ -1,0 +1,272 @@
+{
+  "digest_id": "rubiks-algorithms-animal-shogi-2026-04-26.digest",
+  "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+  "created_at": "2026-04-27T02:25:10.576Z",
+  "summary": "這段對話從 Jones 高中時代的魔術方塊經驗出發，把速解演進理解成狀態空間操控、演算法壓縮與知識擴散的案例。對話進一步把魔術方塊、LeetCode、agentic coding 統一成 state space search / workflow compression 的連續譜：從背公式、寫 algorithm，到設計讓 AI 執行與避免問題出現的系統。後半段延伸到 Jones 國中迷棋與舊動物將棋 AI / RL 專案，形成一個可未來重啟的高掌控度 AI sandbox：先做 rule engine 與 minimax baseline，再走 self-play / RL。這份 source 的核心價值不是魔術方塊知識本身，而是揭示 Jones 如何把個人經驗、技術史、agentic tooling 與未來可做專案串成可累積的思想圖譜。",
+  "items": [
+    {
+      "id": "speedcubing-evolved-into-state-control",
+      "kind": "pattern",
+      "title": "速解魔術方塊從解題演進成狀態操控",
+      "body": "對話把現代 speedcubing 的進化描述為從 Cross/F2L/OLL/PLL 的線性解題，進入 F2L 同時控制 last layer、提高 skip 機率、提前 recognition 的狀態操控。這讓魔術方塊不只是背公式，而是設計未來狀態的實踐。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 117,
+          "end_line": 145,
+          "quote": "不是轉更快，而是讓 cube 更早被“安排好”，最後直接跳步"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 322,
+          "end_line": 325,
+          "quote": "從「解魔術方塊」→ 變成「操控狀態空間」"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": ["rubiks-cube", "state-control", "algorithm", "optimization"]
+    },
+    {
+      "id": "knowledge-exists-before-social-adoption",
+      "kind": "pattern",
+      "title": "知識存在與社會知道之間有擴散斷層",
+      "body": "Jones 從路邊轉魔術方塊讓旁人驚訝的經驗，辨認出一種知識擴散斷層：解法早已存在，小圈子也已經能靠公式解題，但大眾仍停留在無解神話。這個模式後來被用來類比 AI / agentic coding 的採用落差。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 358,
+          "end_line": 368,
+          "quote": "小圈子已經知道解法，但大眾還不知道"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 544,
+          "end_line": 558,
+          "quote": "知識存在 ≠ 社會知道"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": ["knowledge-diffusion", "adoption-curve", "rubiks-cube", "technology-history"]
+    },
+    {
+      "id": "algorithm-learning-repeats-across-cube-leetcode-ai",
+      "kind": "pattern",
+      "title": "Jones 透過魔術方塊、LeetCode、AI 三次接觸 algorithm",
+      "body": "Jones 意識到高中背 OLL/PLL 其實就是在學 algorithm，只是當時以為是記公式；工作面試刷 LeetCode 時又以為那才是 algorithm；到了 AI / agentic coding 時代，他開始把 algorithm 視為可被設計與編排的系統。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 602,
+          "end_line": 609,
+          "quote": "高中學魔術方塊時就是在學記這些algorithm"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 795,
+          "end_line": 804,
+          "quote": "現在 AI 讓你第三次接觸 algorithm，而這次你開始在設計它們"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": ["algorithm", "personal-history", "leetcode", "ai-collaboration"]
+    },
+    {
+      "id": "tool-method-thinking-adoption-ladder",
+      "kind": "pattern",
+      "title": "技術採用會從工具進到方法再進到思維",
+      "body": "對話將魔術方塊與 AI 的採用落差拆成三層：工具、方法、思維。多數人只擁有工具，少數人會設計流程，更少人能操控整個系統；這解釋了為何有些人已在 agentic workflows，而有些人仍只把 ChatGPT 當 copy-paste 問答工具。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 645,
+          "end_line": 688,
+          "quote": "魔術方塊 2006 年的那群人，但在 AI 世界"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 707,
+          "end_line": 731,
+          "quote": "工具 ≠ 方法 ≠ 思維"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": ["agentic-coding", "systems-thinking", "technology-adoption", "workflow"]
+    },
+    {
+      "id": "ai-era-compresses-workflows-into-agents",
+      "kind": "claim",
+      "title": "AI 時代的 algorithm shift 是把 workflow 壓縮成 agent",
+      "body": "對話把三個時代串成一條壓縮鏈：魔術方塊壓縮 state space 成公式，LeetCode 壓縮 problem space 成 algorithm，AI 時代則壓縮 workflow 成 agent。人的角色從學 algorithm，轉向設計讓 AI 執行 algorithm 的系統。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 760,
+          "end_line": 792,
+          "quote": "人設計「讓 AI 執行 algorithm 的系統」"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1087,
+          "end_line": 1096,
+          "quote": "AI 時代 | 壓縮 workflow → agent"
+        }
+      ],
+      "confidence": 0.94,
+      "tags": ["ai", "agent", "workflow", "algorithm"]
+    },
+    {
+      "id": "state-space-search-unifies-cube-leetcode-agent",
+      "kind": "claim",
+      "title": "魔術方塊、LeetCode 與 Agent 都是在狀態空間中找路",
+      "body": "對話明確把三者統一為 state space search：魔術方塊有 cube 狀態與轉動，LeetCode 有資料結構狀態與操作，agentic coding 有任務進度與 tool call / prompt / script。差異在於魔術方塊有限且可逆，LeetCode 抽象，Agent 則是開放世界 heuristic。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 847,
+          "end_line": 893,
+          "quote": "全部都在一個巨大的「狀態空間」裡找路"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 897,
+          "end_line": 915,
+          "quote": "魔術方塊是最乾淨的一個"
+        }
+      ],
+      "confidence": 0.97,
+      "tags": ["state-space-search", "leetcode", "agentic-coding", "rubiks-cube"]
+    },
+    {
+      "id": "human-computer-hybrid-optimization-beats-pure-optimality",
+      "kind": "pattern",
+      "title": "人機混合優化常比純數學最優更適合實際表現",
+      "body": "魔術方塊公式可以由電腦搜尋更短解，但實際速解仍要經過人類手感、finger trick、辨識與節奏篩選。這形成一種 hybrid optimization：電腦找 candidate，人類以情境和 embodied constraints 挑選可用解法。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1137,
+          "end_line": 1158,
+          "quote": "它後來真的被電腦“接手優化”，但沒有完全取代人類版本"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1162,
+          "end_line": 1236,
+          "quote": "電腦搜尋 + 人類手感篩選的 hybrid 結果"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": ["human-computer-collaboration", "optimization", "embodied-constraints", "rubiks-cube"]
+    },
+    {
+      "id": "best-system-design-avoids-hard-states",
+      "kind": "pattern",
+      "title": "高階系統設計不是解難題而是避免難狀態出現",
+      "body": "對話把魔術方塊從優化某個 OLL 公式推進到避免進入難 OLL 狀態，並類比 AI / Agent 流程設計：不只是讓 AI solve，而是設計讓 AI 不需要 solve 的流程。這是一個可跨領域套用的系統設計原則。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1253,
+          "end_line": 1286,
+          "quote": "避免進入難狀態，而不是優化那個狀態"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1289,
+          "end_line": 1317,
+          "quote": "設計讓 AI 不需要 solve 的流程"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": ["system-design", "agentic-coding", "optimization", "avoidance"]
+    },
+    {
+      "id": "animal-shogi-ai-is-controllable-ai-sandbox",
+      "kind": "action",
+      "title": "動物將棋 AI 可作為 Jones 的可控 AI sandbox",
+      "body": "Jones 的舊動物將棋 AI / RL 夢想可被重啟為一個高掌控度 AI sandbox。相較 D2R bot 面對外部遊戲環境，動物將棋是 deterministic、可模擬、可 debug、可視覺化的純邏輯系統，適合先做 rule engine 和 search AI，再走 RL / self-play。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1347,
+          "end_line": 1355,
+          "quote": "動物將棋AI的夢想肯定也可以了！畢竟bot還比較難欸"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1391,
+          "end_line": 1429,
+          "quote": "一個「可完全掌控的 AI sandbox」"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": ["animal-shogi", "reinforcement-learning", "ai-sandbox", "project-idea"]
+    },
+    {
+      "id": "animal-shogi-v2-should-start-with-minimax-baseline",
+      "kind": "decision",
+      "title": "動物將棋 v2 應先做規則引擎與 Minimax 再做 RL",
+      "body": "對話對 Animal Shogi AI 的重啟路線做出明確技術判斷：不要直接修舊 repo，也不要一開始直衝 RL；2026 版本應重寫乾淨架構，先確保規則引擎正確，接著做 minimax / alpha-beta baseline，再加入 RL。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1464,
+          "end_line": 1507,
+          "quote": "Phase 2：Rule Engine（關鍵）／Phase 3：Search AI（先不用 RL）"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1755,
+          "end_line": 1792,
+          "quote": "先做 Minimax，不要直接 RL"
+        }
+      ],
+      "confidence": 0.94,
+      "tags": ["animal-shogi", "minimax", "reinforcement-learning", "technical-plan"]
+    },
+    {
+      "id": "lookup-search-learning-progression",
+      "kind": "pattern",
+      "title": "lookup → search → learning 是 Jones 這條興趣線的進化鏈",
+      "body": "這段對話將魔術方塊、動物將棋與 RL 串成 lookup → search → learning 的進化鏈：魔術方塊使用既有公式 lookup，動物將棋用 search 找最佳解，RL 讓系統自己學出評估函數。這也呼應 Jones 從使用演算法走向生成演算法的長期興趣。",
+      "source_refs": [
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1522,
+          "end_line": 1548,
+          "quote": "lookup → search → learning"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1887,
+          "end_line": 1891,
+          "quote": "下一步，就是讓系統自己長出解法"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": ["learning", "search", "algorithm", "reinforcement-learning"]
+    }
+  ]
+}

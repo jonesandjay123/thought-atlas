@@ -1,0 +1,24 @@
+{
+  "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+  "title": "魔術方塊演算法、知識擴散與動物將棋 AI",
+  "source_type": "conversation",
+  "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+  "captured_at": "2026-04-27T02:15:34.910Z",
+  "content_hash": "sha256:ea0842cd3d13f26c58deddb1158f87b6e62911e6b5ef536f413853b5b31b18da",
+  "language": "zh-Hant",
+  "tags": [
+    "rubiks-cube",
+    "algorithm",
+    "agentic-coding",
+    "knowledge-diffusion",
+    "animal-shogi",
+    "reinforcement-learning"
+  ],
+  "status": "inbox",
+  "origin": {
+    "channel": "slack",
+    "message_id": "1777256644.070339",
+    "thread_id": "1777256043.118699",
+    "sender": "Jones"
+  }
+}

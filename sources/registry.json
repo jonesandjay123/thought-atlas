@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_at": "2026-04-25T22:59:11.200Z",
+  "updated_at": "2026-04-27T02:27:06.073Z",
   "sources": [
     {
       "source_id": "original-conversation-2026-04-11",
@@ -154,6 +154,31 @@
       ],
       "first_seen_at": "2026-04-25T22:57:34.438Z",
       "last_seen_at": "2026-04-25T22:59:11.200Z"
+    },
+    {
+      "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+      "title": "魔術方塊演算法、知識擴散與動物將棋 AI",
+      "source_type": "conversation",
+      "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+      "manifest_path": "examples/rubiks-algorithms-animal-shogi-2026-04-26.source-manifest.json",
+      "content_hash": "sha256:ea0842cd3d13f26c58deddb1158f87b6e62911e6b5ef536f413853b5b31b18da",
+      "status": "processed",
+      "tags": [
+        "rubiks-cube",
+        "algorithm",
+        "agentic-coding",
+        "knowledge-diffusion",
+        "animal-shogi",
+        "reinforcement-learning"
+      ],
+      "origin": {
+        "channel": "slack",
+        "message_id": "1777256644.070339",
+        "thread_id": "1777256043.118699",
+        "sender": "Jones"
+      },
+      "first_seen_at": "2026-04-27T02:25:10.528Z",
+      "last_seen_at": "2026-04-27T02:27:06.073Z"
     }
   ],
   "runs": [
@@ -451,6 +476,37 @@
         "updated_edges": 0
       },
       "at": "2026-04-25T22:59:11.199Z"
+    },
+    {
+      "run_id": "source_manifest_created-1777256710528-22",
+      "type": "source_manifest_created",
+      "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+      "content_hash": "sha256:ea0842cd3d13f26c58deddb1158f87b6e62911e6b5ef536f413853b5b31b18da",
+      "manifest_path": "examples/rubiks-algorithms-animal-shogi-2026-04-26.source-manifest.json",
+      "source_path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+      "origin": {
+        "channel": "slack",
+        "message_id": "1777256644.070339",
+        "thread_id": "1777256043.118699",
+        "sender": "Jones"
+      },
+      "at": "2026-04-27T02:25:10.528Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1777256826073-23",
+      "type": "graph_patch_applied",
+      "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+      "digest_id": "rubiks-algorithms-animal-shogi-2026-04-26.digest",
+      "patch_id": "rubiks-algorithms-animal-shogi-2026-04-26.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 11,
+        "updated_nodes": 0,
+        "added_edges": 8,
+        "updated_edges": 0
+      },
+      "at": "2026-04-27T02:27:06.072Z"
     }
   ]
 }
