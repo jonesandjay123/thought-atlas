@@ -1,0 +1,23 @@
+{
+  "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+  "title": "AI Selection、JEV 與「有球來就打」",
+  "source_type": "conversation",
+  "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+  "captured_at": "2026-09-25T04:52:22.564Z",
+  "content_hash": "sha256:6100b3ddd7deb3375212f64c9f9c37f52403570f53a6bed3d7474b54e102d24e",
+  "language": "zh-Hant",
+  "tags": [
+    "ai-selection",
+    "jev",
+    "commitment",
+    "life-strategy",
+    "play-the-ball",
+    "ai-collaboration"
+  ],
+  "status": "inbox",
+  "notes": "Verbatim copy of jonesandjay123/thinking_with_ai conversations/ai-selection-jev-play-the-ball-2026-09-21/README.md at commit a613104baaa40ae99d9c4d14d31c06eb2fd7a483 (Jones × GPT conversation package, 2026-09-21). The companion summary.md in the same folder is a condensed restatement of this README and was read but not ingested separately. Revival Phase 0 gold-standard source.",
+  "origin": {
+    "channel": "github",
+    "sender": "Jones"
+  }
+}

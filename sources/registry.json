@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_at": "2026-04-27T02:27:06.073Z",
+  "updated_at": "2026-09-25T04:57:13.618Z",
   "sources": [
     {
       "source_id": "original-conversation-2026-04-11",
@@ -179,6 +179,52 @@
       },
       "first_seen_at": "2026-04-27T02:25:10.528Z",
       "last_seen_at": "2026-04-27T02:27:06.073Z"
+    },
+    {
+      "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+      "title": "AI Selection、JEV 與「有球來就打」",
+      "source_type": "conversation",
+      "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+      "manifest_path": "examples/ai-selection-jev-play-the-ball-2026-09-21.source-manifest.json",
+      "content_hash": "sha256:6100b3ddd7deb3375212f64c9f9c37f52403570f53a6bed3d7474b54e102d24e",
+      "status": "processed",
+      "tags": [
+        "ai-selection",
+        "jev",
+        "commitment",
+        "life-strategy",
+        "play-the-ball",
+        "ai-collaboration"
+      ],
+      "origin": {
+        "channel": "github",
+        "sender": "Jones"
+      },
+      "first_seen_at": "2026-09-25T04:52:22.565Z",
+      "last_seen_at": "2026-09-25T04:57:13.532Z"
+    },
+    {
+      "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+      "title": "AI、不可取代性與「不要錯過自己真正想活的人生」",
+      "source_type": "conversation",
+      "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+      "manifest_path": "examples/ai-irreplaceability-lived-experience-2026-09-25.source-manifest.json",
+      "content_hash": "sha256:b2d58a915be8d15bcdcec5c661df32670860fedea29f47ae035a39f3546559d8",
+      "status": "processed",
+      "tags": [
+        "irreplaceability",
+        "lived-experience",
+        "creation",
+        "identity",
+        "ai-era-values",
+        "ai-collaboration"
+      ],
+      "origin": {
+        "channel": "github",
+        "sender": "Jones"
+      },
+      "first_seen_at": "2026-09-25T04:52:22.645Z",
+      "last_seen_at": "2026-09-25T04:57:13.618Z"
     }
   ],
   "runs": [
@@ -507,6 +553,64 @@
         "updated_edges": 0
       },
       "at": "2026-04-27T02:27:06.072Z"
+    },
+    {
+      "run_id": "source_manifest_created-1790311942566-24",
+      "type": "source_manifest_created",
+      "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+      "content_hash": "sha256:6100b3ddd7deb3375212f64c9f9c37f52403570f53a6bed3d7474b54e102d24e",
+      "manifest_path": "examples/ai-selection-jev-play-the-ball-2026-09-21.source-manifest.json",
+      "source_path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+      "origin": {
+        "channel": "github",
+        "sender": "Jones"
+      },
+      "at": "2026-09-25T04:52:22.565Z"
+    },
+    {
+      "run_id": "source_manifest_created-1790311942645-25",
+      "type": "source_manifest_created",
+      "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+      "content_hash": "sha256:b2d58a915be8d15bcdcec5c661df32670860fedea29f47ae035a39f3546559d8",
+      "manifest_path": "examples/ai-irreplaceability-lived-experience-2026-09-25.source-manifest.json",
+      "source_path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+      "origin": {
+        "channel": "github",
+        "sender": "Jones"
+      },
+      "at": "2026-09-25T04:52:22.645Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1790312233532-26",
+      "type": "graph_patch_applied",
+      "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+      "digest_id": "ai-selection-jev-play-the-ball-2026-09-21.digest",
+      "patch_id": "ai-selection-jev-play-the-ball-2026-09-21.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 8,
+        "updated_nodes": 0,
+        "added_edges": 12,
+        "updated_edges": 0
+      },
+      "at": "2026-09-25T04:57:13.532Z"
+    },
+    {
+      "run_id": "graph_patch_applied-1790312233618-27",
+      "type": "graph_patch_applied",
+      "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+      "digest_id": "ai-irreplaceability-lived-experience-2026-09-25.digest",
+      "patch_id": "ai-irreplaceability-lived-experience-2026-09-25.patch",
+      "graph_path": "graph/graph.json",
+      "status": "processed",
+      "summary": {
+        "added_nodes": 8,
+        "updated_nodes": 0,
+        "added_edges": 19,
+        "updated_edges": 0
+      },
+      "at": "2026-09-25T04:57:13.618Z"
     }
   ]
 }

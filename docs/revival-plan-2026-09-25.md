@@ -256,6 +256,21 @@ Clicking a node should expose:
 
 Global visualization must remain exploratory, not merely decorative.
 
+### Future surface: mobile companion (non-binding note)
+
+For now the existing web UI (`thought-atlas-ui`) remains the visualization surface. Once the graph and data contract is stable, consider a polished mobile companion app as another read-only Thought Atlas client. It would make the Atlas feel personal and always available:
+
+- global graph browsing
+- theme / trend dashboard
+- node drill-down
+- "what have I been thinking about lately?"
+- bridge thoughts
+- source trails back to the original evidence
+
+Modern coding agents make a high-quality mobile UI much cheaper and faster to build than before, so this is now a realistic future surface.
+
+This is a note, not a decision. No framework (React Native / Flutter / native Android) is chosen, no app repo exists, and nothing should be implemented until the contract, including scoring, is stable.
+
 ---
 
 ## Dashboard questions worth answering

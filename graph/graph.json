@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_at": "2026-04-27T02:28:00.000Z",
+  "updated_at": "2026-09-25T05:03:00.000Z",
   "nodes": [
     {
       "id": "labor-devotion-question",
@@ -1799,6 +1799,435 @@
         "algorithm",
         "reinforcement-learning"
       ]
+    },
+    {
+      "id": "ai-capability-stack-node-to-selection",
+      "kind": "pattern",
+      "title": "AI 能力正從 Node → Edge → Graph 一路往下吃進 Selection",
+      "body": "對話把 AI 能力遷移整理成 Node → Edge → Graph → Selection → Commitment → Transformation 的 stack：找答案（node）的稀缺性快速下降；看見跨節點關聯（edge）與理解整體結構（graph）也正在自動化；JEV 類工具則讓 AI 進入 selection layer，對選項加權、排序、推薦下一步。因此人的生活策略不應建立在「我永遠會比 AI 更會找答案或做選擇」的假設上。",
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 5,
+          "end_line": 9,
+          "quote": "edge、graph，甚至 selection 本身，也都正在被 AI 吃掉。"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 17,
+          "end_line": 55,
+          "quote": "Graph-level 的觀察也正在快速自動化。"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 164,
+          "end_line": 170,
+          "quote": "AI 正在一路從 Node → Edge → Graph → Selection 往下走。"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "ai-selection",
+        "capability-migration",
+        "jev",
+        "ai-collaboration"
+      ]
+    },
+    {
+      "id": "what-humans-keep-when-ai-selects",
+      "kind": "question",
+      "title": "當 AI 也會連線、建圖、加權、推薦，人還要保留什麼？",
+      "body": "JEV 讓「AI 從幫我想往幫我選再推一步」不再只是哲學假設。對話的真正新問題因此變成：當 AI 不只會回答，也會連線、建圖、比較、加權、推薦，人還要保留什麼？",
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 9,
+          "end_line": 13,
+          "quote": "當 AI 不只會回答，也會連線、建圖、比較、加權、推薦，人還要保留什麼？"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 50,
+          "end_line": 53,
+          "quote": "它把 AI 從「幫我想」往「幫我選」再推一步。"
+        }
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "ai-selection",
+        "jev",
+        "human-role",
+        "question"
+      ]
+    },
+    {
+      "id": "ai-recommendation-is-not-commitment",
+      "kind": "decision",
+      "title": "AI 可以推薦最優選項，但不能替人認領人生",
+      "body": "即使 AI 認為某個選項 expected value 最高，「這是不是我要認領的人生？」也不會被更好的排序消除。Commitment 不是知道哪個選項最優，而是願意真的走進某條路並承受它的成本與後果。原則是讓 AI 幫忙看圖、算權重、提出選擇，但由自己決定哪一段人生值得親自走過。",
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 57,
+          "end_line": 62,
+          "quote": "這是不是我要認領的人生？"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 170,
+          "end_line": 172,
+          "quote": "讓 AI 幫忙看圖、算權重、提出選擇，但由自己決定哪一段人生值得親自走過。"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "commitment",
+        "ai-selection",
+        "agency",
+        "ai-collaboration"
+      ]
+    },
+    {
+      "id": "choice-transforms-the-chooser",
+      "kind": "claim",
+      "title": "選擇會改寫做選擇的人，人生不是固定 utility function 上的 argmax",
+      "body": "選擇不是發生在固定的人身上。走進某條路之後，那段經驗會反過來改變偏好、能力、世界模型與下一次選擇；做決定的人本身也會被路徑改寫，因此人生不是在固定 utility function 上反覆 argmax。",
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 64,
+          "end_line": 69,
+          "quote": "做決定的人本身，也會被路徑改寫。"
+        }
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "transformation",
+        "commitment",
+        "decision-theory",
+        "self-model"
+      ]
+    },
+    {
+      "id": "direction-stable-path-fluid",
+      "kind": "decision",
+      "title": "方向穩定，路徑流動",
+      "body": "AI 讓未來更難被高解析度預測，因此越不值得把大量當下自由度抵押給一張高度具體、假設多年後仍成立的 roadmap。可以保留低解析度方向（健康、好奇、創造能力、重要關係、移動與退出空間），但具體路線應允許重寫。這是 Jones 3.0「方向可以堅持，過程不必控制」在 AI selection 背景下的更新版。",
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 73,
+          "end_line": 91,
+          "quote": "方向穩定，路徑流動。"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 119,
+          "end_line": 121,
+          "quote": "方向可以堅持，過程不必控制。"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 174,
+          "end_line": 176,
+          "quote": "方向穩定，路徑流動；保持自己在場上，有球來就打。"
+        }
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "life-strategy",
+        "direction",
+        "roadmap",
+        "freedom"
+      ]
+    },
+    {
+      "id": "play-the-ball-when-it-comes",
+      "kind": "pattern",
+      "title": "有球來就打：把規劃從固定路線改成維持可回應性",
+      "body": "不要要求自己現在就預測三年後球會從哪裡飛來；保持自己在場上，球真的來了就打。這不是放棄規劃，而是維持可回應性：持續接觸新事物讓自己看得到球、有興趣就快速試而不必先證明它是十年主線、新資訊出現就改路而不把轉彎當失敗、不把任何職稱、技能或 project 當成永久身份、不因下一顆球不同就否定上一顆球的價值。",
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 95,
+          "end_line": 109,
+          "quote": "保持自己在場上，球真的來了，就打。"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "play-the-ball",
+        "life-strategy",
+        "responsiveness",
+        "adaptability"
+      ]
+    },
+    {
+      "id": "present-is-not-future-consumable",
+      "kind": "claim",
+      "title": "當下不是未來的耗材",
+      "body": "未來因 AI 更難被預測，把現在全部犧牲給某個高度具體的遠期版本成本變得更高。今天做了一件有趣的事、學懂一個概念、做出一個小東西、跟重要的人相處、去了沒去過的地方，那一天本身就已成立；真正經歷過、理解過、被改變過的東西，不會因未來 AI 把相關技能商品化就被追溯作廢。",
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 111,
+          "end_line": 111,
+          "quote": "不會因為未來 AI 把相關技能商品化，就被追溯作廢"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 115,
+          "end_line": 133,
+          "quote": "那一天本身就已經成立"
+        }
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "present-value",
+        "time",
+        "lived-experience",
+        "life-strategy"
+      ]
+    },
+    {
+      "id": "jones-version-lineage-selection-patch",
+      "kind": "pattern",
+      "title": "Jones 1.0 → 4.0 自我探索序列與 2026-09-21 Selection Patch",
+      "body": "對話把自己放進一條逐版更新的自我探索序列：Jones 1.0 我是怎麼運作的（操作說明書、思考指紋、自訂框架）；2.0 我要把自己用在哪裡（身份與志業）；3.0 我要怎麼和時間一起活；4.0 我要怎麼讓內在世界進入共同世界；2026-09-21 Selection Patch 則問當 AI 連「幫我選」都開始變強時要怎麼活，答案是方向穩定、路徑流動、有球來就打。",
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 137,
+          "end_line": 150,
+          "quote": "當 AI 連「幫我選」都開始變強，我要怎麼活？"
+        }
+      ],
+      "confidence": 0.88,
+      "tags": [
+        "jones-lineage",
+        "self-model",
+        "identity",
+        "life-design"
+      ]
+    },
+    {
+      "id": "irreplaceability-is-unstable-self-worth-foundation",
+      "kind": "claim",
+      "title": "把自我價值建立在不可取代性上，在 AI 時代是不穩的地基",
+      "body": "傳統敘事是花多年練能力 → 變稀有 → 成為別人做不到的人 → 取得工作、地位、認可 → 證明自己有價值。當 AI 可能以近乎零邊際成本複製一個人二十年累積的稀缺技能，建立在「我會一件別人不會的事情」上的自我價值會非常不穩；「不可取代」越來越像一個短暫、外部決定、無法控制的狀態，因此不應把成為不可取代的人當成人生目標。",
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 6,
+          "end_line": 8,
+          "quote": "人的價值還應該建立在哪裡？"
+        },
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 22,
+          "end_line": 64,
+          "quote": "不要把「成為不可取代的人」當成人生目標。"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "irreplaceability",
+        "self-worth",
+        "identity",
+        "ai-era-values"
+      ]
+    },
+    {
+      "id": "worth-doing-without-being-the-only-one",
+      "kind": "claim",
+      "title": "一件事情值得做，不必因為只有你做得到",
+      "body": "努力沒有消失，只是理由改變了。為了證明稀缺性而努力（比別人強、取得 title、確保不被取代）與因為真的想做而努力（想把歌唱好、想知道機構能不能動、想把 side project 做出來、享受試錯後突然成功）是兩種努力；後者不需要以「永遠比 AI 強」作為成立條件。",
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 68,
+          "end_line": 94,
+          "quote": "一件事情值得做，不必因為只有你做得到。"
+        }
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "effort",
+        "intrinsic-motivation",
+        "irreplaceability",
+        "meaning"
+      ]
+    },
+    {
+      "id": "artifact-commodified-experience-not-voided",
+      "kind": "claim",
+      "title": "成果可以被商品化；經歷不會被追溯作廢",
+      "body": "成果（程式、模型、文章、設計、歌曲、研究結果）未來可能被 AI 更快、更好、更便宜地大量生成；但經歷（想到 → 試 → 壞掉 → 改 → 突然成功 →「靠，真的動了」）不能被未來更好的結果倒推證明為白費。那一晚真正被消費的產品本來就不只是最後那份 code 或模型，那段探索本身就是人生的一部分。",
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 98,
+          "end_line": 127,
+          "quote": "成果可以被商品化；經歷不會被追溯作廢。"
+        }
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "lived-experience",
+        "artifact",
+        "commoditization",
+        "meaning"
+      ]
+    },
+    {
+      "id": "scarcity-moves-to-taste-intent-experience",
+      "kind": "claim",
+      "title": "當 execution 趨近免費，稀缺性上移到 taste、curiosity、intent 與值得活過的經歷",
+      "body": "即使 AI 可以找答案、建立關聯、比較路徑、選擇方案、生成成品，人仍然要面對「我到底想把注意力、時間與生命放在哪裡？」。execution 成本越低，真正稀缺的東西越往上移到 taste、curiosity、intent、willingness to experience 與 what feels worth living through；「選擇」不只是選最優答案，也是在選哪一段經歷值得親自活過。",
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 131,
+          "end_line": 173,
+          "quote": "哪一段經歷值得我親自活過。"
+        }
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "taste",
+        "intent",
+        "scarcity",
+        "ai-selection"
+      ]
+    },
+    {
+      "id": "creation-as-lived-activity-rises",
+      "kind": "claim",
+      "title": "AI 讓作為商品的技能貶值，讓作為活動的創造升值",
+      "body": "創作有兩種功能：作為商品（我要產出最好的結果），會受 AI 非常直接的競爭；作為活動（我喜歡進入這個狀態），價值不來自別人做不到。AI 越強，skill as commodity ↓；但 execution 變便宜也讓人把更多注意力放在真正想做、好奇、喜歡的風格與想活過的經歷上，creation as lived activity ↑。極度功利的效率工具，最後可能逼人重新回答：如果我不需要靠「有用」證明自己，我真正想做什麼？",
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 190,
+          "end_line": 208,
+          "quote": "因為我喜歡，所以我做。"
+        },
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 212,
+          "end_line": 234,
+          "quote": "creation as lived activity ↑"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "creation",
+        "commoditization",
+        "intrinsic-motivation",
+        "ai-era-values"
+      ]
+    },
+    {
+      "id": "ambition-redirected-to-exploration",
+      "kind": "decision",
+      "title": "不是躺平：把野心從成為不可取代的人轉向探索這一生能走到哪裡",
+      "body": "這套觀點不是「反正 AI 會超越我，所以隨便過」，而是把野心從「我要成為某種厲害、稀缺、不可取代的人」移到「我想看看這一生到底可以探索到哪裡」。只為身份與地位而鑽的洞可能突然失去意義；但如果一個洞本身讓你著迷，那就鑽爆它。AI 越強，越能把雜務拿掉，讓人把更多生命花在真正有意思的部分。",
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 262,
+          "end_line": 282,
+          "quote": "我想看看這一生到底可以探索到哪裡。"
+        }
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "ambition",
+        "exploration",
+        "curiosity",
+        "life-strategy"
+      ]
+    },
+    {
+      "id": "outer-inner-principle-pair",
+      "kind": "pattern",
+      "title": "一外一內：對世界有球來就打，對自己不必證明不可取代",
+      "body": "9/21 的結論面向外在世界：未來不必被完全預測，只需保持開放，讓自己有能力隨時重新選擇（方向穩定，路徑流動；保持在場，有球來就打）。9/25 的結論面向內在身份：人生不必用來證明自己不可取代，而可以用來追隨真正的好奇、創造與體驗。兩者合成一外一內的一組原則：外面的世界怎麼變，來了再應對；裡面的自己，不需要和世界比誰更不可取代。",
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 238,
+          "end_line": 258,
+          "quote": "形成一外一內兩條原則"
+        },
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 298,
+          "end_line": 302,
+          "quote": "這句話和「有球來就打」是一外一內。"
+        }
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "principle-pair",
+        "life-strategy",
+        "identity",
+        "play-the-ball"
+      ]
+    },
+    {
+      "id": "do-not-miss-the-life-you-want-to-live",
+      "kind": "decision",
+      "title": "不必成為不可取代的人；只要不要錯過自己真正想活的人生",
+      "body": "Source B 最後收斂成一句 durable principle：不必成為不可取代的人；只要不要錯過自己真正想活的人生。人生不必用來證明自己不可取代，而可以用來追隨真正的好奇、創造與體驗——想做什麼，就真正去做。",
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 286,
+          "end_line": 296,
+          "quote": "不必成為不可取代的人；只要不要錯過自己真正想活的人生。"
+        },
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 304,
+          "end_line": 304,
+          "quote": "想做什麼，就真正去做。"
+        }
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "durable-principle",
+        "irreplaceability",
+        "lived-experience",
+        "life-design"
+      ]
     }
   ],
   "edges": [
@@ -2908,6 +3337,690 @@
         }
       ],
       "rationale": "Animal Shogi AI 是 Jones 將個人興趣、工具鏈與 agentic execution 轉成可玩專案的一個節點。"
+    },
+    {
+      "id": "edge-capability-stack-to-what-humans-keep",
+      "from": "ai-capability-stack-node-to-selection",
+      "to": "what-humans-keep-when-ai-selects",
+      "relation": "extends",
+      "weight": 0.9,
+      "confidence": 0.93,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 7,
+          "end_line": 13,
+          "quote": "人還要保留什麼？"
+        }
+      ],
+      "rationale": "Selection 也被 AI 吃掉之後，才出現「人還要保留什麼」這個新問題。"
+    },
+    {
+      "id": "edge-what-humans-keep-to-recommendation-not-commitment",
+      "from": "what-humans-keep-when-ai-selects",
+      "to": "ai-recommendation-is-not-commitment",
+      "relation": "extends",
+      "weight": 0.9,
+      "confidence": 0.92,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 57,
+          "end_line": 62,
+          "quote": "這是不是我要認領的人生？"
+        }
+      ],
+      "rationale": "Commitment 是對「人還要保留什麼」的第一個回答：排序可以外包，認領不能。"
+    },
+    {
+      "id": "edge-recommendation-not-commitment-to-choice-transforms",
+      "from": "ai-recommendation-is-not-commitment",
+      "to": "choice-transforms-the-chooser",
+      "relation": "extends",
+      "weight": 0.86,
+      "confidence": 0.9,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 57,
+          "end_line": 69,
+          "quote": "做決定的人本身，也會被路徑改寫。"
+        }
+      ],
+      "rationale": "Stack 的最後一層：認領之後，路徑會反過來改寫做選擇的人。"
+    },
+    {
+      "id": "edge-capability-stack-to-direction-stable",
+      "from": "ai-capability-stack-node-to-selection",
+      "to": "direction-stable-path-fluid",
+      "relation": "supports",
+      "weight": 0.8,
+      "confidence": 0.88,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 73,
+          "end_line": 81,
+          "quote": "AI 變化速度越快，越不值得把大量當下自由度抵押給一張高度具體、假設多年後仍然成立的 roadmap。"
+        }
+      ],
+      "rationale": "「Selection 被吃掉之後，生活策略怎麼變？」：AI 加速變化正是不鎖死 roadmap 的理由。"
+    },
+    {
+      "id": "edge-direction-stable-to-play-the-ball",
+      "from": "direction-stable-path-fluid",
+      "to": "play-the-ball-when-it-comes",
+      "relation": "extends",
+      "weight": 0.92,
+      "confidence": 0.95,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 174,
+          "end_line": 176,
+          "quote": "方向穩定，路徑流動；保持自己在場上，有球來就打。"
+        }
+      ],
+      "rationale": "Source 的一句話版本把兩者串成同一原則：方向穩定、路徑流動是策略，有球來就打是操作形式。"
+    },
+    {
+      "id": "edge-present-not-consumable-to-direction-stable",
+      "from": "present-is-not-future-consumable",
+      "to": "direction-stable-path-fluid",
+      "relation": "supports",
+      "weight": 0.82,
+      "confidence": 0.88,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 129,
+          "end_line": 131,
+          "quote": "因此，把現在全部犧牲給某個高度具體的遠期版本，成本變得更高。"
+        }
+      ],
+      "rationale": "當下本身成立，是不把自由度抵押給遠期 roadmap 的價值理由。"
+    },
+    {
+      "id": "edge-jones-lineage-to-direction-stable",
+      "from": "jones-version-lineage-selection-patch",
+      "to": "direction-stable-path-fluid",
+      "relation": "extends",
+      "weight": 0.74,
+      "confidence": 0.86,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 149,
+          "end_line": 150,
+          "quote": "方向穩定、路徑流動；保持在場，有球來就打。"
+        }
+      ],
+      "rationale": "Selection Patch 把「方向穩定、路徑流動」接在 Jones 1.0 → 4.0 序列之後，作為第五個版本更新。"
+    },
+    {
+      "id": "edge-workflow-to-agent-to-capability-stack",
+      "from": "ai-era-compresses-workflows-into-agents",
+      "to": "ai-capability-stack-node-to-selection",
+      "relation": "extends",
+      "weight": 0.74,
+      "confidence": 0.8,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 35,
+          "end_line": 55,
+          "quote": "它把 AI 從「幫我想」往「幫我選」再推一步。"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 760,
+          "end_line": 792,
+          "quote": "人設計「讓 AI 執行 algorithm 的系統」"
+        }
+      ],
+      "rationale": "4 月的壓縮鏈把人的角色放在「設計讓 AI 執行 algorithm 的系統」；9 月的 stack 更進一步指出 edge、graph、selection 也正在被 AI 接手，是同一條 AI 往上吃抽象層的線。"
+    },
+    {
+      "id": "edge-hybrid-optimization-to-recommendation-not-commitment",
+      "from": "human-computer-hybrid-optimization-beats-pure-optimality",
+      "to": "ai-recommendation-is-not-commitment",
+      "relation": "extends",
+      "weight": 0.7,
+      "confidence": 0.8,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 170,
+          "end_line": 172,
+          "quote": "讓 AI 幫忙看圖、算權重、提出選擇，但由自己決定哪一段人生值得親自走過。"
+        },
+        {
+          "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+          "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+          "start_line": 1137,
+          "end_line": 1158,
+          "quote": "它後來真的被電腦“接手優化”，但沒有完全取代人類版本"
+        }
+      ],
+      "rationale": "4 月的 hybrid optimization 仍由人類做 selection（電腦找 candidate、人類挑選）；9 月承認 selection 也在被 AI 吃掉，人的保留角色因此再往下一層移到 commitment。"
+    },
+    {
+      "id": "edge-decision-augmentation-to-capability-stack",
+      "from": "blind-assist-and-polymarket-share-decision-augmentation",
+      "to": "ai-capability-stack-node-to-selection",
+      "relation": "resonates_with",
+      "weight": 0.6,
+      "confidence": 0.72,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 50,
+          "end_line": 53,
+          "quote": "這正是 JEV 讓 Jones 特別有感的地方。"
+        },
+        {
+          "source_id": "breakfast-product-theory-2026-03-31",
+          "path": "sources/inbox/breakfast-product-theory-2026-03-31.md",
+          "start_line": 8,
+          "end_line": 19,
+          "quote": "在資訊不完整的世界中，幫人做更好的決策（Decision Augmentation）"
+        }
+      ],
+      "rationale": "3 月把 Decision Augmentation 當成產品機會；9 月 JEV 讓 AI 進入 selection layer，是同一種「AI 幫人做決策」能力從產品視角轉為生活策略視角。關聯是主題共振，非來源明示。"
+    },
+    {
+      "id": "edge-choice-transforms-to-commitment-gap",
+      "from": "choice-transforms-the-chooser",
+      "to": "direction-too-many-commitment-gap",
+      "relation": "resonates_with",
+      "weight": 0.76,
+      "confidence": 0.82,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 64,
+          "end_line": 69,
+          "quote": "你走進某條路之後，那段經驗會反過來改變你的偏好、能力、世界模型與下一次選擇。"
+        },
+        {
+          "source_id": "ikigai-2026-04-25",
+          "path": "sources/inbox/ikigai-2026-04-25.md",
+          "start_line": 151,
+          "end_line": 159,
+          "quote": "方向太多 → 不敢 commit"
+        }
+      ],
+      "rationale": "Ikigai 對話說「選一個值得投入的方向，並在投入中讓它變成答案」；9 月的 transformation 給出同一件事的機制：走進去之後，路徑會改寫人，所以答案不必在投入前就被證明。"
+    },
+    {
+      "id": "edge-direction-stable-to-playable-life-system",
+      "from": "direction-stable-path-fluid",
+      "to": "playable-life-system-prototype",
+      "relation": "resonates_with",
+      "weight": 0.72,
+      "confidence": 0.8,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 81,
+          "end_line": 91,
+          "quote": "但具體路線應該允許重寫。"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 152,
+          "end_line": 158,
+          "quote": "[Playable Life System](../../principles/playable-life-system/)"
+        },
+        {
+          "source_id": "ikigai-2026-04-25",
+          "path": "sources/inbox/ikigai-2026-04-25.md",
+          "start_line": 562,
+          "end_line": 589,
+          "quote": "把你的生活、想法、行動，全部變成一個可以被 AI 一起操作與重構的「遊戲介面」"
+        }
+      ],
+      "rationale": "Source A 在相關歸檔中明列 Playable Life System；兩者都把人生當成可重構、可重寫路線的系統，而非固定計畫。"
+    },
+    {
+      "id": "edge-irreplaceability-unstable-to-do-not-miss-life",
+      "from": "irreplaceability-is-unstable-self-worth-foundation",
+      "to": "do-not-miss-the-life-you-want-to-live",
+      "relation": "supports",
+      "weight": 0.9,
+      "confidence": 0.93,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 286,
+          "end_line": 296,
+          "quote": "不必成為不可取代的人；只要不要錯過自己真正想活的人生。"
+        }
+      ],
+      "rationale": "不可取代性是不穩的地基，是 durable line 前半句「不必成為不可取代的人」的理由。"
+    },
+    {
+      "id": "edge-irreplaceability-unstable-to-worth-doing",
+      "from": "irreplaceability-is-unstable-self-worth-foundation",
+      "to": "worth-doing-without-being-the-only-one",
+      "relation": "extends",
+      "weight": 0.86,
+      "confidence": 0.9,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 64,
+          "end_line": 74,
+          "quote": "真正的轉向是把兩種努力拆開。"
+        }
+      ],
+      "rationale": "放下不可取代性之後，努力沒有消失，只是理由從證明稀缺轉向真的想做。"
+    },
+    {
+      "id": "edge-experience-not-voided-to-worth-doing",
+      "from": "artifact-commodified-experience-not-voided",
+      "to": "worth-doing-without-being-the-only-one",
+      "relation": "supports",
+      "weight": 0.84,
+      "confidence": 0.88,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 117,
+          "end_line": 127,
+          "quote": "那段探索本身，就是人生的一部分。"
+        }
+      ],
+      "rationale": "經歷不會被追溯作廢，說明為什麼即使結果可被 AI 取代，事情仍值得親自去做。"
+    },
+    {
+      "id": "edge-scarcity-moves-up-to-creation-rises",
+      "from": "scarcity-moves-to-taste-intent-experience",
+      "to": "creation-as-lived-activity-rises",
+      "relation": "supports",
+      "weight": 0.84,
+      "confidence": 0.9,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 216,
+          "end_line": 230,
+          "quote": "但也因為 execution 變便宜，人可以把更多注意力放在："
+        }
+      ],
+      "rationale": "Execution 變便宜、稀缺性上移，正是 creation as lived activity ↑ 的機制。"
+    },
+    {
+      "id": "edge-worth-doing-to-ambition-redirected",
+      "from": "worth-doing-without-being-the-only-one",
+      "to": "ambition-redirected-to-exploration",
+      "relation": "extends",
+      "weight": 0.8,
+      "confidence": 0.86,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 276,
+          "end_line": 280,
+          "quote": "那就鑽爆它。"
+        }
+      ],
+      "rationale": "「因為真的想做而努力」延伸成野心的新方向：讓你著迷的洞就鑽爆它。"
+    },
+    {
+      "id": "edge-ambition-redirected-to-do-not-miss-life",
+      "from": "ambition-redirected-to-exploration",
+      "to": "do-not-miss-the-life-you-want-to-live",
+      "relation": "supports",
+      "weight": 0.8,
+      "confidence": 0.86,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 268,
+          "end_line": 274,
+          "quote": "我想看看這一生到底可以探索到哪裡。"
+        }
+      ],
+      "rationale": "「不要錯過自己真正想活的人生」不是躺平，而是把野心轉向探索；此節點防止 durable line 被誤讀。"
+    },
+    {
+      "id": "edge-do-not-miss-life-to-outer-inner-pair",
+      "from": "do-not-miss-the-life-you-want-to-live",
+      "to": "outer-inner-principle-pair",
+      "relation": "supports",
+      "weight": 0.86,
+      "confidence": 0.9,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 294,
+          "end_line": 302,
+          "quote": "這句話和「有球來就打」是一外一內。"
+        }
+      ],
+      "rationale": "這句 durable line 是一外一內原則中的「內」。"
+    },
+    {
+      "id": "edge-play-the-ball-to-outer-inner-pair",
+      "from": "play-the-ball-when-it-comes",
+      "to": "outer-inner-principle-pair",
+      "relation": "supports",
+      "weight": 0.9,
+      "confidence": 0.94,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 238,
+          "end_line": 254,
+          "quote": "方向穩定，路徑流動；保持自己在場上，有球來就打。"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 174,
+          "end_line": 176,
+          "quote": "方向穩定，路徑流動；保持自己在場上，有球來就打。"
+        }
+      ],
+      "rationale": "9/21 的「有球來就打」被 9/25 明確收編為一外一內原則中的「外」。"
+    },
+    {
+      "id": "edge-capability-stack-to-scarcity-moves-up",
+      "from": "ai-capability-stack-node-to-selection",
+      "to": "scarcity-moves-to-taste-intent-experience",
+      "relation": "extends",
+      "weight": 0.86,
+      "confidence": 0.92,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 131,
+          "end_line": 149,
+          "quote": "今天又多看見了一層。"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 17,
+          "end_line": 33,
+          "quote": "Transformation"
+        }
+      ],
+      "rationale": "Source B 直接引用 9/21 的 Node → … → Transformation stack，並在 selection 之後補上 taste、intent 與 experience 一層。"
+    },
+    {
+      "id": "edge-recommendation-not-commitment-to-scarcity-moves-up",
+      "from": "ai-recommendation-is-not-commitment",
+      "to": "scarcity-moves-to-taste-intent-experience",
+      "relation": "extends",
+      "weight": 0.82,
+      "confidence": 0.88,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 171,
+          "end_line": 173,
+          "quote": "哪一段經歷值得我親自活過。"
+        },
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 170,
+          "end_line": 172,
+          "quote": "由自己決定哪一段人生值得親自走過。"
+        }
+      ],
+      "rationale": "9/21 的「由自己決定哪一段人生值得親自走過」在 9/25 被推成「選擇也是在選哪一段經歷值得親自活過」。"
+    },
+    {
+      "id": "edge-present-not-consumable-to-experience-not-voided",
+      "from": "present-is-not-future-consumable",
+      "to": "artifact-commodified-experience-not-voided",
+      "relation": "extends",
+      "weight": 0.88,
+      "confidence": 0.9,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 111,
+          "end_line": 111,
+          "quote": "不會因為未來 AI 把相關技能商品化，就被追溯作廢"
+        },
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 119,
+          "end_line": 127,
+          "quote": "成果可以被商品化；經歷不會被追溯作廢。"
+        }
+      ],
+      "rationale": "9/21 以一行旁註出現的「不會被追溯作廢」，在 9/25 成為 artifact vs lived experience 的核心拆分。"
+    },
+    {
+      "id": "edge-play-the-ball-to-irreplaceability-unstable",
+      "from": "play-the-ball-when-it-comes",
+      "to": "irreplaceability-is-unstable-self-worth-foundation",
+      "relation": "resonates_with",
+      "weight": 0.66,
+      "confidence": 0.76,
+      "source_refs": [
+        {
+          "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+          "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+          "start_line": 108,
+          "end_line": 108,
+          "quote": "不把任何一個職稱、技能或 project 當成永久身份"
+        },
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 62,
+          "end_line": 64,
+          "quote": "不可取代」本身越來越可能是一個短暫、外部決定、無法控制的狀態。"
+        }
+      ],
+      "rationale": "9/21 的「不把職稱、技能或 project 當成永久身份」是 9/25 不可取代性鬆綁的前兆；9/25 並未直接引用這一行，因此只標為共振。"
+    },
+    {
+      "id": "edge-irreplaceability-unstable-to-comparison-happiness",
+      "from": "irreplaceability-is-unstable-self-worth-foundation",
+      "to": "comparison-awakens-happiness",
+      "relation": "resonates_with",
+      "weight": 0.78,
+      "confidence": 0.82,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 54,
+          "end_line": 64,
+          "quote": "我會一件別人不會的事情。"
+        },
+        {
+          "source_id": "original-conversation-2026-04-11",
+          "path": "sources/inbox/original-conversation-2026-04-11.md",
+          "start_line": 135,
+          "end_line": 170,
+          "quote": "幸福常常會被比較喚醒，但不一定只能靠比較維持。"
+        }
+      ],
+      "rationale": "4 月說幸福若只能依賴勝負或相對位置會不穩；9 月說建立在「我會別人不會」上的自我價值會不穩。兩者都指出以相對位置為基礎的價值感不耐久。"
+    },
+    {
+      "id": "edge-irreplaceability-unstable-contrasts-dimension-reduction",
+      "from": "irreplaceability-is-unstable-self-worth-foundation",
+      "to": "dimension-reduction-means-ai-compresses-traditional-knowhow",
+      "relation": "contrasts",
+      "weight": 0.7,
+      "confidence": 0.8,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 38,
+          "end_line": 52,
+          "quote": "但 AI 正在快速降低很多能力的稀缺性。"
+        },
+        {
+          "source_id": "human-needs-ai-leverage-2026-03-12",
+          "path": "sources/inbox/human-needs-ai-leverage-2026-03-12.md",
+          "start_line": 20,
+          "end_line": 41,
+          "quote": "AI 30 分鐘把他 10 年的 know-how 壓縮給你"
+        }
+      ],
+      "rationale": "同一個機制、相反的立場：3 月把「AI 壓縮他人多年 know-how」視為進入市場的機會；9 月從技能持有者角度看同一件事，得出不應把自我價值押在稀缺技能上。"
+    },
+    {
+      "id": "edge-worth-doing-to-devotion-sources",
+      "from": "worth-doing-without-being-the-only-one",
+      "to": "devotion-three-sources",
+      "relation": "extends",
+      "weight": 0.76,
+      "confidence": 0.82,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 76,
+          "end_line": 92,
+          "quote": "後一種努力不需要以「永遠比 AI 強」作為成立條件。"
+        },
+        {
+          "source_id": "original-conversation-2026-04-11",
+          "path": "sources/inbox/original-conversation-2026-04-11.md",
+          "start_line": 229,
+          "end_line": 258,
+          "quote": "人要在什麼條件下，才會心甘情願地把自己交給一件事？"
+        }
+      ],
+      "rationale": "4 月列出投入的三個來源（內在樂趣、身份認同、更大意義）；9 月指出以稀缺性為基礎的身份認同在 AI 時代會鬆動，內在樂趣型的投入則不受影響。"
+    },
+    {
+      "id": "edge-creation-rises-to-intrinsic-creator",
+      "from": "creation-as-lived-activity-rises",
+      "to": "jones-intrinsic-creator-profile",
+      "relation": "supports",
+      "weight": 0.8,
+      "confidence": 0.86,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 204,
+          "end_line": 208,
+          "quote": "因為我喜歡，所以我做。"
+        },
+        {
+          "source_id": "original-conversation-2026-04-11",
+          "path": "sources/inbox/original-conversation-2026-04-11.md",
+          "start_line": 323,
+          "end_line": 365,
+          "quote": "你不是為了輸出而輸出的人，你是因為「腦內有東西在流動」，才需要輸出。"
+        }
+      ],
+      "rationale": "「Jones 做 side project 時追著一個奇怪想法一路做到真的跑起來」與「因為我喜歡，所以我做」再次印證 Jones 是內在驅動型創作者。"
+    },
+    {
+      "id": "edge-experience-not-voided-contrasts-ai-forge",
+      "from": "artifact-commodified-experience-not-voided",
+      "to": "ai-forge-not-final-vehicle",
+      "relation": "contrasts",
+      "weight": 0.68,
+      "confidence": 0.78,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 102,
+          "end_line": 111,
+          "quote": "大幅降低成本"
+        },
+        {
+          "source_id": "original-conversation-2026-04-11",
+          "path": "sources/inbox/original-conversation-2026-04-11.md",
+          "start_line": 615,
+          "end_line": 652,
+          "quote": "AI 不能當你的「最終載體」，只能當「中介」。"
+        }
+      ],
+      "rationale": "4 月認為對話會流走、真正留下來的是封裝後的模組、文章、產品或系統；9 月指出這些 artifact 正是最容易被 AI 商品化的部分，而經歷不會被追溯作廢。兩者是不同價值軸（累積 vs 存在），不是直接矛盾。"
+    },
+    {
+      "id": "edge-ambition-redirected-to-process-entrepreneurship",
+      "from": "ambition-redirected-to-exploration",
+      "to": "process-oriented-entrepreneurship-fit",
+      "relation": "resonates_with",
+      "weight": 0.74,
+      "confidence": 0.82,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 268,
+          "end_line": 280,
+          "quote": "那就鑽爆它。"
+        },
+        {
+          "source_id": "ikigai-2026-04-25",
+          "path": "sources/inbox/ikigai-2026-04-25.md",
+          "start_line": 363,
+          "end_line": 400,
+          "quote": "你之前試圖用「結果導向創業」去驅動一個「過程導向的人」"
+        }
+      ],
+      "rationale": "4 月發現 Jones 被探索、創造、玩系統驅動而非結果導向；9 月把野心從「成為稀缺的人」轉向「探索這一生能到哪裡」，是同一種過程導向驅動在身份層的表述。"
+    },
+    {
+      "id": "edge-ambition-redirected-to-ai-natural-leverage",
+      "from": "ambition-redirected-to-exploration",
+      "to": "ai-as-natural-leverage",
+      "relation": "extends",
+      "weight": 0.66,
+      "confidence": 0.76,
+      "source_refs": [
+        {
+          "source_id": "ai-irreplaceability-lived-experience-2026-09-25",
+          "path": "sources/inbox/ai-irreplaceability-lived-experience-2026-09-25.md",
+          "start_line": 282,
+          "end_line": 282,
+          "quote": "AI 越強，甚至越能把雜務拿掉，讓人把更多生命花在真正有意思的部分。"
+        },
+        {
+          "source_id": "ikigai-2026-04-25",
+          "path": "sources/inbox/ikigai-2026-04-25.md",
+          "start_line": 537,
+          "end_line": 560,
+          "quote": "AI 對你來說不是風口，而是「最自然的槓桿」"
+        }
+      ],
+      "rationale": "4 月 AI 是放大 Jones 已在做之事的自然槓桿；9 月補上另一面：AI 拿掉雜務，讓更多生命花在真正有意思的部分。"
     }
   ]
 }

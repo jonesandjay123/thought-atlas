@@ -11,13 +11,15 @@ This document is the fastest entry point for a future Jarvis/session that needs 
 
 Thought Atlas backend v0 remains structurally usable, but the canonical graph is an April snapshot and now needs a controlled revival.
 
-Current local graph:
+Current local graph (after Revival Phase 0 gold-standard ingest):
 
 ```text
-nodes: 76
-edges: 62
-graph updated_at: 2026-04-27T02:28:00.000Z
+nodes: 92
+edges: 93
+graph updated_at: 2026-09-25T05:03:00.000Z
 ```
+
+The April snapshot was 76 nodes / 62 edges. The two gold-standard sources added 16 nodes and 31 edges without modifying any existing node or edge. See [`docs/revival-phase0-observations-2026-09-25.md`](./revival-phase0-observations-2026-09-25.md). This local graph has **not** been synced to Firestore.
 
 The next milestone is **not** a UI rewrite. It is to restart ingestion with recent high-signal sources and separate semantic relationship weight from Jones-specific attention / resonance.
 
@@ -241,10 +243,10 @@ Short version:
 Start here:
 
 1. Read `docs/revival-plan-2026-09-25.md`.
-2. Ingest these two gold-standard sources from `thinking_with_ai`:
+2. ~~Ingest these two gold-standard sources from `thinking_with_ai`~~ — done 2026-09-25:
    - `ai-selection-jev-play-the-ball-2026-09-21`
    - `ai-irreplaceability-lived-experience-2026-09-25`
-3. Review the generated nodes / edges manually before adding scoring fields.
+3. Review the generated nodes / edges and read `docs/revival-phase0-observations-2026-09-25.md` before adding scoring fields.
 4. Draft `resonance_score`, `attention_score`, `recurrence_score`, `recency_score`, and derived `interest_score` semantics against those real examples.
 5. Only then change schemas and validators.
 6. Do not bulk backfill or write Firestore as part of the first revival pass.

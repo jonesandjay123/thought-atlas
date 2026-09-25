@@ -1,0 +1,570 @@
+{
+  "patch_id": "ai-selection-jev-play-the-ball-2026-09-21.patch",
+  "digest_id": "ai-selection-jev-play-the-ball-2026-09-21.digest",
+  "created_at": "2026-09-25T05:01:00.000Z",
+  "operations": [
+    {
+      "op": "add_node",
+      "rationale": "The source's core model: AI capability migrating down the Node → Edge → Graph → Selection stack.",
+      "node": {
+        "id": "ai-capability-stack-node-to-selection",
+        "kind": "pattern",
+        "title": "AI 能力正從 Node → Edge → Graph 一路往下吃進 Selection",
+        "body": "對話把 AI 能力遷移整理成 Node → Edge → Graph → Selection → Commitment → Transformation 的 stack：找答案（node）的稀缺性快速下降；看見跨節點關聯（edge）與理解整體結構（graph）也正在自動化；JEV 類工具則讓 AI 進入 selection layer，對選項加權、排序、推薦下一步。因此人的生活策略不應建立在「我永遠會比 AI 更會找答案或做選擇」的假設上。",
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 5,
+            "end_line": 9,
+            "quote": "edge、graph，甚至 selection 本身，也都正在被 AI 吃掉。"
+          },
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 17,
+            "end_line": 55,
+            "quote": "Graph-level 的觀察也正在快速自動化。"
+          },
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 164,
+            "end_line": 170,
+            "quote": "AI 正在一路從 Node → Edge → Graph → Selection 往下走。"
+          }
+        ],
+        "confidence": 0.95,
+        "tags": [
+          "ai-selection",
+          "capability-migration",
+          "jev",
+          "ai-collaboration"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The explicit open question that JEV makes concrete; later nodes answer it.",
+      "node": {
+        "id": "what-humans-keep-when-ai-selects",
+        "kind": "question",
+        "title": "當 AI 也會連線、建圖、加權、推薦，人還要保留什麼？",
+        "body": "JEV 讓「AI 從幫我想往幫我選再推一步」不再只是哲學假設。對話的真正新問題因此變成：當 AI 不只會回答，也會連線、建圖、比較、加權、推薦，人還要保留什麼？",
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 9,
+            "end_line": 13,
+            "quote": "當 AI 不只會回答，也會連線、建圖、比較、加權、推薦，人還要保留什麼？"
+          },
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 50,
+            "end_line": 53,
+            "quote": "它把 AI 從「幫我想」往「幫我選」再推一步。"
+          }
+        ],
+        "confidence": 0.94,
+        "tags": [
+          "ai-selection",
+          "jev",
+          "human-role",
+          "question"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The source's answer to what humans keep: selection can be assisted, commitment stays with Jones.",
+      "node": {
+        "id": "ai-recommendation-is-not-commitment",
+        "kind": "decision",
+        "title": "AI 可以推薦最優選項，但不能替人認領人生",
+        "body": "即使 AI 認為某個選項 expected value 最高，「這是不是我要認領的人生？」也不會被更好的排序消除。Commitment 不是知道哪個選項最優，而是願意真的走進某條路並承受它的成本與後果。原則是讓 AI 幫忙看圖、算權重、提出選擇，但由自己決定哪一段人生值得親自走過。",
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 57,
+            "end_line": 62,
+            "quote": "這是不是我要認領的人生？"
+          },
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 170,
+            "end_line": 172,
+            "quote": "讓 AI 幫忙看圖、算權重、提出選擇，但由自己決定哪一段人生值得親自走過。"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": [
+          "commitment",
+          "ai-selection",
+          "agency",
+          "ai-collaboration"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Transformation is the final layer of the stack and the reason pure optimization is insufficient.",
+      "node": {
+        "id": "choice-transforms-the-chooser",
+        "kind": "claim",
+        "title": "選擇會改寫做選擇的人，人生不是固定 utility function 上的 argmax",
+        "body": "選擇不是發生在固定的人身上。走進某條路之後，那段經驗會反過來改變偏好、能力、世界模型與下一次選擇；做決定的人本身也會被路徑改寫，因此人生不是在固定 utility function 上反覆 argmax。",
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 64,
+            "end_line": 69,
+            "quote": "做決定的人本身，也會被路徑改寫。"
+          }
+        ],
+        "confidence": 0.93,
+        "tags": [
+          "transformation",
+          "commitment",
+          "decision-theory",
+          "self-model"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The practical life-strategy principle the source derives once selection is eaten by AI.",
+      "node": {
+        "id": "direction-stable-path-fluid",
+        "kind": "decision",
+        "title": "方向穩定，路徑流動",
+        "body": "AI 讓未來更難被高解析度預測，因此越不值得把大量當下自由度抵押給一張高度具體、假設多年後仍成立的 roadmap。可以保留低解析度方向（健康、好奇、創造能力、重要關係、移動與退出空間），但具體路線應允許重寫。這是 Jones 3.0「方向可以堅持，過程不必控制」在 AI selection 背景下的更新版。",
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 73,
+            "end_line": 91,
+            "quote": "方向穩定，路徑流動。"
+          },
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 119,
+            "end_line": 121,
+            "quote": "方向可以堅持，過程不必控制。"
+          },
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 174,
+            "end_line": 176,
+            "quote": "方向穩定，路徑流動；保持自己在場上，有球來就打。"
+          }
+        ],
+        "confidence": 0.97,
+        "tags": [
+          "life-strategy",
+          "direction",
+          "roadmap",
+          "freedom"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "The source's most natural metaphor and its operational checklist for staying responsive.",
+      "node": {
+        "id": "play-the-ball-when-it-comes",
+        "kind": "pattern",
+        "title": "有球來就打：把規劃從固定路線改成維持可回應性",
+        "body": "不要要求自己現在就預測三年後球會從哪裡飛來；保持自己在場上，球真的來了就打。這不是放棄規劃，而是維持可回應性：持續接觸新事物讓自己看得到球、有興趣就快速試而不必先證明它是十年主線、新資訊出現就改路而不把轉彎當失敗、不把任何職稱、技能或 project 當成永久身份、不因下一顆球不同就否定上一顆球的價值。",
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 95,
+            "end_line": 109,
+            "quote": "保持自己在場上，球真的來了，就打。"
+          }
+        ],
+        "confidence": 0.96,
+        "tags": [
+          "play-the-ball",
+          "life-strategy",
+          "responsiveness",
+          "adaptability"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Present-value claim; it seeds the artifact/experience split that Source B makes central.",
+      "node": {
+        "id": "present-is-not-future-consumable",
+        "kind": "claim",
+        "title": "當下不是未來的耗材",
+        "body": "未來因 AI 更難被預測，把現在全部犧牲給某個高度具體的遠期版本成本變得更高。今天做了一件有趣的事、學懂一個概念、做出一個小東西、跟重要的人相處、去了沒去過的地方，那一天本身就已成立；真正經歷過、理解過、被改變過的東西，不會因未來 AI 把相關技能商品化就被追溯作廢。",
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 111,
+            "end_line": 111,
+            "quote": "不會因為未來 AI 把相關技能商品化，就被追溯作廢"
+          },
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 115,
+            "end_line": 133,
+            "quote": "那一天本身就已經成立"
+          }
+        ],
+        "confidence": 0.94,
+        "tags": [
+          "present-value",
+          "time",
+          "lived-experience",
+          "life-strategy"
+        ]
+      }
+    },
+    {
+      "op": "add_node",
+      "rationale": "Self-model lineage node; the referenced Jones 1.0-4.0 sources are not yet ingested, so this anchors future backfill.",
+      "node": {
+        "id": "jones-version-lineage-selection-patch",
+        "kind": "pattern",
+        "title": "Jones 1.0 → 4.0 自我探索序列與 2026-09-21 Selection Patch",
+        "body": "對話把自己放進一條逐版更新的自我探索序列：Jones 1.0 我是怎麼運作的（操作說明書、思考指紋、自訂框架）；2.0 我要把自己用在哪裡（身份與志業）；3.0 我要怎麼和時間一起活；4.0 我要怎麼讓內在世界進入共同世界；2026-09-21 Selection Patch 則問當 AI 連「幫我選」都開始變強時要怎麼活，答案是方向穩定、路徑流動、有球來就打。",
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 137,
+            "end_line": 150,
+            "quote": "當 AI 連「幫我選」都開始變強，我要怎麼活？"
+          }
+        ],
+        "confidence": 0.88,
+        "tags": [
+          "jones-lineage",
+          "self-model",
+          "identity",
+          "life-design"
+        ]
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "The capability stack directly produces the source's central question.",
+      "edge": {
+        "id": "edge-capability-stack-to-what-humans-keep",
+        "from": "ai-capability-stack-node-to-selection",
+        "to": "what-humans-keep-when-ai-selects",
+        "relation": "extends",
+        "weight": 0.9,
+        "confidence": 0.93,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 7,
+            "end_line": 13,
+            "quote": "人還要保留什麼？"
+          }
+        ],
+        "rationale": "Selection 也被 AI 吃掉之後，才出現「人還要保留什麼」這個新問題。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Commitment answers the question of what humans keep.",
+      "edge": {
+        "id": "edge-what-humans-keep-to-recommendation-not-commitment",
+        "from": "what-humans-keep-when-ai-selects",
+        "to": "ai-recommendation-is-not-commitment",
+        "relation": "extends",
+        "weight": 0.9,
+        "confidence": 0.92,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 57,
+            "end_line": 62,
+            "quote": "這是不是我要認領的人生？"
+          }
+        ],
+        "rationale": "Commitment 是對「人還要保留什麼」的第一個回答：排序可以外包，認領不能。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Transformation follows Commitment in the source's stack.",
+      "edge": {
+        "id": "edge-recommendation-not-commitment-to-choice-transforms",
+        "from": "ai-recommendation-is-not-commitment",
+        "to": "choice-transforms-the-chooser",
+        "relation": "extends",
+        "weight": 0.86,
+        "confidence": 0.9,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 57,
+            "end_line": 69,
+            "quote": "做決定的人本身，也會被路徑改寫。"
+          }
+        ],
+        "rationale": "Stack 的最後一層：認領之後，路徑會反過來改寫做選擇的人。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "The source derives the life-strategy principle from the capability migration.",
+      "edge": {
+        "id": "edge-capability-stack-to-direction-stable",
+        "from": "ai-capability-stack-node-to-selection",
+        "to": "direction-stable-path-fluid",
+        "relation": "supports",
+        "weight": 0.8,
+        "confidence": 0.88,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 73,
+            "end_line": 81,
+            "quote": "AI 變化速度越快，越不值得把大量當下自由度抵押給一張高度具體、假設多年後仍然成立的 roadmap。"
+          }
+        ],
+        "rationale": "「Selection 被吃掉之後，生活策略怎麼變？」：AI 加速變化正是不鎖死 roadmap 的理由。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "The source's one-line takeaway fuses the principle and its operational metaphor.",
+      "edge": {
+        "id": "edge-direction-stable-to-play-the-ball",
+        "from": "direction-stable-path-fluid",
+        "to": "play-the-ball-when-it-comes",
+        "relation": "extends",
+        "weight": 0.92,
+        "confidence": 0.95,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 174,
+            "end_line": 176,
+            "quote": "方向穩定，路徑流動；保持自己在場上，有球來就打。"
+          }
+        ],
+        "rationale": "Source 的一句話版本把兩者串成同一原則：方向穩定、路徑流動是策略，有球來就打是操作形式。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Present-value is a second, value-based reason for fluid paths.",
+      "edge": {
+        "id": "edge-present-not-consumable-to-direction-stable",
+        "from": "present-is-not-future-consumable",
+        "to": "direction-stable-path-fluid",
+        "relation": "supports",
+        "weight": 0.82,
+        "confidence": 0.88,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 129,
+            "end_line": 131,
+            "quote": "因此，把現在全部犧牲給某個高度具體的遠期版本，成本變得更高。"
+          }
+        ],
+        "rationale": "當下本身成立，是不把自由度抵押給遠期 roadmap 的價值理由。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "The source places the principle as the latest patch in the Jones lineage.",
+      "edge": {
+        "id": "edge-jones-lineage-to-direction-stable",
+        "from": "jones-version-lineage-selection-patch",
+        "to": "direction-stable-path-fluid",
+        "relation": "extends",
+        "weight": 0.74,
+        "confidence": 0.86,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 149,
+            "end_line": 150,
+            "quote": "方向穩定、路徑流動；保持在場，有球來就打。"
+          }
+        ],
+        "rationale": "Selection Patch 把「方向穩定、路徑流動」接在 Jones 1.0 → 4.0 序列之後，作為第五個版本更新。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Links the April workflow-to-agent compression chain to the September capability stack.",
+      "edge": {
+        "id": "edge-workflow-to-agent-to-capability-stack",
+        "from": "ai-era-compresses-workflows-into-agents",
+        "to": "ai-capability-stack-node-to-selection",
+        "relation": "extends",
+        "weight": 0.74,
+        "confidence": 0.8,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 35,
+            "end_line": 55,
+            "quote": "它把 AI 從「幫我想」往「幫我選」再推一步。"
+          },
+          {
+            "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+            "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+            "start_line": 760,
+            "end_line": 792,
+            "quote": "人設計「讓 AI 執行 algorithm 的系統」"
+          }
+        ],
+        "rationale": "4 月的壓縮鏈把人的角色放在「設計讓 AI 執行 algorithm 的系統」；9 月的 stack 更進一步指出 edge、graph、selection 也正在被 AI 接手，是同一條 AI 往上吃抽象層的線。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Same human-AI division-of-labor theme; the human's reserved layer moves from selection to commitment.",
+      "edge": {
+        "id": "edge-hybrid-optimization-to-recommendation-not-commitment",
+        "from": "human-computer-hybrid-optimization-beats-pure-optimality",
+        "to": "ai-recommendation-is-not-commitment",
+        "relation": "extends",
+        "weight": 0.7,
+        "confidence": 0.8,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 170,
+            "end_line": 172,
+            "quote": "讓 AI 幫忙看圖、算權重、提出選擇，但由自己決定哪一段人生值得親自走過。"
+          },
+          {
+            "source_id": "rubiks-algorithms-animal-shogi-2026-04-26",
+            "path": "sources/inbox/rubiks-algorithms-animal-shogi-2026-04-26.md",
+            "start_line": 1137,
+            "end_line": 1158,
+            "quote": "它後來真的被電腦“接手優化”，但沒有完全取代人類版本"
+          }
+        ],
+        "rationale": "4 月的 hybrid optimization 仍由人類做 selection（電腦找 candidate、人類挑選）；9 月承認 selection 也在被 AI 吃掉，人的保留角色因此再往下一層移到 commitment。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Thematic resonance only (not stated by either source); kept at low weight.",
+      "edge": {
+        "id": "edge-decision-augmentation-to-capability-stack",
+        "from": "blind-assist-and-polymarket-share-decision-augmentation",
+        "to": "ai-capability-stack-node-to-selection",
+        "relation": "resonates_with",
+        "weight": 0.6,
+        "confidence": 0.72,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 50,
+            "end_line": 53,
+            "quote": "這正是 JEV 讓 Jones 特別有感的地方。"
+          },
+          {
+            "source_id": "breakfast-product-theory-2026-03-31",
+            "path": "sources/inbox/breakfast-product-theory-2026-03-31.md",
+            "start_line": 8,
+            "end_line": 19,
+            "quote": "在資訊不完整的世界中，幫人做更好的決策（Decision Augmentation）"
+          }
+        ],
+        "rationale": "3 月把 Decision Augmentation 當成產品機會；9 月 JEV 讓 AI 進入 selection layer，是同一種「AI 幫人做決策」能力從產品視角轉為生活策略視角。關聯是主題共振，非來源明示。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "April's commitment gap and September's transformation layer describe the same mechanism.",
+      "edge": {
+        "id": "edge-choice-transforms-to-commitment-gap",
+        "from": "choice-transforms-the-chooser",
+        "to": "direction-too-many-commitment-gap",
+        "relation": "resonates_with",
+        "weight": 0.76,
+        "confidence": 0.82,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 64,
+            "end_line": 69,
+            "quote": "你走進某條路之後，那段經驗會反過來改變你的偏好、能力、世界模型與下一次選擇。"
+          },
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 151,
+            "end_line": 159,
+            "quote": "方向太多 → 不敢 commit"
+          }
+        ],
+        "rationale": "Ikigai 對話說「選一個值得投入的方向，並在投入中讓它變成答案」；9 月的 transformation 給出同一件事的機制：走進去之後，路徑會改寫人，所以答案不必在投入前就被證明。"
+      }
+    },
+    {
+      "op": "add_edge",
+      "rationale": "Source A explicitly lists Playable Life System as related; both treat life routes as rewritable.",
+      "edge": {
+        "id": "edge-direction-stable-to-playable-life-system",
+        "from": "direction-stable-path-fluid",
+        "to": "playable-life-system-prototype",
+        "relation": "resonates_with",
+        "weight": 0.72,
+        "confidence": 0.8,
+        "source_refs": [
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 81,
+            "end_line": 91,
+            "quote": "但具體路線應該允許重寫。"
+          },
+          {
+            "source_id": "ai-selection-jev-play-the-ball-2026-09-21",
+            "path": "sources/inbox/ai-selection-jev-play-the-ball-2026-09-21.md",
+            "start_line": 152,
+            "end_line": 158,
+            "quote": "[Playable Life System](../../principles/playable-life-system/)"
+          },
+          {
+            "source_id": "ikigai-2026-04-25",
+            "path": "sources/inbox/ikigai-2026-04-25.md",
+            "start_line": 562,
+            "end_line": 589,
+            "quote": "把你的生活、想法、行動，全部變成一個可以被 AI 一起操作與重構的「遊戲介面」"
+          }
+        ],
+        "rationale": "Source A 在相關歸檔中明列 Playable Life System；兩者都把人生當成可重構、可重寫路線的系統，而非固定計畫。"
+      }
+    }
+  ]
+}
