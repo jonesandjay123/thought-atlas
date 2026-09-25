@@ -298,6 +298,8 @@ This may reveal hidden recurring concepts such as autonomy, freedom, creation, o
 
 Do not start a large schema migration, UI rewrite, or bulk ingest tonight.
 
+> **2026-09-25 late-night note:** the scoring/temporal semantics contract is now written — see `docs/scoring-temporal-semantics-contract-2026-09-25.md` (spec only; no schema/graph/code changes). It settles `occurred_at` vs `captured_at`, the recurrence merge policy, behavioral attention signals, resonance vs JEV's capped role, recency anchors, edge `evidence_type`, legacy calibration policy, and 10 acceptance tests. Next implementation step: manifest `occurred_at` + `occurred_precision` and backfill dates for the 11 existing sources.
+
 The next coding session should begin with:
 
 1. re-read this revival plan;

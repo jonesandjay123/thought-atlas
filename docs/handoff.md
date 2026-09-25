@@ -7,6 +7,8 @@ This document is the fastest entry point for a future Jarvis/session that needs 
 
 > **2026-09-25 revival note:** Thought Atlas is being resumed as a self-growing personal thought graph. Before changing schema, UI, or bulk-ingesting recent history, read [`docs/revival-plan-2026-09-25.md`](./revival-plan-2026-09-25.md). The immediate restart sequence is: ingest two recent gold-standard conversations, inspect graph quality, then define personal-interest scoring.
 
+> **2026-09-25 scoring contract (spec only):** scoring/temporal semantics are now settled in [`docs/scoring-temporal-semantics-contract-2026-09-25.md`](./scoring-temporal-semantics-contract-2026-09-25.md) — definitions, 10 invariants, worked examples against the live graph, and acceptance tests. No schema, graph, or code was changed. The recommended next implementation step is: add `occurred_at` + `occurred_precision` to the source manifest and backfill dates for the 11 existing sources (migration step 1 of 8; see contract §10).
+
 ## Current status
 
 Thought Atlas backend v0 remains structurally usable, but the canonical graph is an April snapshot and now needs a controlled revival.
