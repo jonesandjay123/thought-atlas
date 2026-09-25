@@ -1,12 +1,27 @@
 # Thought Atlas Backend Handoff
 
-Last updated: 2026-04-25
+Last updated: 2026-09-25
 
 This document is the fastest entry point for a future Jarvis/session that needs to continue Thought Atlas backend work.
 
+
+> **2026-09-25 revival note:** Thought Atlas is being resumed as a self-growing personal thought graph. Before changing schema, UI, or bulk-ingesting recent history, read [`docs/revival-plan-2026-09-25.md`](./revival-plan-2026-09-25.md). The immediate restart sequence is: ingest two recent gold-standard conversations, inspect graph quality, then define personal-interest scoring.
+
 ## Current status
 
-Thought Atlas backend v0 is ready:
+Thought Atlas backend v0 remains structurally usable, but the canonical graph is an April snapshot and now needs a controlled revival.
+
+Current local graph:
+
+```text
+nodes: 76
+edges: 62
+graph updated_at: 2026-04-27T02:28:00.000Z
+```
+
+The next milestone is **not** a UI rewrite. It is to restart ingestion with recent high-signal sources and separate semantic relationship weight from Jones-specific attention / resonance.
+
+Original v0 state remains valid:
 
 - Local ingest pipeline works.
 - Three seed sources are committed and synced to Firestore.
@@ -220,6 +235,21 @@ Short version:
 - conversation/reflection sources → extract emergent claims, questions, decisions, patterns, self-model updates;
 - report/checklist sources → extract principles, evaluation frameworks, gates, ordered actions;
 - do not create one node per checklist bullet unless each bullet is durable and reusable.
+
+## Revival next session
+
+Start here:
+
+1. Read `docs/revival-plan-2026-09-25.md`.
+2. Ingest these two gold-standard sources from `thinking_with_ai`:
+   - `ai-selection-jev-play-the-ball-2026-09-21`
+   - `ai-irreplaceability-lived-experience-2026-09-25`
+3. Review the generated nodes / edges manually before adding scoring fields.
+4. Draft `resonance_score`, `attention_score`, `recurrence_score`, `recency_score`, and derived `interest_score` semantics against those real examples.
+5. Only then change schemas and validators.
+6. Do not bulk backfill or write Firestore as part of the first revival pass.
+
+Muse can be added after the contract is stable for fast candidate extraction and second-opinion ranking. GPT should own the first canonical examples so multiple agents do not diverge on ontology.
 
 ## UI next step
 
